@@ -1,0 +1,12 @@
+---
+engines:
+  fixme:
+    enabled: true
+  eslint:
+    enabled: true
+ratings:
+  paths: []
+exclude_paths:
+  - node_modules/**
+  - .idea/**
+  - _book/**
