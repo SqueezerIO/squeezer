@@ -11,4 +11,10 @@ install:
   - travis_retry npm install
 
 script:
+  - set -e
   - npm test
+  - npm run eslint
+  - npm run jsinspect
+
+notifications:
+  slack: squeezerio:4ISMhZ6FBNpUYppy8kRK4uLf
