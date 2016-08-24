@@ -12,11 +12,8 @@ install:
 
 script:
   - npm test
+  - npm eslint
+  - npm jsinspect
 
 notifications:
   slack: squeezerio:4ISMhZ6FBNpUYppy8kRK4uLf
-
-addons:
-  code_climate:
-    repo_token: 28a4f8c37693f8a1d52d8793a63d7a0f29c0300bd2b00731e1322b4b714b22c4
-

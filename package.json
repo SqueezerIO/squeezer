@@ -30,7 +30,9 @@
     "url": "https://github.com/SqueezerIO/squeezer-cli.git"
   },
   "scripts": {
-    "test": "mocha ./test/runner.js"
+    "test": "mocha ./test/runner.js",
+    "eslint": "eslint .",
+    "jsinspect": "jsinspect -t 30 -i ./cli/ ./lib/"
   },
   "contributors": [
     {
@@ -43,11 +45,19 @@
   "dependencies": {
     "cmnd": "^0.1.2",
     "colors": "^1.1.2",
-    "lodash": "^4.15.0"
+    "jscpd": "^0.6.4",
+    "lodash": "^4.15.0",
+    "update-notifier": "^1.0.2"
   },
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^3.0.2",
-    "update-notifier": "^1.0.2"
+    "eslint": "^3.3.1",
+    "jsinspect": "^0.8.0",
+    "eslint-config-airbnb": "^10.0.1",
+    "eslint-config-airbnb-base": "^5.0.2",
+    "eslint-plugin-import": "^1.13.0",
+    "eslint-plugin-jsx-a11y": "^2.1.0",
+    "eslint-plugin-react": "^6.1.1"
   }
 }
