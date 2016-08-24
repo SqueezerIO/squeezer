@@ -12,8 +12,8 @@ install:
 
 script:
   - npm test
-  - npm eslint
-  - npm jsinspect
+  - npm run eslint
+  - npm run jsinspect
 
 notifications:
   slack: squeezerio:4ISMhZ6FBNpUYppy8kRK4uLf
