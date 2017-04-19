@@ -10,8 +10,9 @@ engines:
       languages:
       - javascript
 ratings:
-  paths: []
+  paths:
+    - "**.js"
 exclude_paths:
-  - node_modules/**
-  - .idea/**
-  - _book/**
+  - "node_modules/**"
+  - ".idea/**"
+  - "_book/**"

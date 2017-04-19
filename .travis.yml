@@ -12,3 +12,6 @@ install:
 
 script:
   - npm test
+
+notifications:
+  slack: squeezerio:4ISMhZ6FBNpUYppy8kRK4uLf

@@ -1,6 +1,6 @@
 Bug Report Template -----------------------------------------------
 
-##### Squeezer Framework Version information ( `squeezer-cli version` ) : 
+##### Squeezer Framework Version information ( `$ squeezer-cli version` ) : 
 
 * Squeezer CLI version: x.x.x
 * Node version: x.x.x
@@ -17,4 +17,3 @@ Feature Request Template ------------------------------------------
 ##### Benefits:
 
 * Benefit 1...
-* Benefit 2...

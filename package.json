@@ -1,9 +1,9 @@
 {
   "name": "squeezer-cli",
-  "version": "0.0.1-beta4",
+  "version": "1.1.0",
   "preferGlobal": true,
-  "description": "Squeezer it's a framework designed to help back-end developers to get a better architecture on zero-administration compute platforms with code that runs into [microservices](https://en.wikipedia.org/wiki/Microservices) clouds like [AWS Lambda](https://aws.amazon.com/documentation/lambda/) , [Azure Functions](https://azure.microsoft.com/en-us/services/functions/) , [Google Cloud Functions](https://cloud.google.com/functions/docs/) and [IBM OpenWhisk](https://developer.ibm.com/openwhisk/) .",
-  "homepage": "http://Squeezer.IO/",
+  "description": "Squeezer it's a framework designed to help back-end developers to get a better architecture on serverless zero-administration compute platforms with code that runs into [microservices](https://en.wikipedia.org/wiki/Microservices) clouds like [AWS Lambda](https://aws.amazon.com/documentation/lambda/) , [Azure Functions](https://azure.microsoft.com/en-us/services/functions/) , [Google Cloud Functions](https://cloud.google.com/functions/docs/) and [IBM OpenWhisk](https://developer.ibm.com/openwhisk/) .",
+  "homepage": "https://Squeezer.IO/",
   "bin": {
     "squeezer-cli": "cli/bin.js",
     "squeezer": "cli/bin.js",
@@ -43,12 +43,11 @@
   "dependencies": {
     "cmnd": "^0.1.2",
     "colors": "^1.1.2",
-    "lodash": "^4.15.0",
-    "systeminformation": "^3.2.1"
+    "lodash": "^4.15.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^3.0.2",
     "update-notifier": "^1.0.2"
   }
-}
+} 
