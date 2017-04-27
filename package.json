@@ -40,7 +40,7 @@
     "eslint": "eslint . --cache",
     "jsinspect": "jsinspect -t 30 -i ./cli/ ./lib/ ./test/ --ignore ./lib/plugins/serve/public",
     "gendocs": "rm -rf `pwd`/docs/README.md && ln -s `pwd`/README.md `pwd`/docs/README.md && rm -rf `pwd`/docs/docs/gitbook && mkdir -p `pwd`/docs/docs && ln -s `pwd`/docs/gitbook `pwd`/docs/docs/gitbook && gulp gen-classes-docs && node tasks/genCliDocs && node tasks/genFrameworkInfo.js && cd docs && gitbook build",
-    "publishdocs" : "rm -rf /tmp/_book && cp -r docs/_book /tmp/_book && git pull && git checkout gh-pages && rsync /tmp/_book/* . && git add . && git commit -m 'docs update' && git push && git checkout -"
+    "publishdocs" : "rm -rf /tmp/_book && cp -r docs/_book /tmp/_book && rm -rf /tmp/squeezer-cli && git clone git@github.com:SqueezerIO/squeezer-cli.git /tmp/squeezer-cli && cd /tmp/squeezer-cli && git checkout gh-pages && rsync /tmp/_book/* . && git add . && git commit -m 'docs update' && git push"
   },
   "contributors": [
     {
