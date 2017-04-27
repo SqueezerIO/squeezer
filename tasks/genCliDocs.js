@@ -30,7 +30,7 @@ _.forEach(commands, (val, cmd) => {
   const cmdNamesLen = cmdNames.length;
 
   _.forEach(cmdNames, (val, index) => {
-    const filename     = `docs/cli/${cmdNames[0]}.md`;
+    const filename     = `cli/${cmdNames[0]}.md`;
     const alphaVal     = _.capitalize(val.replace(/[^a-z0-9]+/gi, ' '));
     let command        = '';
     let output         = null;
