@@ -1,0 +1,3 @@
+- identifier : 'list:all'
+  path : 'lib'
+  function : 'run'

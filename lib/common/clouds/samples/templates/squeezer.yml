@@ -1,0 +1,13 @@
+# SQUEEZER FRAMEWORK
+framework: squeezer
+
+# PROJECT NAME
+name: <%= project %>
+
+# CLOUD TYPE
+cloud: <%= cloud %>
+
+# LANGUAGE PLATFORM
+language:
+  - runtime: <%= runtime %>
+  - version: <%= version %>

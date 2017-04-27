@@ -1,0 +1,2 @@
+- description: Linking the microservice source directory to the target dir
+  bin: sqz fileutils:link --source ${source} --target ${output}

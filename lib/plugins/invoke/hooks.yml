@@ -1,0 +1,3 @@
+- identifier : 'invoke:run'
+  path : 'lib'
+  function : 'run'

@@ -1,0 +1,18 @@
+#Parameters:
+Resources:
+  cloudFrontStack:
+    Type: "AWS::CloudFormation::Stack"
+    Properties:
+      TemplateURL: cdn-template.yml
+      TimeoutInMinutes: 40
+Outputs:
+  WebBucket:
+    Value:
+      Fn::GetAtt:
+      - cloudFrontStack
+      - Outputs.WebBucket
+  CloudFrontDomain:
+    Value:
+      Fn::GetAtt:
+      - cloudFrontStack
+      - Outputs.CloudFrontDomain

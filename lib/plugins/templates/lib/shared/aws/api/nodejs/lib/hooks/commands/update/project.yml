@@ -1,0 +1,4 @@
+- description: Updating project's npm packages
+  bin: cd ${project.path} && npm update --silent
+- description: Installing required tools
+  bin: npm update webpack node-sass phantomjs-prebuilt webdriverio wdio-mocha-framework wdio-spec-reporter  -g --silent

@@ -1,0 +1,3 @@
+- identifier : 'version:display'
+  path : 'lib'
+  function : 'run'

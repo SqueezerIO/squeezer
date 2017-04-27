@@ -1,0 +1,2 @@
+- description: Linking static assets from ${source} to ${target}
+  bin: sqz fileutils:link --source ${staticSource} --target ${staticTarget}

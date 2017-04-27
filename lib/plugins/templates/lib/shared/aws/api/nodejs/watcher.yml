@@ -1,0 +1,8 @@
+# Watcher configuration
+# https://www.npmjs.com/package/chokidar
+
+globs:
+  include:
+    - '${projectPath}/microservices/**'
+  ignore:
+    - '**/node_modules/**'

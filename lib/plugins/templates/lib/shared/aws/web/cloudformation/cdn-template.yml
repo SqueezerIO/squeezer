@@ -1,0 +1,42 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: CDN Stack
+Resources:
+  WebBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      AccessControl: PublicRead
+      WebsiteConfiguration:
+        IndexDocument: index.html
+        ErrorDocument: error.html
+    DeletionPolicy: Retain
+  CDN:
+    Type: AWS::CloudFront::Distribution
+    Properties:
+      DistributionConfig:
+        Origins:
+          - DomainName:
+              Fn::GetAtt:
+                - WebBucket
+                - DomainName
+            Id: WebBucket
+            S3OriginConfig:
+              OriginAccessIdentity: ""
+        Enabled: true
+#        Aliases:
+#          - foo.bar
+#          - www.foo.bar
+        DefaultCacheBehavior:
+          TargetOriginId: WebBucket
+          ForwardedValues:
+            QueryString: false
+          ViewerProtocolPolicy: allow-all
+        PriceClass: PriceClass_100
+Outputs:
+  WebBucket:
+    Value:
+      Ref: WebBucket
+  CloudFrontDomain:
+    Value:
+      Fn::GetAtt:
+      - CDN
+      - DomainName

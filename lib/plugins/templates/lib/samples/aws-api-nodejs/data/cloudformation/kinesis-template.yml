@@ -1,0 +1,16 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: Kinesis Stack
+Resources:
+  myKinesisStream:
+    Type: "AWS::Kinesis::Stream"
+    Properties:
+      ShardCount: 1
+Outputs:
+  myKinesisStreamName:
+    Value:
+      Ref: myKinesisStream
+  myKinesisStreamArn:
+    Value:
+      Fn::GetAtt:
+        - myKinesisStream
+        - Arn

@@ -1,0 +1,3 @@
+- identifier : 'templates:list'
+  path : 'lib/list'
+  function : 'run'

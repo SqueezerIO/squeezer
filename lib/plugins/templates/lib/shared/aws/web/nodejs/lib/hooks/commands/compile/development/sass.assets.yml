@@ -1,0 +1,7 @@
+- description: Compiling SASS
+  bin: node-sass
+  args:
+    - '--source-map'
+    - 'true'
+    - '${source}/sass/main.scss'
+    - '${target}/css/main.css'

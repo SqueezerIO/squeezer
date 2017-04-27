@@ -1,0 +1,80 @@
+# SQUEEZER MICROSERVICE
+
+name: hello
+description: Hello !!!!!
+
+# ENVIRONMENT VARIABLES ( accessible via "process.env" in NodeJS )
+env:
+#  MSG: hello
+#  PRODUCTS_TABLE: DynamoStack.Outputs.ProductsDynamoTable
+  dev:
+#    PRODUCTS_TABLE_READ_CAPACITY: 1
+#    PRODUCTS_TABLE_WRITE_CAPACITY: 1
+  prod:
+#    PRODUCTS_TABLE_READ_CAPACITY: 10
+#    PRODUCTS_TABLE_WRITE_CAPACITY: 10
+
+functions:
+  hello:
+#     Function description
+#     http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-description
+    description: Says hello
+
+#     Handler
+#     http://docs.aws.amazon.com/lambda/latest/dg/nodejs-prog-model-handler.html
+    handler: hello
+
+#     Memory size ( MB )
+#     https://aws.amazon.com/lambda/pricing/
+    memory: 128
+
+#     Execution timeout
+#     http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-timeout
+    timeout: 6
+
+#     invoke current lambda function when some of the next events is triggered
+#     http://docs.aws.amazon.com/lambda/latest/dg/invoking-lambda-function.html
+    events:
+      - http:
+          path: /v1/hello
+          method: get
+#      - s3:
+#          bucket: s3Stack.myS3Bucket
+#          event: s3:ObjectCreated:*
+#          # optional filters
+#          filter:
+#            S3Key:
+#              Rules:
+#                - Name: suffix
+#                  Value: zip
+#      - schedule:
+#          value: rate(1 minute)
+#          # OR
+#          value: cron(0 10 * * * *)
+#          stages:
+#            - prod
+#      - stream:
+#          sourceArn: DynamoStack.Outputs.ProductsDynamoTableStreamArn
+#          batchSize: 100
+#          startPosition: LATEST
+#      - stream:
+#          sourceArn: KinesisStack.Outputs.myKinesisStreamArn
+#          batchSize: 100
+#          startPosition: LATEST
+#      - sns:
+#          topic: snsStack.mySNSTopic
+#      - iot:
+#          sql: "SELECT * FROM 'some_topic'"
+#      - alexaSkills:
+#          enabled: true
+
+# INCLUDES FILES OR DIRECTORIES FROM PROJECT ( should appear on "src/inclusions/DEST" microservice's path )
+inclusions:
+  - src: lib/http
+    dest: http
+
+packaging:
+  - node_modules
+  - inclusions/http
+#  - other_dir
+#  - other_file

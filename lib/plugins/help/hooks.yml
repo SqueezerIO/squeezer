@@ -1,0 +1,3 @@
+- identifier : 'help:run'
+  path : 'lib'
+  function : 'run'

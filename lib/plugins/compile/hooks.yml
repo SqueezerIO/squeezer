@@ -1,0 +1,3 @@
+- identifier : 'compile:run'
+  path : 'lib/compile'
+  function : 'run'

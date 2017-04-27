@@ -1,0 +1,4 @@
+- description: Executing test "${source}"
+  bin: mocha
+  args:
+    - '${source}'

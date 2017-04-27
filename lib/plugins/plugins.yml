@@ -1,0 +1,21 @@
+plugins:
+  - aws
+  - config
+  - test
+  - deploy
+  - invoke
+  - run
+  - logs
+  - help
+  - list
+  - project
+  - microservices
+  - create
+  - serve
+  - version
+  - templates
+  - install
+  - compile
+  - update
+  - fileutils
+#  - docker

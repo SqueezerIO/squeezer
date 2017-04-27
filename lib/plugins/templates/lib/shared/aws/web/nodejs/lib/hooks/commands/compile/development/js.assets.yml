@@ -1,0 +1,9 @@
+- description: Webpacking JS assets
+  bin: webpack
+  args:
+    - '--progress'
+    - "--colors"
+    - '--config'
+    - '${projectPath}/lib/webpack/config.web.dev.js'
+    - '${source}/js/main.js'
+    - '${target}/js/main.js'

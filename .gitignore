@@ -1,0 +1,18 @@
+.DS_Store
+.env
+node_modules
+dist/*
+!dist/.gitkeep
+*.log
+.idea
+
+# eslint cache
+.eslintcache
+
+# just a simple test.js
+test.js
+
+# docs
+docs/_book
+docs/README.md
+docs/docs

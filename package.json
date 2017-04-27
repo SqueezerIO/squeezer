@@ -1,0 +1,92 @@
+{
+  "name": "squeezer-cli",
+  "version": "1.1.0",
+  "preferGlobal": true,
+  "description": "Squeezer it's a framework designed to help back-end developers to get a better architecture on serverless zero-administration compute platforms with code that runs into [microservices](https://en.wikipedia.org/wiki/Microservices) clouds like [AWS Lambda](https://aws.amazon.com/documentation/lambda/) , [Azure Functions](https://azure.microsoft.com/en-us/services/functions/) , [Google Cloud Functions](https://cloud.google.com/functions/docs/) and [IBM OpenWhisk](https://developer.ibm.com/openwhisk/) .",
+  "homepage": "http://squeezer.io/",
+  "bin": {
+    "sqz": "cli/bin.js",
+    "squeezer-cli": "cli/bin.js",
+    "squeezer": "cli/bin.js"
+  },
+  "keywords": [
+    "squeezer.io",
+    "squeezer.io framework",
+    "squeezer framework",
+    "squeezer",
+    "squeezer cli",
+    "squeezer generator",
+    "serverless",
+    "serverless framework",
+    "microservices",
+    "aws lambda",
+    "swagger",
+    "swagger api docs",
+    "pug",
+    "reactjs",
+    "jade",
+    "aws",
+    "amazon web services lambda",
+    "azure functions",
+    "google cloud functions",
+    "ibm openwhisk"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SqueezerIO/squeezer-cli.git"
+  },
+  "scripts": {
+    "test": "mocha ./test/runner.js",
+    "eslint": "eslint . --cache",
+    "jsinspect": "jsinspect -t 30 -i ./cli/ ./lib/ ./test/ --ignore ./lib/plugins/serve/public",
+    "gendocs": "rm -rf `pwd`/docs/README.md && ln -s `pwd`/README.md `pwd`/docs/README.md && rm -rf `pwd`/docs/docs/gitbook && mkdir -p `pwd`/docs/docs && ln -s `pwd`/docs/gitbook `pwd`/docs/docs/gitbook && gulp gen-classes-docs && node tasks/genCliDocs && node tasks/genFrameworkInfo.js && cd docs && gitbook build"
+  },
+  "contributors": [
+    {
+      "name": "Nick Chisiu",
+      "email": "nick@squeezer.io",
+      "web": "https://Squeezer.IO/"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "app-root-path": "^2.0.1",
+    "archiver": "^1.1.0",
+    "aws-sdk": "^2.9.0",
+    "bluebird": "^3.4.6",
+    "body-parser": "^1.15.2",
+    "colors": "^1.1.2",
+    "connect-livereload": "^0.6.0",
+    "express": "^4.14.0",
+    "fs-extra": "^2.0.0",
+    "home-config": "^0.1.0",
+    "js-yaml": "^3.6.1",
+    "lodash": "^4.15.0",
+    "moment": "^2.17.1",
+    "precinct": "^3.6.0",
+    "request": "^2.81.0",
+    "s3-upload-stream": "^1.0.7",
+    "sync-exec": "^0.6.2",
+    "templatestring": "^5.0.1",
+    "update-notifier": "^1.0.2",
+    "url-pattern": "^1.0.3",
+    "walk-sync": "^0.3.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "concurrently": "^3.1.0",
+    "documentation": "^3.0.4",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.0.0",
+    "eslint-config-airbnb-base": "^11.0.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
+    "eslint-plugin-react": "^6.10.0",
+    "gulp-documentation": "^3.10",
+    "jsinspect": "^0.8.0",
+    "livereload": "^0.6.2",
+    "mocha": "^3.0.2",
+    "stripcolorcodes": "^0.1.0",
+    "yargs": "^3.32.0"
+  }
+}

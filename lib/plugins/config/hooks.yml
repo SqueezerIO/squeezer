@@ -1,0 +1,3 @@
+- identifier : 'config:set'
+  path : 'lib'
+  function : 'run'
