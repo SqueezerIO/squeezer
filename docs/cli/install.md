@@ -15,4 +15,4 @@
 
  Examples:
 
-    $ sqz install --name my-first-project --template aws-generic
+    $ sqz install 

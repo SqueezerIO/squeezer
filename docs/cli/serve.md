@@ -8,7 +8,7 @@
 
  Description:
 
-    If no options are specified all your available microservices where code changed from the last deployment will be deployed.
+    Serve project in watch mode . Live reload is enabled by default.
 
  Options:
 
@@ -18,6 +18,3 @@
  Examples:
 
     $ sqz serve 
-    $ sqz serve --stage dev --region us-east-1
-    $ sqz serve --force
-    $ sqz serve --microservice my-first-microservice
