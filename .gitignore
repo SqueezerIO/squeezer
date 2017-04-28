@@ -13,6 +13,7 @@ dist/*
 test.js
 
 # docs
+!docs
 docs/_book
 docs/README.md
 docs/docs
