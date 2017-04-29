@@ -16,4 +16,3 @@
  Examples:
 
     $ sqz templates 
-    $ sqz templates --function MyFunction

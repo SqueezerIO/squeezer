@@ -25,5 +25,3 @@
 
     $ sqz test 
     $ sqz test --microservice my-first-microservice
-    $ sqz test --unit
-    $ sqz test --integration
