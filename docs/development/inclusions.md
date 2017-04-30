@@ -1,6 +1,6 @@
 ### Inclusions
 
-#### Why the use of `inclusions` are required ?
+#### Why the use of `inclusions` is recommended ?
 
 Well , even if Squeezer tries to simulates as best it can the trivial projects by sharing one component
 to other it needs some help on getting the standard initial purpose for a microservice by 

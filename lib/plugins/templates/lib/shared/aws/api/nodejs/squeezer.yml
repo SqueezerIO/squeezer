@@ -23,6 +23,9 @@ env:
   SQZ_PROJECT_NAME        : $\\{this.name\\}
   SQZ_STAGE               : $\\{vars.stage\\}
 
+  # CORS enabled by default https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS
+  CORS: 'enabled'
+
 #  stage env vars
 #  dev:
 #    GLOBAL_VAR1: hello dev 1

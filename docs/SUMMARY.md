@@ -21,6 +21,7 @@
 * [Packaging](development/packaging.md)
 * [Command Hooks](development/command_hooks.md)
 * [Testing](development/testing.md)
+* [CORS](development/cors.md)
   
 --
 

@@ -12,6 +12,10 @@
 
  Options:
 
+    --microservice / -m  microservice name (optional)
+    value
+                       install packages only for a specific microservice
+ 
 
  Examples:
 
