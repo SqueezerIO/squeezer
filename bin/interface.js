@@ -3,7 +3,7 @@
  */
 const appRoot = require('app-root-path');
 
-const sqz      = require(`${appRoot}/cli/Squeezer`);
+const sqz      = require(`${appRoot}/bin/Squeezer`);
 const colors   = require('colors/safe');
 const _        = require('lodash');
 const walkSync = require('walk-sync');
