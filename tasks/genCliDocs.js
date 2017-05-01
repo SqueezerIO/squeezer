@@ -5,11 +5,11 @@ const fs              = require('fs');
 const _               = require('lodash');
 const stripColorCodes = require('stripcolorcodes');
 const Help            = require(`${appRoot}/lib/common/cli/help`);
-const sqz             = require(`${appRoot}/cli/Squeezer`);
+const sqz             = require(`${appRoot}/bin/Squeezer`);
 
 sqz.init();
 
-const CLI = require(`${appRoot}/cli/cli`);
+const CLI = require(`${appRoot}/bin/cli`);
 
 const help = new Help();
 // const CLI  = new CommandLineInterface();

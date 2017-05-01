@@ -21,11 +21,11 @@ process.on('uncaughtException', e => displayError(e));
 process.on('unhandledRejection', e => displayError(e));
 
 try {
-  const sqz = require(`${appRoot}/cli/Squeezer`);
+  const sqz = require(`${appRoot}/bin/Squeezer`);
 
   sqz.init();
 
-  const CLI            = require(`${appRoot}/cli/cli`);
+  const CLI            = require(`${appRoot}/bin/cli`);
   const updateNotifier = require('update-notifier');
 
   updateNotifier({ pkg }).notify();
