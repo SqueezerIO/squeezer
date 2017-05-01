@@ -1,3 +1,6 @@
+## v1.1.4 - 2017-05-01
+- moved livereload package from dev section to prod
+
 ## v1.1.3 - 2017-05-01
 - added missing "chokidar" package
 
