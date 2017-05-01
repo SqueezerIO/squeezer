@@ -1,3 +1,6 @@
+## v1.1.3 - 2017-05-01
+- added missing "chokidar" package
+
 ## v1.1.2 - 2017-05-01
 - fixed package bin path
 
