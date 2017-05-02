@@ -1,3 +1,6 @@
+## v1.1.8 - 2017-05-02
+- error on README create new project error
+
 ## v1.1.7 - 2017-05-02
 - updated typo errors
 - updated README header picture
