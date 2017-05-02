@@ -1,4 +1,8 @@
 ## v1.1.6 - 2017-05-02
+- updated typo errors
+- updated README header picture
+
+## v1.1.6 - 2017-05-02
 - mising project type property on project's creation
 
 ## v1.1.5 - 2017-05-02

@@ -1,8 +1,8 @@
 {
   "name": "squeezer-cli",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "preferGlobal": true,
-  "description": "Event-driven APIs & Web apps on microservices ... serverless ! Squeezer it's a framework designed to help back-end developers to get a better architecture on serverless zero-administration compute platforms with code that runs into [microservices](https://en.wikipedia.org/wiki/Microservices) clouds like [AWS Lambda](https://aws.amazon.com/documentation/lambda/) , [Azure Functions](https://azure.microsoft.com/en-us/services/functions/) , [Google Cloud Functions](https://cloud.google.com/functions/docs/) and [IBM OpenWhisk](https://developer.ibm.com/openwhisk/) .",
+  "description": "Event-driven APIs & Web apps on microservices ... serverless ! Squeezer is a framework designed to help back-end developers to get a better architecture on serverless zero-administration compute platforms with code that runs into [microservices](https://en.wikipedia.org/wiki/Microservices) clouds like [AWS Lambda](https://aws.amazon.com/documentation/lambda/) , [Azure Functions](https://azure.microsoft.com/en-us/services/functions/) , [Google Cloud Functions](https://cloud.google.com/functions/docs/) and [IBM OpenWhisk](https://developer.ibm.com/openwhisk/) .",
   "homepage": "http://squeezer.io/",
   "bin": {
     "sqz": "bin/bin.js",
@@ -51,7 +51,7 @@
     "eslint": "eslint . --cache",
     "jsinspect": "jsinspect -t 30 -i ./cli/ ./lib/ ./test/ --ignore ./lib/plugins/serve/public",
     "gendocs": "rm -rf `pwd`/docs/README.md && ln -s `pwd`/README.md `pwd`/docs/README.md && rm -rf `pwd`/docs/docs/gitbook && mkdir -p `pwd`/docs/docs && ln -s `pwd`/docs/gitbook `pwd`/docs/docs/gitbook && gulp gen-classes-docs && node tasks/genCliDocs && node tasks/genFrameworkInfo.js && cd docs && gitbook build",
-    "publishdocs": "rm -rf /tmp/_book && cp -r docs/_book /tmp/_book && rm -rf /tmp/squeezer-cli && git clone git@github.com:SqueezerIO/squeezer-cli.git /tmp/squeezer-cli && cd /tmp/squeezer-cli && git checkout gh-pages && rsync -a /tmp/_book/* . && git add . && git commit -m 'docs update' && git push"
+    "publishdocs": "aws s3 sync docs/_book s3://docs.squeezer.io/ --profile squeezer"
   },
   "contributors": [
     {
