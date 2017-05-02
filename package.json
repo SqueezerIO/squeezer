@@ -1,6 +1,6 @@
 {
   "name": "squeezer-cli",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "preferGlobal": true,
   "description": "Event-driven APIs & Web apps on microservices ... serverless ! Squeezer it's a framework designed to help back-end developers to get a better architecture on serverless zero-administration compute platforms with code that runs into [microservices](https://en.wikipedia.org/wiki/Microservices) clouds like [AWS Lambda](https://aws.amazon.com/documentation/lambda/) , [Azure Functions](https://azure.microsoft.com/en-us/services/functions/) , [Google Cloud Functions](https://cloud.google.com/functions/docs/) and [IBM OpenWhisk](https://developer.ibm.com/openwhisk/) .",
   "homepage": "http://squeezer.io/",
