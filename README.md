@@ -5,7 +5,7 @@
 
 ## What is Squeezer ?
 
-Squeezer it's a framework designed to help  developers to get a better architecture on serverless
+Squeezer is a framework designed to help  developers to get a better architecture on serverless
 zero-administration compute platforms where code runs on the top of
 [microservices](https://en.wikipedia.org/wiki/Microservices) clouds like
 [AWS Lambda](https://aws.amazon.com/documentation/lambda/) , [Azure Functions](https://azure.microsoft.com/en-us/services/functions/) , [IBM OpenWhisk](https://developer.ibm.com/openwhisk/) & [Google Functions](https://cloud.google.com/functions/)
