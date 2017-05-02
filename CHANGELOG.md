@@ -1,4 +1,4 @@
-## v1.1.6 - 2017-05-02
+## v1.1.7 - 2017-05-02
 - updated typo errors
 - updated README header picture
 
