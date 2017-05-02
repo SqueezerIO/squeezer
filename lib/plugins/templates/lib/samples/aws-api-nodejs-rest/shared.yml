@@ -3,7 +3,7 @@
 - shared/aws/api/nodejs/.editorconfig:.editorconfig
 - shared/aws/api/nodejs/.eslintignore:.eslintignore
 - shared/aws/api/nodejs/.eslintrc:.eslintrc
-- shared/aws/api/nodejs/.gitignore:.gitignore
+- shared/aws/api/nodejs/.gitignore.txt:.gitignore
 - shared/aws/api/nodejs/package.json:package.json
 - shared/aws/api/nodejs/squeezer.yml:squeezer.yml
 - shared/aws/api/nodejs/watcher.yml:watcher.yml

@@ -1,3 +1,7 @@
+## v1.1.4 - 2017-05-02
+- fixed .gitignore renaming on npm publish
+- added more keywords
+
 ## v1.1.4 - 2017-05-01
 - moved livereload package from dev section to prod
 

@@ -51,7 +51,7 @@ You can get various templates for creating a quick project stub :
 | template | description  |
 |-----|--------------|
 |aws-api-nodejs|AWS generic API Hello World template
-|aws-api-nodejs-rest|AWS NodeJS REST API template + Swagger support
+|aws-api-nodejs-rest|AWS NodeJS REST API template + DynamoDB + Swagger support
 |aws-web-nodejs-reactjs|AWS NodeJS WebApp template + Pug ( ex-Jade ) + ReactJS support + Material UI + Bootstrap 3 styling
 
 

@@ -4,7 +4,7 @@
 - shared/aws/web/nodejs/.editorconfig:.editorconfig
 - shared/aws/web/nodejs/.eslintignore:.eslintignore
 - shared/aws/web/nodejs/.eslintrc:.eslintrc
-- shared/aws/web/nodejs/.gitignore:.gitignore
+- shared/aws/web/nodejs/.gitignore.txt:.gitignore
 - shared/aws/web/nodejs/livereload.yml:livereload.yml
 - shared/aws/web/nodejs/package.json:package.json
 - shared/aws/web/nodejs/squeezer.yml:squeezer.yml
