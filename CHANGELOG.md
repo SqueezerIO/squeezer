@@ -1,4 +1,4 @@
-## v1.1.4 - 2017-05-02
+## v1.1.5 - 2017-05-02
 - fixed .gitignore renaming on npm publish
 - added more keywords
 
