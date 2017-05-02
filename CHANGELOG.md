@@ -1,3 +1,6 @@
+## v1.1.6 - 2017-05-02
+- mising project type property on project's creation
+
 ## v1.1.5 - 2017-05-02
 - fixed .gitignore renaming on npm publish
 - added more keywords
