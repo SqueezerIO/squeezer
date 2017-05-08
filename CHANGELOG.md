@@ -1,3 +1,6 @@
+## v1.1.9 - 2017-05-08
+- added Gitter chat support
+
 ## v1.1.8 - 2017-05-02
 - error on README create new project error
 
