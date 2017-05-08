@@ -3,6 +3,8 @@
 ## Framework : [squeezer.io](http://squeezer.io)
 ## Documentation : [docs.squeezer.io](http://docs.squeezer.io)
 
+[![Join the chat at https://gitter.im/SqueezerIO/squeezer](https://badges.gitter.im/SqueezerIO/squeezer.svg)](https://gitter.im/SqueezerIO/squeezer?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ## What is Squeezer ?
 
 Squeezer is a framework designed to help  developers to get a better architecture on serverless
