@@ -1,3 +1,6 @@
+## v1.1.10 - 2017-05-08
+- added Gitter chat support ( fixed icon on NPM )
+
 ## v1.1.9 - 2017-05-08
 - added Gitter chat support
 
