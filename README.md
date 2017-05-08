@@ -1,7 +1,8 @@
 ![Squeezer Intro](docs/gitbook/images/introduction.png)
 
-## Framework : [squeezer.io](http://squeezer.io)
-## Documentation : [docs.squeezer.io](http://docs.squeezer.io)
+## Framework : [squeezer.io](https://squeezer.io)
+## Docs : [docs.squeezer.io](https://docs.squeezer.io)
+## Chat : [chat.squeezer.io](https://chat.squeezer.io)
 
 ## What is Squeezer ?
 

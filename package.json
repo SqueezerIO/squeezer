@@ -1,9 +1,9 @@
 {
   "name": "squeezer-cli",
-  "version": "1.1.9",
+  "version": "1.1.10",
   "preferGlobal": true,
   "description": "Event-driven APIs & Web apps on microservices ... serverless ! Squeezer is a framework designed to help back-end developers to get a better architecture on serverless zero-administration compute platforms with code that runs into [microservices](https://en.wikipedia.org/wiki/Microservices) clouds like [AWS Lambda](https://aws.amazon.com/documentation/lambda/) , [Azure Functions](https://azure.microsoft.com/en-us/services/functions/) , [Google Cloud Functions](https://cloud.google.com/functions/docs/) and [IBM OpenWhisk](https://developer.ibm.com/openwhisk/) .",
-  "homepage": "http://squeezer.io/",
+  "homepage": "https://squeezer.io/",
   "bin": {
     "sqz": "bin/bin.js",
     "squeezer-cli": "bin/bin.js",
@@ -51,7 +51,7 @@
     "eslint": "eslint . --cache",
     "jsinspect": "jsinspect -t 30 -i ./cli/ ./lib/ ./test/ --ignore ./lib/plugins/serve/public",
     "gendocs": "rm -rf `pwd`/docs/README.md && ln -s `pwd`/README.md `pwd`/docs/README.md && rm -rf `pwd`/docs/docs/gitbook && mkdir -p `pwd`/docs/docs && ln -s `pwd`/docs/gitbook `pwd`/docs/docs/gitbook && gulp gen-classes-docs && node tasks/genCliDocs && node tasks/genFrameworkInfo.js && cd docs && gitbook build",
-    "publishdocs": "aws s3 sync docs/_book s3://docs.squeezer.io/ --profile squeezer"
+    "publishdocs": "aws s3 sync docs/_book s3://docs.squeezer.io/ --profile squeezer && aws configure set preview.cloudfront true && aws cloudfront create-invalidation --profile squeezer --distribution-id E3DPKIWN8MDSTI --paths '/*'"
   },
   "contributors": [
     {
