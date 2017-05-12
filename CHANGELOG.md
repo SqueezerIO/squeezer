@@ -1,3 +1,6 @@
+## v1.1.12 - 2017-05-12
+- npm issues on listing html images 
+
 ## v1.1.11 - 2017-05-12
 - changed gitter from https to http link
 
