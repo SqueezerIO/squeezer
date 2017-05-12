@@ -1,3 +1,6 @@
+## v1.1.11 - 2017-05-09
+- changed gitter from https to http link
+
 ## v1.1.10 - 2017-05-08
 - added Gitter chat support ( fixed icon on NPM )
 
