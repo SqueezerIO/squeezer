@@ -1,4 +1,4 @@
-## v1.1.11 - 2017-05-09
+## v1.1.11 - 2017-05-12
 - changed gitter from https to http link
 
 ## v1.1.10 - 2017-05-08
