@@ -12,12 +12,12 @@ const samplesDir = `${appRoot}/lib/plugins/templates/lib/samples`;
 const destDir    = `${appRoot}/../squeezer-templates`;
 
 if (!args.template) {
-  console.log('missing template name, --template VALUE');
+  process.stdout.write('missing template name, --template VALUE');
   process.exit(1);
 }
 
 if (!args.key) {
-  console.log('missing deployment key argument, --key VALUE');
+  process.stdout.write('missing deployment key argument, --key VALUE');
   process.exit(1);
 }
 

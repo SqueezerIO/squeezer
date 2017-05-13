@@ -14,7 +14,6 @@ const CommonCliLog     = require(`${appRoot}/lib/common/cli/log`);
 const CommonCliParams  = require(`${appRoot}/lib/common/cli/params`);
 const CommonCliHelp    = require(`${appRoot}/lib/common/cli/help`);
 const CommonUtils      = require(`${appRoot}/lib/common/utils`);
-const CommonCloudsInfo = require(`${appRoot}/lib/common/clouds/info`);
 const CommonLifecycle  = require(`${appRoot}/lib/common/lifecycle`);
 const CommonVariables  = require(`${appRoot}/lib/common/variables`);
 const CommonVersion    = require(`${appRoot}/lib/common/version`);
@@ -24,41 +23,40 @@ const CommonChecksums  = require(`${appRoot}/lib/common/checksums`);
 
 class Squeezer {
   init() {
-    this.cli        = {};
-    this.cli.params = new CommonCliParams(this);
-    this.cli.error  = new CommonCliError(this);
-    this.cli.loader = new CommonCliLoader(this);
-    this.cli.log    = new CommonCliLog(this);
-    this.cli.help   = new CommonCliHelp(this);
-    this.utils      = new CommonUtils(this);
-    this.yaml       = new CommonYaml(this);
-    this.lifecycle  = new CommonLifecycle(this);
-    this.command    = new CommonCommand(this);
-    this.variables  = new CommonVariables(this);
-    this.archive    = new CommonArchiver(this);
-    this.version    = new CommonVersion(this);
-    this.config     = new CommonConfig(this);
-    this.validate   = new CommonValidate(this);
-    this.checksums  = new CommonChecksums(this);
+    this.cli       = {
+      params : new CommonCliParams(this),
+      error  : new CommonCliError(this),
+      loader : new CommonCliLoader(this),
+      log    : new CommonCliLog(this),
+      help   : new CommonCliHelp(this)
+    };
+    this.utils     = new CommonUtils(this);
+    this.yaml      = new CommonYaml(this);
+    this.lifecycle = new CommonLifecycle(this);
+    this.command   = new CommonCommand(this);
+    this.variables = new CommonVariables(this);
+    this.archive   = new CommonArchiver(this);
+    this.version   = new CommonVersion(this);
+    this.config    = new CommonConfig(this);
+    this.validate  = new CommonValidate(this);
+    this.checksums = new CommonChecksums(this);
 
     this.deploy = {};
 
-    this.clouds      = {};
-    this.clouds.info = new CommonCloudsInfo(this);
-
-    this.vars               = {};
-    this.vars.project       = {};
-    this.vars.microservices = {};
-    this.vars.hooks         = [];
-    this.vars.apiBaseUrl    = 'https://api.squeezer.io';
-    this.vars.stage         = 'dev';
-    this.vars.assets        = {
-      main          : {
-        previousChecksum : null,
-        currentChecksum  : null
-      },
-      microservices : [],
-      uploadPaths   : []
+    this.vars = {
+      project       : {},
+      microservices : {},
+      hooks         : [],
+      apiBaseUrl    : 'https://api.squeezer.io',
+      stage         : 'dev',
+      assets        : {
+        main          : {
+          previousChecksum : null,
+          currentChecksum  : null
+        },
+        microservices : [],
+        uploadPaths   : []
+      }
     };
 
     if (process.argv[2] === 'deploy') {
@@ -99,7 +97,7 @@ class Squeezer {
     }, splitPath.length);
 
     if (this.vars.project.isValid === true) {
-      const buildPath = `${this.vars.project.path}/.build`;
+      const buildPath             = `${this.vars.project.path}/.build`;
       this.vars.project.buildPath = buildPath;
       if (!fs.existsSync(buildPath)) {
         fs.mkdirSync(buildPath);
