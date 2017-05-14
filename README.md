@@ -106,3 +106,7 @@ NOTE: **Windows** users should [enable symlinks](http://answers.perforce.com/art
 ├── node_modules        Node NPM packages
 └── plugins             Project's plugins
 ```
+
+### Contributing
+
+See [contributing.md](CONTRIBUTING.md) for contribution guidelines.
