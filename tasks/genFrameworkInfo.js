@@ -3,6 +3,7 @@
 const fs       = require('fs');
 const appRoot  = require('app-root-path');
 const moment = require('moment');
+
 const settings = require(`${appRoot}/package.json`);
 
 const versionReleaseDate = moment(new Date()).format('YYYY-MM-DD');

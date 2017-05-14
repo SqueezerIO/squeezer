@@ -4,6 +4,7 @@ const appRoot         = require('app-root-path');
 const fs              = require('fs');
 const _               = require('lodash');
 const stripColorCodes = require('stripcolorcodes');
+
 const Help            = require(`${appRoot}/lib/common/cli/help`);
 const sqz             = require(`${appRoot}/bin/Squeezer`);
 
@@ -25,7 +26,7 @@ const addedCmds = [];
 const data      = {};
 const summary   = fs.readFileSync(`${appRoot}/docs/SUMMARY.md`, 'utf8');
 
-_.forEach(commands, (val, cmd) => {
+_.forEach(commands, (mainVal, cmd) => {
   const cmdNames    = cmd.split(':');
   const cmdNamesLen = cmdNames.length;
 
@@ -37,15 +38,19 @@ _.forEach(commands, (val, cmd) => {
     let hashIdentifier = null;
 
 
-    if (index === 0) {
-      command = cmdNames[0];
-    } else if (index === cmdNamesLen - 1) {
-      hashIdentifier = cmdNames.join('_');
-      command        = cmdNames.join(':');
-    } else {
-      hashIdentifier = cmdNames.slice(0, index + 1).join('_');
-      command        = cmdNames.slice(0, index + 1).join(':');
-    }
+    const init = () => {
+      if (index === 0) {
+        command = cmdNames[0];
+      } else if (index === cmdNamesLen - 1) {
+        hashIdentifier = cmdNames.join('_');
+        command        = cmdNames.join(':');
+      } else {
+        hashIdentifier = cmdNames.slice(0, index + 1).join('_');
+        command        = cmdNames.slice(0, index + 1).join(':');
+      }
+    };
+
+    init();
 
     if (addedCmds.indexOf(command) < 0) {
       output = `${startHeading}${'#'.repeat(index)}` +
@@ -62,7 +67,6 @@ _.forEach(commands, (val, cmd) => {
   });
 });
 
-// console.log(data);
 _.forEach(data, (value, key) => {
   fs.writeFileSync(`${appRoot}/docs/cli/${key}.md`, stripColorCodes(value));
 });

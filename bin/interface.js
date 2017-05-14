@@ -24,14 +24,14 @@ module.exports = (() => {
 
     load() {
       const frameworkCmdsPaths = walkSync(`${appRoot}`, { globs : ['lib/plugins/*/index.js'] })
-        .map((val) => (`${appRoot}/${val}`));
+        .map(val => (`${appRoot}/${val}`));
 
       let pluginsCmdsPaths = [];
 
       if (sqz.vars.project.isValid && sqz.vars.project.plugins
         && sqz.vars.project.plugins.length > 0) {
         pluginsCmdsPaths = sqz.vars.project.plugins
-          .map((val) => (`${sqz.vars.project.path}/${val.path}/${val.name}/index.js`));
+          .map(val => (`${sqz.vars.project.path}/${val.path}/${val.name}/index.js`));
       }
 
       const paths = _.concat(frameworkCmdsPaths, pluginsCmdsPaths);
@@ -79,34 +79,48 @@ module.exports = (() => {
 
       const helpCmdMsg = colors.yellow(`\n\n$ ${bin} ${colors.blue.bold('help')} ${args.names.join(':')}`);
 
-      _.forEach(cmdData.options, (value, key) => {
-        if (_.has(args.flags, value.flag)) {
-          sqz.cli.params.setOption(key, args.flags[value.flag]);
-        }
+      const check = (value, key) => {
         if (value.required === true) {
-
           if (!_.has(args.options, key) && !_.has(args.flags, value.flag)) {
             sqz.cli.log.error(`Missing option ${colors.green(`--${key}`)}  ${helpCmdMsg}`);
           } else if (!args.options[key] && !args.flags[value.flag]) {
             sqz.cli.log.error(`Missing option ${colors.green(`--${key}`)} ` +
               `${colors.red('value')} ${helpCmdMsg}`);
           }
-        } else {
-          if (!args.options[key] && value.defaultValue !== null) { // eslint-disable-line no-lonely-if
-            args.options[key] = value.defaultValue;
-          }
+        } else if (!args.options[key] && value.defaultValue !== null) {
+          args.options[key] = value.defaultValue;
         }
+      };
 
+      _.forEach(cmdData.options, (value, key) => {
+        if (_.has(args.flags, value.flag)) {
+          sqz.cli.params.setOption(key, args.flags[value.flag]);
+        }
         if (value.boolean && args.options[key]) {
           args.options[key] = JSON.parse(args.options[key]);
         }
-
         if (_.has(value, 'validate')) {
           if (!value.validate.fn(args.options[key])) {
             sqz.cli.log.error(`${colors.blue.bold(`--${key}`)} : ${value.validate.error}`);
           }
         }
+        check(value, key);
       });
+    }
+
+    index(args, logo) {
+      if (args.names.length === 0) {
+        const msg =
+                `${logo}\n` +
+                `* Lists all commands ${colors.green('`sqz list`')}.\n` +
+                `* Get help for a command ${colors.green('`sqz help [command]`')}.\n` +
+                `* Add ${colors.green('--debug')} to any command for debugging\n` +
+                `* Squeezer framework documentation: ${colors.cyan('docs.squeezer.io')}\n`;
+
+        sqz.cli.log.console(msg.replace(/^/gm, ' '.repeat(1)));
+
+        process.exit(0);
+      }
     }
 
     run() {
@@ -129,22 +143,11 @@ module.exports = (() => {
       let errorMsg            = `Command "${colors.green(hintCmd)}" not found  ... \n`;
       const availableHelpCmds = [];
 
-      if (args.names.length === 0) {
-        const msg =
-                `${logo}\n` +
-                `* Lists all commands ${colors.green('`sqz list`')}.\n` +
-                `* Get help for a command ${colors.green('`sqz help [command]`')}.\n` +
-                `* Add ${colors.green('--debug')} to any command for debugging\n` +
-                `* Squeezer framework documentation: ${colors.cyan('docs.squeezer.io')}\n`;
-
-        sqz.cli.log.console(msg.replace(/^/gm, ' '.repeat(1)));
-
-        process.exit(0);
-      }
+      this.index(args, logo);
 
       if (args.names[0] === 'help' && args.args.length === 0) {
         sqz.cli.log.error(
-          `Missing help command argument , please use ` +
+          'Missing help command argument , please use ' +
           `${colors.blue.bold(`\`${bin} help [command]\``)}` +
           `\n\n... or ${colors.blue.bold(`\`${bin} list\``)} to get all available commands\n`
         );
@@ -155,10 +158,11 @@ module.exports = (() => {
           if (cmd.indexOf(hintCmd) >= 0) {
             availableHelpCmds.push(cmd);
           }
+          return availableHelpCmds;
         });
 
         if (availableHelpCmds.length > 0) {
-          errorMsg += colors.green(`\nDid you mean one of these commands?\n\n`);
+          errorMsg += colors.green('\nDid you mean one of these commands?\n\n');
           errorMsg += `${' '.repeat(3)}${colors.blue.bold(availableHelpCmds.join(`\n${' '.repeat(3)}`))}`;
         }
 

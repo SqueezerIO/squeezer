@@ -50,7 +50,8 @@
     "strict": 0,
     "import/no-extraneous-dependencies": "off",
     "import/no-dynamic-require": "off",
-    "react/require-extension": "off"
+    "react/require-extension": "off",
+    "import/no-unresolved" : "off"
   },
   "globals": {
     "AnalysisView": true,
