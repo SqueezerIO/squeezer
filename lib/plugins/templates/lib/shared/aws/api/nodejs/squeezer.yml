@@ -1,6 +1,6 @@
 # PROJECT
-name: <%= name %>
-key: <%= key %>
+name: ${name}
+key: ${key}
 type: api
 
 # SQUEEZER FRAMEWORK

@@ -46,7 +46,7 @@ module.exports = () => {
 
   parallel('create projects based on all available templates', () => {
     _.forEach(templates, (template) => {
-      const cmd = `cd ${projectsBuildPath} && ${baseCommand} create --project ${template} --template ${template} --email integration-tests@squeezer.io`;
+      const cmd = `cd ${projectsBuildPath} && ${baseCommand} create --project ${template} --template ${template} --email test@squeezer.io --noChecksums true`;
       it(`creating test project ${template}\n     Running command : ${cmd}`, (done) => {
         shelltest()
           .cmd(cmd)
