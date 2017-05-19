@@ -2,7 +2,7 @@
   "name": "squeezer-cli",
   "version": "1.1.13",
   "preferGlobal": true,
-  "description": "Event-driven APIs & Web apps on microservices ... serverless ! Squeezer is a framework designed to help developers to get a better architecture on serverless zero-administration compute platforms with code that runs into [microservices](https://en.wikipedia.org/wiki/Microservices) clouds like [AWS Lambda](https://aws.amazon.com/documentation/lambda/) , [Azure Functions](https://azure.microsoft.com/en-us/services/functions/) , [Google Cloud Functions](https://cloud.google.com/functions/docs/) and [IBM OpenWhisk](https://developer.ibm.com/openwhisk/) .",
+  "description": "Event-driven APIs & Web apps on microservices, serverless ! Squeezer is a framework designed to help developers to get a better architecture on serverless zero-administration compute platforms with code that runs into [microservices](https://en.wikipedia.org/wiki/Microservices) clouds like [AWS Lambda](https://aws.amazon.com/documentation/lambda/) , [Azure Functions](https://azure.microsoft.com/en-us/services/functions/) , [Google Cloud Functions](https://cloud.google.com/functions/docs/) and [IBM OpenWhisk](https://developer.ibm.com/openwhisk/) .",
   "homepage": "https://squeezer.io/",
   "bin": {
     "sqz": "bin/bin.js",
@@ -47,7 +47,8 @@
     "url": "https://github.com/SqueezerIO/squeezer.git"
   },
   "scripts": {
-    "test": "mocha ./test/runner.js",
+    "test-unit": "mocha ./test/unit-runner.js",
+    "test-integration": "docker rm squeezer-test  >/dev/null 2>/dev/null ; docker run -ti --name squeezer-test -v `pwd`:/app -v $HOME/.aws:/root/.aws squeezerio/test node /app/node_modules/.bin/mocha /app/test/integration-runner.js --timeout 3600000",
     "eslint": "eslint . --cache",
     "jsinspect": "jsinspect -t 30 -i ./bin/ ./lib/ ./test/ --ignore './lib/plugins/serve/public|./lib/plugins/templates'",
     "gendocs": "rm -rf `pwd`/docs/README.md && ln -s `pwd`/README.md `pwd`/docs/README.md && rm -rf `pwd`/docs/docs/gitbook && mkdir -p `pwd`/docs/docs && ln -s `pwd`/docs/gitbook `pwd`/docs/docs/gitbook && gulp gen-classes-docs && node tasks/genCliDocs && node tasks/genFrameworkInfo.js && cd docs && gitbook build",
@@ -98,6 +99,8 @@
     "gulp-documentation": "^3.2.0",
     "jsinspect": "^0.8.0",
     "mocha": "^3.0.2",
+    "mocha.parallel": "^0.15.2",
+    "shelltest": "^2.0.0",
     "stripcolorcodes": "^0.1.0",
     "yargs": "^3.32.0"
   }
