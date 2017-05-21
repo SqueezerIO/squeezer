@@ -47,7 +47,7 @@
     "url": "https://github.com/SqueezerIO/squeezer.git"
   },
   "scripts": {
-    "test-unit": "mocha ./test/unit-runner.js",
+    "test-units": "mocha ./test/units-runner.js",
     "test-integration": "docker rm squeezer-test  >/dev/null 2>/dev/null ; docker run -ti --name squeezer-test -v `pwd`:/app -v $HOME/.aws:/root/.aws squeezerio/test node /app/node_modules/.bin/mocha /app/test/integration-runner.js --timeout 3600000",
     "eslint": "eslint . --cache",
     "jsinspect": "jsinspect -t 30 -i ./bin/ ./lib/ ./test/ --ignore './lib/plugins/serve/public|./lib/plugins/templates'",

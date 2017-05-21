@@ -12,9 +12,9 @@ Please note we have a code of conduct, please follow it in all your interactions
 
 ## Tests
 
-### Unit
+### Units
 
-- `npm run test-unit`
+- `npm run test-units`
 
 ### Integration
 
