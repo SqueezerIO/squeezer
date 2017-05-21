@@ -1,7 +1,7 @@
 'use strict';
 
 import RaisedButton from 'material-ui/RaisedButton';
-import { Theme } from '../../../../../../../web/assets/js/components/theme';
+import { Theme } from '../../../../../../../web/assets/jsx/components/theme';
 
 const style = {
   margin : 5
