@@ -5,5 +5,5 @@
     - '--colors'
     - '--config'
     - '${projectPath}/lib/webpack/config.web.main.dev.js'
-    - '${source}/jsx/main.jsx'
+    - '${source}/js/main.js'
     - '${target}/js/main.js'

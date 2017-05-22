@@ -4,5 +4,5 @@
     - '-p'
     - '--config'
     - '${projectPath}/lib/webpack/config.web.main.prod.js'
-    - '${source}/jsx/main.jsx'
+    - '${source}/js/main.js'
     - '${target}/js/main.js'
