@@ -6,8 +6,12 @@ node_js:
 services:
   - docker
 
+before_install:
+  - pip install --user awscli
+  - export PATH=$PATH:$HOME/.local/bin
+
 install:
-  - npm install
+  - travis_retry npm install
   - npm install aws-sdk -g
 
 script:
