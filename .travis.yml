@@ -16,8 +16,8 @@ install:
 script:
   - npm run eslint
   - npm run jsinspect
-  - aws configure --profile squeezer-test set aws_access_key_id "$aws_access_key_id"
-  - aws configure --profile squeezer-test set aws_secret_access_key "$aws_secret_access_key"
+  - aws configure --profile squeezer-test set aws_access_key_id $aws_access_key_id
+  - aws configure --profile squeezer-test set aws_secret_access_key $aws_secret_access_key
   - aws configure --profile squeezer-test set region us-east-1
   - aws configure --profile squeezer-test set output json
   - ls -al $HOME/.aws
