@@ -107,4 +107,4 @@ NOTE: **Windows** users should [enable symlinks](http://answers.perforce.com/art
 
 ### Contributing
 
-See [contributing.md](CONTRIBUTING.md) for contribution guidelines.
+See [contributing.md](CONTRIBUTING.md) for contribution guidelines
