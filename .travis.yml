@@ -12,7 +12,6 @@ before_install:
 
 install:
   - travis_retry npm install
-  - npm install aws-sdk -g
 
 script:
   - npm run eslint
@@ -20,5 +19,8 @@ script:
   - aws configure --profile squeezer-test set aws_access_key_id $aws_access_key_id
   - aws configure --profile squeezer-test set aws_secret_access_key $aws_secret_access_key
   - aws configure --profile squeezer-test set region us-east-1
+  - ls -al $HOME/.aws
+  - cat $HOME/.aws/credentials
+  - cat $HOME/.aws/config
   - npm run test-units
   - npm run test-integration
