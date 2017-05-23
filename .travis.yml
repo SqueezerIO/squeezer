@@ -9,6 +9,8 @@ services:
 before_install:
   - pip install --user awscli
   - export PATH=$PATH:$HOME/.local/bin
+  - travis encrypt aws_access_key_id=$aws_access_key_id --add --override
+  - travis encrypt aws_secret_access_key=$aws_secret_access_key --add --override
 
 install:
   - travis_retry npm install
