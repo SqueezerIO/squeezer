@@ -1,14 +1,17 @@
 FROM ubuntu:16.04
 
-RUN apt-get update  && apt-get install -y --no-install-recommends \
+RUN apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates \
     apt-transport-https \
     curl \
+    ntpd -gq \
     xz-utils \
     unzip \
     bzip2 \
     wget \
     && rm -rf /var/lib/apt/lists/*
+
+RUN service ntp start
 
 ENV NPM_CONFIG_LOGLEVEL info
 

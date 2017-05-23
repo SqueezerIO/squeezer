@@ -48,7 +48,7 @@
   },
   "scripts": {
     "test-units": "mocha ./test/units-runner.js",
-    "test-integration": "docker rm squeezer-test  >/dev/null 2>/dev/null ; docker run -ti --name squeezer-test -v `pwd`:/app -v $HOME/.aws:/root/.aws squeezerio/test node /app/node_modules/.bin/mocha /app/test/integration-runner.js --timeout 3600000",
+    "test-integration": "docker rm squeezer-test  >/dev/null 2>/dev/null ; docker run -ti --privileged --name squeezer-test -v `pwd`:/app -v $HOME/.aws:/root/.aws squeezerio/test node /app/node_modules/.bin/mocha /app/test/integration-runner.js --timeout 3600000",
     "eslint": "eslint . --cache",
     "jsinspect": "jsinspect -t 30 -i ./bin/ ./lib/ ./test/ --ignore './lib/plugins/serve/public'",
     "gendocs": "rm -rf `pwd`/docs/README.md && ln -s `pwd`/README.md `pwd`/docs/README.md && rm -rf `pwd`/docs/docs/gitbook && mkdir -p `pwd`/docs/docs && ln -s `pwd`/docs/gitbook `pwd`/docs/docs/gitbook && gulp gen-classes-docs && node tasks/genCliDocs && node tasks/genFrameworkInfo.js && cd docs && gitbook build",
