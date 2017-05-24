@@ -89,7 +89,7 @@ NOTE: **Windows** users should [enable symlinks](http://answers.perforce.com/art
 |    | cmd | description  |
 |----|-----|--------------|
 | 1. | **sqz compile --production**  |  Compile microservices |
-| 2. | **sqz deploy**  | Deploy your app into the cloud provider<br>*Note*: initial deployments can take longer <= **40 mins** |
+| 2. | **sqz deploy --stage dev**  | Deploy your app into the cloud provider<br>*Note*: initial deployments can take longer <= **40 mins** |
 
 
 ### Project Structure
