@@ -7,6 +7,7 @@
 ### Chat : [chat.squeezer.io](http://chat.squeezer.io)
 
 [![Build Status](https://travis-ci.org/SqueezerIO/squeezer.svg?branch=master)](https://travis-ci.org/SqueezerIO/squeezer)
+[![Coverage Status](https://coveralls.io/repos/github/SqueezerIO/squeezer/badge.svg?branch=master)](https://coveralls.io/github/SqueezerIO/squeezer?branch=master)
 [![npm version](https://badge.fury.io/js/squeezer-cli.svg)](https://badge.fury.io/js/squeezer-cli)
 [![Join the chat at https://gitter.im/SqueezerIO/squeezer](https://badges.gitter.im/SqueezerIO/squeezer.svg)](https://gitter.im/SqueezerIO/squeezer?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
