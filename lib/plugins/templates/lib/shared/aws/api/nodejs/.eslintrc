@@ -1,8 +1,9 @@
 {
   "extends": "airbnb",
-  "plugins": ["eslint-plugin-import"],
+  "plugins": [],
   "env": {
     "node": true,
+    "browser": true,
     "mocha": true
   },
   "rules": {
@@ -30,26 +31,31 @@
       2,
       30
     ],
+    "react/react-in-jsx-scope" : 0,
+    "react/jsx-filename-extension" : 0,
     "arrow-body-style": 0,
-    "func-names": "off",
+    "consistent-return": 0,
     "no-shadow-restricted-names": 2,
-    "no-undef": 2,
+    "no-undef": 0,
     "no-use-before-define": 2,
-    "import/prefer-default-export" : 0,
-    "import/no-dynamic-require" : 0,
     "radix": 2,
     "semi": 2,
     "space-infix-ops": 2,
     "key-spacing": 0,
     "no-multi-spaces": 0,
-    "object-shorthand": [2, "consistent"],
+    "import/extensions" : 0,
+    "object-shorthand": [
+      2,
+      "consistent"
+    ],
     "no-param-reassign": 0,
     "prefer-rest-params": 0,
     "class-methods-use-this": 0,
     "strict": 0,
     "import/no-extraneous-dependencies": "off",
-    "import/no-unresolved": 2,
+    "import/no-dynamic-require": "off",
     "react/require-extension": "off",
+    "import/no-unresolved" : "off"
   },
   "globals": {
     "AnalysisView": true,

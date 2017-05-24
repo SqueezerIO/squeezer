@@ -1,5 +1,3 @@
-# Squeezer Framework [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
-
 ![Squeezer Intro](docs/gitbook/images/introduction.png)
 
 ## [Watch video](https://www.youtube.com/watch?v=DfRnJOZvtJg&t=3s)
@@ -8,6 +6,9 @@
 ### Docs : [docs.squeezer.io](https://docs.squeezer.io)
 ### Chat : [chat.squeezer.io](http://chat.squeezer.io)
 
+[![Build Status](https://travis-ci.org/SqueezerIO/squeezer.svg?branch=master)](https://travis-ci.org/SqueezerIO/squeezer)
+[![Coverage Status](https://coveralls.io/repos/github/SqueezerIO/squeezer/badge.svg?branch=master)](https://coveralls.io/github/SqueezerIO/squeezer?branch=master)
+[![npm version](https://badge.fury.io/js/squeezer-cli.svg)](https://badge.fury.io/js/squeezer-cli)
 [![Join the chat at https://gitter.im/SqueezerIO/squeezer](https://badges.gitter.im/SqueezerIO/squeezer.svg)](https://gitter.im/SqueezerIO/squeezer?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ![Quick Getting Started](docs/gitbook/images/getting-started-tutorial-quick.gif)
@@ -57,11 +58,11 @@ like on any other trivial NodeJS project
 
 You can get various templates for creating a quick project stub :
 
-| template | description  |
-|-----|--------------|
+| template | description | |
+|-----|--------------|-------|
 |aws-api-nodejs|AWS generic API Hello World template
 |aws-api-nodejs-rest|AWS NodeJS REST API template + DynamoDB + Swagger support
-|aws-web-nodejs-reactjs|AWS NodeJS WebApp template + Pug ( ex-Jade ) + ReactJS support + Material UI + Bootstrap 3 styling
+|aws-web-nodejs-reactjs|AWS NodeJS WebApp template + Pug ( ex-Jade ) + ReactJS support + Material UI + Bootstrap 3 styling|[demo](https://dg3eevr06b.execute-api.us-east-1.amazonaws.com/dev)
 
 
 ### Getting started
@@ -91,7 +92,7 @@ NOTE: **Windows** users should [enable symlinks](http://answers.perforce.com/art
 |    | cmd | description  |
 |----|-----|--------------|
 | 1. | **sqz compile --production**  |  Compile microservices |
-| 2. | **sqz deploy**  | Deploy your app into the cloud provider<br>*Note*: initial deployments can take longer <= **40 mins** |
+| 2. | **sqz deploy --stage dev**  | Deploy your app into the cloud provider<br>*Note*: initial deployments can take longer <= **40 mins** |
 
 
 ### Project Structure
@@ -109,4 +110,4 @@ NOTE: **Windows** users should [enable symlinks](http://answers.perforce.com/art
 
 ### Contributing
 
-See [contributing.md](CONTRIBUTING.md) for contribution guidelines.
+See [contributing.md](CONTRIBUTING.md) for contribution guidelines

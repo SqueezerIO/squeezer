@@ -10,6 +10,18 @@ Please note we have a code of conduct, please follow it in all your interactions
 1. Lock down dependency versions `npm shrinkwrap`
 2. TravisCI will trigger linter check, js duplicate code scan and integration tests
 
+## Tests
+
+### Units
+
+- `npm run test-units`
+
+### Integration
+
+- Please make sure that you have [Docker](https://docs.docker.com/engine/installation/) installed
+- [Configure an AWS profile](https://docs.squeezer.io/clouds/aws/aws_profile.html) named `squeezer-test` 
+- `npm run test-integration`
+
 ## Code of Conduct
 
 ### Our Pledge

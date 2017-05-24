@@ -1,0 +1,32 @@
+language: node_js
+
+node_js:
+  - "6"
+
+services:
+  - docker
+
+before_install:
+  - pip install --user awscli
+  - export PATH=$PATH:$HOME/.local/bin
+
+install:
+  - travis_retry npm install
+
+script:
+  - npm run eslint
+  - npm run jsinspect
+  - aws configure --profile squeezer-test set aws_access_key_id $aws_access_key_id
+  - aws configure --profile squeezer-test set aws_secret_access_key $aws_secret_access_key
+  - aws configure --profile squeezer-test set region us-east-1
+  - aws configure --profile squeezer-test set output json
+  - npm run test-units
+  - npm run test-integration
+
+notifications:
+  webhooks:
+    urls:
+      - https://webhooks.gitter.im/e/3c87287517b9672eb7d9
+    on_success: change
+    on_failure: always
+    on_start: never
