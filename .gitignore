@@ -17,3 +17,9 @@ test.js
 docs/_book
 docs/README.md
 docs/docs
+
+# coverage
+
+coverage/
+lib-cov/
+coverage.json

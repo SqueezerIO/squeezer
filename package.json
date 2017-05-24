@@ -47,7 +47,7 @@
     "url": "https://github.com/SqueezerIO/squeezer.git"
   },
   "scripts": {
-    "test-units": "mocha ./test/units-runner.js",
+    "test-units": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha test/units-runner.js --report lcovonly -- -R spec",
     "test-integration": "docker rm squeezer-test  >/dev/null 2>/dev/null ; docker run -ti --privileged --name squeezer-test -v `pwd`:/app -v $HOME/.aws:/root/.aws squeezerio/test node /app/node_modules/.bin/mocha /app/test/integration-runner.js --timeout 3600000",
     "eslint": "eslint . --cache",
     "jsinspect": "jsinspect -t 30 -i ./bin/ ./lib/ ./test/ --ignore './lib/plugins/serve/public'",
@@ -98,8 +98,10 @@
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.10.0",
     "gulp-documentation": "^3.2.0",
+    "istanbul": "^0.4.5",
     "jsinspect": "^0.8.0",
     "mocha": "^3.0.2",
+    "mocha-lcov-reporter": "^1.3.0",
     "mocha.parallel": "^0.15.2",
     "shelltest": "^2.0.0",
     "stripcolorcodes": "^0.1.0",
