@@ -14,6 +14,7 @@ install:
   - travis_retry npm install
 
 script:
+  - set -e
   - npm run eslint
   - npm run jsinspect
   - aws configure --profile squeezer-test set aws_access_key_id $aws_access_key_id
