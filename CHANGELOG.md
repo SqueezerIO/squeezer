@@ -1,4 +1,4 @@
-## v1.1.12 - 2017-05-12
+## v1.1.13 - 2017-05-12
 - aws profile config issue
 - create project steps
 
