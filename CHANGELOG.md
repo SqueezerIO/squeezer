@@ -1,4 +1,8 @@
 ## v1.1.12 - 2017-05-12
+- aws profile config issue
+- create project steps
+
+## v1.1.12 - 2017-05-12
 - npm issues on listing html images 
 
 ## v1.1.11 - 2017-05-12
