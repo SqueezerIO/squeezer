@@ -7,7 +7,7 @@
 ### Chat : [chat.squeezer.io](http://chat.squeezer.io)
 
 [![Build Status](https://travis-ci.org/SqueezerIO/squeezer.svg?branch=master)](https://travis-ci.org/SqueezerIO/squeezer)
-[![Coverage Status](https://coveralls.io/repos/github/SqueezerIO/squeezer/badge.svg?branch=master)](https://coveralls.io/github/SqueezerIO/squeezer?branch=master)
+<!--[![Coverage Status](https://coveralls.io/repos/github/SqueezerIO/squeezer/badge.svg?branch=master)](https://coveralls.io/github/SqueezerIO/squeezer?branch=master)-->
 [![npm version](https://badge.fury.io/js/squeezer-cli.svg)](https://badge.fury.io/js/squeezer-cli)
 [![Join the chat at https://gitter.im/SqueezerIO/squeezer](https://badges.gitter.im/SqueezerIO/squeezer.svg)](https://gitter.im/SqueezerIO/squeezer?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
@@ -74,9 +74,9 @@ NOTE: **Windows** users should [enable symlinks](http://answers.perforce.com/art
 |    | cmd | description  |
 |----|-----|--------------|
 | 1. | **npm install -g squeezer-cli**  |  Install Squeezer CLI |
-| 2. | [Configure AWS profile](https://docs.squeezer.io/clouds/aws/aws_profile.html)  |  AWS Profile |
-| 3. | **sqz create --project my-first-project --template aws-api-nodejs --email you@example.org**  |  Create a project |
-| 4. | **cd my-first-project**  |  Switch to the project's directory |
+| 2. | **sqz create --project my-first-project --template aws-api-nodejs --email you@example.org**  |  Create a project |
+| 3. | **cd my-first-project**  |  Switch to the project's directory |
+| 4. | [Configure AWS profile](https://docs.squeezer.io/clouds/aws/aws_profile.html)  |  AWS Profile |
 | 5. | **sqz install**  |  Install all requirements |
 | 5. | **sqz compile**  |  Compile microservices |
 | 7. | **sqz serve**  |  Simulates project on your local microservices platform<br>*NOTE* : Live reload enabled by default |

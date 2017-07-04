@@ -25,5 +25,5 @@ Default output format [None]: json
 #### Step 3 - Initiate the AWS profile for your Squeezer project
 
 ```
-$ sqz config --setting aws-profile --value my-first-project
+$ sqz config --setting aws_profile --value my-first-project
 ```

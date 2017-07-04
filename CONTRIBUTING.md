@@ -14,7 +14,7 @@ Please note we have a code of conduct, please follow it in all your interactions
 
 ### Units
 
-- `npm run test-units`
+- `npm run test`
 
 ### Integration
 
