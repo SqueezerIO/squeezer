@@ -5,13 +5,21 @@ directly from your project's directory stored in `PROJECT_DIR/lib/hooks/commands
 separating your project functionality as much as possible, and use Squeezer framework only as a trigger .
 
 ```
-PROJECT_DIR/lib/hooks/commands/
-├── deploy.compile.yml    - compiles source code before a cloud deployment
-├── project.install.yml   - installs projects dependencies on project creation or project install command
-├── run.compile.yml       - compiles source code before running a function
-├── run.execute.yml       - executes your desired function
-├── serve.execute.yml     - commands to run in order to serve/watch your project
-├── test.compile.yml      - compiles source code before running tests
-├── test.execute.yml      - executes tests
-└── test.prepare.yml      - prepare your project before compiling tests
+PROJECT_DIR/lib/hooks/
+└── commands
+    ├── compile
+    │   ├── development
+    │   │   └── microservice.yml  - compile microservices for local development
+    │   └── production
+    │       └── microservice.yml  - compile microservices for cloud deployments 
+    ├── install
+    │   ├── microservice.yml      - install packages required for each microservice
+    │   └── project.yml           - install project required packages
+    ├── run
+    │   └── execute.function.yml  - run a function locally
+    ├── test
+    │   └── execute.yml           - run integration tests for a microservice
+    └── update
+        ├── microservice.yml      - update packages for each microservice
+        └── project.yml           - update project packages
 ```

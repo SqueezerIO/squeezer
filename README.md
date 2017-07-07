@@ -61,7 +61,7 @@ You can get various templates for creating a quick project stub :
 | template | description | |
 |-----|--------------|-------|
 |aws-api-nodejs|AWS generic API Hello World template
-|aws-api-nodejs-rest|AWS NodeJS REST API template + DynamoDB + Swagger support
+|aws-api-nodejs-rest|AWS NodeJS REST API template + DynamoDB + Swagger support|[demo](https://s3.amazonaws.com/squeezer-projects/swagger-ui/index.html?url=https://s3.amazonaws.com/squeezer-projects/api-docs.json)
 |aws-web-nodejs-reactjs|AWS NodeJS WebApp template + Pug ( ex-Jade ) + ReactJS support + Material UI + Bootstrap 3 styling|[demo](https://dg3eevr06b.execute-api.us-east-1.amazonaws.com/dev)
 
 
@@ -91,7 +91,7 @@ NOTE: **Windows** users should [enable symlinks](http://answers.perforce.com/art
 
 |    | cmd | description  |
 |----|-----|--------------|
-| 1. | **sqz compile --production**  |  Compile microservices |
+| 1. | **sqz compile --production**  |  Compile microservices for cloud deployments |
 | 2. | **sqz deploy --stage dev**  | Deploy your app into the cloud provider<br>*Note*: initial deployments can take longer <= **40 mins** |
 
 
