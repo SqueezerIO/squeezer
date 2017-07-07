@@ -1,4 +1,7 @@
-## v1.1.13 - 2017-05-12
+## v1.1.14 - 2017-07-06
+- fixed CORS issues
+
+## v1.1.13 - 2017-07-01
 - aws profile config issue
 - create project steps
 

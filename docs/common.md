@@ -128,16 +128,6 @@ Return CLI params
 
 Returns **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
 
-## Settings
-
-Class representing Squeezer  microservices clouds information
-
-## 
-
-Returns clouds information data
-
-Returns **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
-
 ## Command
 
 Class for running spawning commands

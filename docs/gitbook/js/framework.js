@@ -1,3 +1,3 @@
 
-window.frameworkVersion = '1.1.12';
-window.frameworkVersionReleaseDate = '2017-05-12';
+window.frameworkVersion = '1.1.13';
+window.frameworkVersionReleaseDate = '2017-07-04';
