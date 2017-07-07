@@ -1,5 +1,6 @@
 ## v1.1.14 - 2017-07-06
 - fixed CORS issues
+- added "Edit On Github" docs support
 
 ## v1.1.13 - 2017-07-01
 - aws profile config issue
