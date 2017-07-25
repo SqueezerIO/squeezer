@@ -14,6 +14,8 @@ Feature Request Template ------------------------------------------
 
 ##### Feature Request:
 
+##### Acceptance Criteria:
+
 ##### Benefits:
 
 * Benefit 1...
