@@ -28,7 +28,8 @@
 ### Clouds
 
 * [AWS](clouds/aws/aws.md)
-  * [Setting up a new profile](clouds/aws/aws_profile.md)
+  * [Installation](clouds/aws/installation.md)
+  * [Setting up credentials](clouds/aws/credentials.md)
   * [CloudFormation](clouds/aws/cloudformation.md)
   * [Events](clouds/aws/events/introduction.md)
     * [API Gateway](clouds/aws/events/api_gateway.md)
@@ -40,6 +41,11 @@
     * [SNS](clouds/aws/events/sns.md)
     * [IoT](clouds/aws/events/iot.md)
     * [Alexa Skills](clouds/aws/events/alexa.md)
+* [Azure](clouds/azure/azure.md)
+  * [Installation](clouds/azure/installation.md)
+  * [Setting up credentials](clouds/azure/credentials.md)
+  * [ARM templates](clouds/azure/arm_templates.md)
+
       
 --
 
@@ -64,7 +70,6 @@
 * [Compile](cli/compile.md)
 * [Config](cli/config.md)
 * [Create](cli/create.md)
-* [Deploy](cli/deploy.md)
 * [Fileutils](cli/fileutils.md)
     * [Copy](cli/fileutils.md#fileutils_copy)
     * [Empty](cli/fileutils.md#fileutils_empty)
@@ -75,11 +80,7 @@
     * [Sync](cli/fileutils.md#fileutils_sync)
 * [Help](cli/help.md)
 * [Install](cli/install.md)
-* [Invoke](cli/invoke.md)
 * [List](cli/list.md)
-* [Logs](cli/logs.md)
-* [Run](cli/run.md)
-* [Serve](cli/serve.md)
 * [Templates](cli/templates.md)
 * [Test](cli/test.md)
 * [Update](cli/update.md)

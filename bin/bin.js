@@ -5,10 +5,8 @@
 
 'use strict';
 
-const appRoot = require('app-root-path');
-
-const Err = require(`${appRoot}/lib/common/cli/error`);
-const pkg = require(`${appRoot}/package.json`);
+const Err = require('../lib/common/cli/error');
+const pkg = require('../package.json');
 
 const err = new Err();
 
@@ -21,11 +19,11 @@ process.on('uncaughtException', e => displayError(e));
 process.on('unhandledRejection', e => displayError(e));
 
 try {
-  const sqz = require(`${appRoot}/bin/Squeezer`);
+  const sqz = require('./Squeezer');
 
   sqz.init();
 
-  const CLI            = require(`${appRoot}/bin/cli`);
+  const CLI            = require('./cli');
   const updateNotifier = require('update-notifier');
 
   updateNotifier({ pkg }).notify();

@@ -10,7 +10,7 @@ PROJECT_DIR/lib/hooks/
     ├── compile
     │   ├── development
     │   │   └── microservice.yml  - compile microservices for local development
-    │   └── production
+    │   └── cloud
     │       └── microservice.yml  - compile microservices for cloud deployments 
     ├── install
     │   ├── microservice.yml      - install packages required for each microservice

@@ -1,6 +1,0 @@
-- identifier : 'run:compile'
-  path : 'lib/compile'
-  function : 'run'
-- identifier : 'run:run'
-  path : 'lib'
-  function : 'run'

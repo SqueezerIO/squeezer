@@ -128,6 +128,87 @@ Return CLI params
 
 Returns **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
 
+## this.sqz.cloud.storage.uploadDir
+
+Uploads a directory to the Cloud's storage
+
+**Parameters**
+
+-   `localPath` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** local path "/tmp/source_dir"
+-   `remotePath` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** remote path "upload/path"
+-   `params` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
+
+**Examples**
+
+```javascript
+this.sqz.cloud.storage.uploadDir('/tmp/source_dir', 'upload/path', {
+    public : true, // uploads the file as a public access URL
+    sync   : true  // synchronize directory
+}).then(() => {
+    // file successfully uploaded
+});
+```
+
+Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
+
+## this.sqz.cloud.storage.getPublicUrl
+
+Retrieve Cloud storage public URL
+
+**Examples**
+
+```javascript
+this.sqz.cloud.storage.getPublicUrl().then((res) => {
+    console.log(res.publicUrl);
+});
+```
+
+Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
+
+## this.sqz.cloud.storage.removeFile
+
+Removes a file from to the Cloud's storage
+
+**Parameters**
+
+-   `remotePath` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** remote path "upload/path"
+
+**Examples**
+
+```javascript
+this.sqz.cloud.storage.removeFile(remotePath).then(() => {
+    // file successfully removed
+});
+```
+
+Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
+
+## Cloud
+
+Class that manages Cloud operations
+
+## this.sqz.cloud.storage.uploadFile
+
+Uploads a file to the Cloud's storage
+
+**Parameters**
+
+-   `localPath` **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** local file path "/tmp/file.zip"
+-   `remotePath` **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** remote file path "upload/path/file.zip"
+-   `params` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
+
+**Examples**
+
+```javascript
+this.sqz.cloud.storage.uploadFile('/tmp/file.zip', 'upload/path/file.zip', {
+    public : true // uploads the file as a public access URL
+}).then(() => {
+    // file successfully uploaded
+});
+```
+
+Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
+
 ## Command
 
 Class for running spawning commands
@@ -176,13 +257,56 @@ Run each event from the lifecycle
 
 -   `lifecycle` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** lifecycle array
 
+## Express
+
+Class that serves a Squeezer project
+
+### run
+
+Start the Node Express server
+
+**Parameters**
+
+-   `callback`  
+
+### find
+
+Find a function's HTTP event that matches to the current requested URL
+
+**Parameters**
+
+-   `url`  http request url
+-   `method`  http method
+
+## loadMicroservices
+
+Loads available microservices from the current project
+
+## Livereload
+
+Class that serves a Squeezer project
+
+## Watcher
+
+Class that serves a Squeezer project
+
+### init
+
+initialize the file watcher
+
+### getFileDeps
+
+Get deep file inclusions for a specific file
+
+**Parameters**
+
+-   `file`  
+
+Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** 
+
 ## Utilities
 
 Class that manages some Squeezer utilities
-
-## this.sqz.utils.aws
-
-Returns AWS SDK instance
 
 ## this.sqz.utils.bluebird
 
@@ -222,6 +346,10 @@ Check if Node defined project's platform it's compatible with the current runtim
 
 Class that manages global CLI variables
 
+## this.sqz.variables.get
+
+Returns all available variables
+
 ## this.sqz.variables.getStage
 
 Returns current selected stage
@@ -242,21 +370,21 @@ Returns all available microservices in the current project
 
 Returns project's hooks
 
-## sqz.tasks.version
+## this.sqz.variables.getAppBaseUrl
+
+Returns deployed app base url
+
+## Version
 
 Class which builds an Object for returning local version information  .
 
-## get
+## this.sqz.version.get
 
-Return current version information
+Returns framework version information
 
-Returns **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
+## this.sqz.version.msg
 
-## msg
-
-Return markdown formatted version message
-
-Returns **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
+Returns framework  markdown version information
 
 ## YAML
 

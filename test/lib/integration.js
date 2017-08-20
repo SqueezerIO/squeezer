@@ -2,7 +2,6 @@
 
 const fs        = require('fs');
 const fsExtra   = require('fs-extra');
-const appRoot   = require('app-root-path');
 const shelltest = require('shelltest');
 const _         = require('lodash');
 const colors    = require('colors');
@@ -10,13 +9,13 @@ const parallel  = require('mocha.parallel');
 
 module.exports = () => {
   const baseCommand       = 'sqz';
-  const templates         = fs.readdirSync(`${appRoot}/lib/plugins/templates/lib/samples`);
+  const templates         = fs.readdirSync('../../lib/plugins/templates/lib/samples');
   const awsTestProfile    = 'squeezer-test';
   const projectsBuildPath = '/tmp/projects';
 
   fsExtra.removeSync(projectsBuildPath);
   fsExtra.ensureDirSync(projectsBuildPath);
-  fsExtra.ensureSymlinkSync(`${appRoot}/bin/bin.js`, '/usr/bin/sqz');
+  fsExtra.ensureSymlinkSync('../../bin/bin.js', '/usr/bin/sqz');
 
   const shtest = (cmd, done, regex) => {
     const cb = (err, stdout, stderr) => {
@@ -82,8 +81,8 @@ module.exports = () => {
     testTemplates(cmd, /Compiled !/);
   });
 
-  parallel('production compile all projects', () => {
-    const cmd = `cd ${projectsBuildPath}/#template && ${baseCommand} compile --production`;
+  parallel('cloud compile all projects', () => {
+    const cmd = `cd ${projectsBuildPath}/#template && ${baseCommand} compile --cloud`;
     testTemplates(cmd, /Compiled !/);
   });
 

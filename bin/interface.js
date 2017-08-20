@@ -1,14 +1,14 @@
 /**
  * CLI manager
  */
-const appRoot = require('app-root-path');
 
-const sqz      = require(`${appRoot}/bin/Squeezer`);
+const sqz      = require('./Squeezer');
+const fs       = require('fs');
 const colors   = require('colors/safe');
 const _        = require('lodash');
 const walkSync = require('walk-sync');
 
-const settings = require(`${appRoot}/package.json`);
+const settings = require('../package.json');
 const bin      = Object.keys(settings.bin)[0];
 
 /* eslint no-param-reassign: 0, no-shadow: 0, prefer-template : 0 */
@@ -23,15 +23,19 @@ module.exports = (() => {
     }
 
     load() {
-      const frameworkCmdsPaths = walkSync(`${appRoot}`, { globs : ['lib/plugins/*/index.js'] })
-        .map(val => (`${appRoot}/${val}`));
+      const frameworkCmdsPaths = walkSync(`${__dirname}/../`, { globs : ['lib/plugins/*/index.js'] })
+        .map(val => (`../${val}`));
 
       let pluginsCmdsPaths = [];
 
       if (sqz.vars.project.isValid && sqz.vars.project.plugins
         && sqz.vars.project.plugins.length > 0) {
-        pluginsCmdsPaths = sqz.vars.project.plugins
-          .map(val => (`${sqz.vars.project.path}/${val.path}/${val.name}/index.js`));
+        _.forEach(sqz.vars.project.plugins, (val) => {
+          const pluginPath = `${sqz.vars.project.path}/${val.path}/${val.name}/index.js`;
+          if (fs.existsSync(pluginPath)) {
+            pluginsCmdsPaths.push(pluginPath);
+          }
+        });
       }
 
       const paths = _.concat(frameworkCmdsPaths, pluginsCmdsPaths);

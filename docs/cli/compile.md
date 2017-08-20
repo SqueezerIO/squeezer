@@ -16,12 +16,10 @@
     value
                        Compiles only a specific microservice
  
-    --production / -p    enable production compiling default is development (optional)
+    --cloud / -p         enable cloud compiling, default is development (optional)
  
 
  Examples:
 
     $ sqz compile 
-    $ sqz compile --stage dev --region us-east-1
-    $ sqz compile --force
-    $ sqz compile --microservice my-first-microservice
+    $ sqz compile --cloud
