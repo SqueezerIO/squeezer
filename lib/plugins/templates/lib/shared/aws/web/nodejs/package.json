@@ -5,6 +5,8 @@
     "jsinspect": "jsinspect -t 30 -i ./lib/ ./microservices/"
   },
   "dependencies": {
+    "squeezer-serve" : "^0.0.1",
+    "squeezer-aws": "^0.0.1",
     "bootstrap-sass": "^3.3.7",
     "material-ui": "^0.17.1",
     "react": "^15.5.0",

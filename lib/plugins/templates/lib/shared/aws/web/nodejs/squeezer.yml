@@ -8,10 +8,6 @@ framework:
   name: squeezer
   version: ^${version}
 
-# CLOUD
-cloud:
- name: aws
-
 # LANGUAGE PLATFORM
 runtime:
   name: 'nodejs'
@@ -34,6 +30,7 @@ env:
 #    GLOBAL_VAR3: hello prod 1
 
 # PLUGINS
-#plugins:
-#  - name: my-first-plugin
-#    path: plugins
+plugins:
+  - name: squeezer-serve
+    path: node_modules
+

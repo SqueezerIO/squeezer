@@ -4,7 +4,11 @@
     "eslint": "eslint .",
     "jsinspect": "jsinspect -t 30 -i ./lib/ ./microservices/"
   },
-  "dependencies": {},
+  "dependencies": {
+    "squeezer-serve" : "^0.0.1",
+    "squeezer-aws": "^0.0.1",
+    "squeezer-swagger": "^0.0.1"
+  },
   "devDependencies": {
     "babel-core": "^6.24.1",
     "babel-loader": "^6.4.1",

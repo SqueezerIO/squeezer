@@ -1,25 +1,24 @@
 'use strict';
 
-const appRoot = require('app-root-path');
 const _       = require('lodash');
 const colors  = require('colors');
 const fs      = require('fs');
 
-const CommonArchiver   = require(`${appRoot}/lib/common/archiver`);
-const CommonYaml       = require(`${appRoot}/lib/common/yaml`);
-const CommonCommand    = require(`${appRoot}/lib/common/command`);
-const CommonCliError   = require(`${appRoot}/lib/common/cli/error`);
-const CommonCliLoader  = require(`${appRoot}/lib/common/cli/loader`);
-const CommonCliLog     = require(`${appRoot}/lib/common/cli/log`);
-const CommonCliParams  = require(`${appRoot}/lib/common/cli/params`);
-const CommonCliHelp    = require(`${appRoot}/lib/common/cli/help`);
-const CommonUtils      = require(`${appRoot}/lib/common/utils`);
-const CommonLifecycle  = require(`${appRoot}/lib/common/lifecycle`);
-const CommonVariables  = require(`${appRoot}/lib/common/variables`);
-const CommonVersion    = require(`${appRoot}/lib/common/version`);
-const CommonConfig     = require(`${appRoot}/lib/common/config`);
-const CommonValidate   = require(`${appRoot}/lib/common/validate`);
-const CommonChecksums  = require(`${appRoot}/lib/common/checksums`);
+const CommonArchiver  = require('../lib/common/archiver');
+const CommonYaml      = require('../lib/common/yaml');
+const CommonCommand   = require('../lib/common/command');
+const CommonCliError  = require('../lib/common/cli/error');
+const CommonCliLoader = require('../lib/common/cli/loader');
+const CommonCliLog    = require('../lib/common/cli/log');
+const CommonCliParams = require('../lib/common/cli/params');
+const CommonCliHelp   = require('../lib/common/cli/help');
+const CommonUtils     = require('../lib/common/utils');
+const CommonLifecycle = require('../lib/common/lifecycle');
+const CommonVariables = require('../lib/common/variables');
+const CommonVersion   = require('../lib/common/version');
+const CommonConfig    = require('../lib/common/config');
+const CommonValidate  = require('../lib/common/validate');
+const CommonChecksums = require('../lib/common/checksums');
 
 class Squeezer {
   init() {
@@ -42,6 +41,7 @@ class Squeezer {
     this.checksums = new CommonChecksums(this);
 
     this.deploy = {};
+    this.cloud  = {};
 
     this.vars = {
       project       : {},
@@ -122,13 +122,13 @@ class Squeezer {
 
   loadHooks() {
     /* load frameworks hooks */
-    const frameworkPlugins = this.yaml.parse(`${appRoot}/lib/plugins/plugins.yml`);
+    const frameworkPlugins = this.yaml.parse(`${__dirname}/../lib/plugins/plugins.yml`);
 
     _.forOwn(frameworkPlugins.plugins, (plugin) => {
-      const hookFile = `${appRoot}/lib/plugins/${plugin}/hooks.yml`;
+      const hookFile = `${__dirname}/../lib/plugins/${plugin}/hooks.yml`;
       if (fs.existsSync(hookFile)) {
         const data = this.yaml.parse(hookFile).map((val) => {
-          val.path = `${appRoot}/lib/plugins/${plugin}/${val.path}`;
+          val.path = `${__dirname}/../lib/plugins/${plugin}/${val.path}`;
           return val;
         });
 
@@ -136,18 +136,20 @@ class Squeezer {
       }
     });
 
-
     /* load plugins hooks */
     if (this.vars.project.isValid === true) {
       _.forEach(this.vars.project.plugins, (plugin) => {
-        const data = this
-          .yaml.parse(`${this.vars.project.path}/${plugin.path}/${plugin.name}/hooks.yml`)
-          .map((val) => {
-            val.path = `${this.vars.project.path}/${plugin.path}/${plugin.name}/${val.path}`;
-            return val;
-          });
+        const hookFile = `${this.vars.project.path}/${plugin.path}/${plugin.name}/hooks.yml`;
+        if (fs.existsSync(hookFile)) {
+          const data = this
+            .yaml.parse(hookFile)
+            .map((val) => {
+              val.path = `${this.vars.project.path}/${plugin.path}/${plugin.name}/${val.path}`;
+              return val;
+            });
 
-        this.vars.hooks = this.vars.hooks.concat(data);
+          this.vars.hooks = this.vars.hooks.concat(data);
+        }
       });
     }
   }

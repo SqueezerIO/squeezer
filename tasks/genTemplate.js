@@ -1,15 +1,13 @@
 'use strict';
 
-const appRoot = require('app-root-path');
 const args    = require('yargs').argv;
 const fs      = require('fs');
 const yaml    = require('js-yaml');
 const _       = require('lodash');
 const fsExtra = require('fs-extra');
 
-const pkg        = require(`${appRoot}/package.json`);
-const samplesDir = `${appRoot}/lib/plugins/templates/lib/samples`;
-const destDir    = `${appRoot}/../squeezer-templates`;
+const samplesDir = '../lib/plugins/templates/lib/samples';
+const destDir    = '../../squeezer-templates';
 
 if (!args.template) {
   process.stdout.write('missing template name, --template VALUE');

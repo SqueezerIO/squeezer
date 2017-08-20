@@ -1,22 +1,17 @@
 'use strict';
 
-const appRoot         = require('app-root-path');
 const fs              = require('fs');
 const _               = require('lodash');
 const stripColorCodes = require('stripcolorcodes');
 
-const Help            = require(`${appRoot}/lib/common/cli/help`);
-const sqz             = require(`${appRoot}/bin/Squeezer`);
+const Help            = require('../lib/common/cli/help');
+const sqz             = require('../bin/Squeezer');
 
 sqz.init();
 
-const CLI = require(`${appRoot}/bin/cli`);
+const CLI = require('../bin/cli');
 
 const help = new Help();
-// const CLI  = new CommandLineInterface();
-
-// CLI.load(__dirname, '../cli/interface');
-// CLI.run();
 
 const spacing      = '    ';
 const startHeading = '##';
@@ -24,7 +19,7 @@ const commands     = CLI.get();
 let cliTree     = '';
 const addedCmds = [];
 const data      = {};
-const summary   = fs.readFileSync(`${appRoot}/docs/SUMMARY.md`, 'utf8');
+const summary   = fs.readFileSync('../docs/SUMMARY.md', 'utf8');
 
 _.forEach(commands, (mainVal, cmd) => {
   const cmdNames    = cmd.split(':');
@@ -68,11 +63,11 @@ _.forEach(commands, (mainVal, cmd) => {
 });
 
 _.forEach(data, (value, key) => {
-  fs.writeFileSync(`${appRoot}/docs/cli/${key}.md`, stripColorCodes(value));
+  fs.writeFileSync(`../docs/cli/${key}.md`, stripColorCodes(value));
 });
 
 const startChars = '### Command Line Interface';
 const endChars   = '--';
 const re         = new RegExp(`${startChars}[\\s\\S]*?${endChars}`);
 
-fs.writeFileSync(`${appRoot}/docs/SUMMARY.md`, summary.replace(re, `${startChars}\n\n${cliTree}\n\n${endChars}`));
+fs.writeFileSync('../docs/SUMMARY.md', summary.replace(re, `${startChars}\n\n${cliTree}\n\n${endChars}`));

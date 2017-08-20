@@ -1,11 +1,12 @@
 plugins:
-  - aws
+#  - aws
+#  - azure
   - config
   - test
   - deploy
-  - invoke
-  - run
-  - logs
+#  - invoke
+#  - run
+#  - logs
   - help
   - list
   - project
