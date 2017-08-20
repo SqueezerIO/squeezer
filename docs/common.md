@@ -4,6 +4,10 @@
 
 Class representing files archiving
 
+**Parameters**
+
+-   `sqz`  
+
 ## this.sqz.archive
 
 Zips a directory
@@ -17,6 +21,10 @@ Zips a directory
 
 Class that manages some Squeezer utilities
 
+**Parameters**
+
+-   `sqz`  
+
 ## Error
 
 Class that manage errors of all types.
@@ -27,14 +35,19 @@ Returns formatted error message
 
 **Parameters**
 
--   `error` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** error message
+-   `errorParam`  
 -   `noSqzError` **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** true for system error
+-   `error` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** error message
 
 Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
 ## Help
 
 Class which builds the help message  .
+
+**Parameters**
+
+-   `sqz`  
 
 ### constructor
 
@@ -46,11 +59,20 @@ Class which builds the help message  .
 
 Return current version information
 
+**Parameters**
+
+-   `commands`  
+-   `param`  
+
 Returns **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
 
 ## Loader
 
 Class that represents CLI loader.
+
+**Parameters**
+
+-   `sqz`  
 
 ## this.sqz.cli.loader.start
 
@@ -63,6 +85,10 @@ Loader stop
 ## Log
 
 Class that represents CLI logging.
+
+**Parameters**
+
+-   `sqz`  
 
 ## this.sqz.cli.log.debug
 
@@ -108,14 +134,27 @@ Use the same NodeJS console.log feature
 
 Class for CLI params orchestration
 
+**Parameters**
+
+-   `sqz`  
+
 ## this.sqz.cli.params.set
 
 Set CLI params object
+
+**Parameters**
+
+-   `params`  
 
 ## this.sqz.cli.params.setOption
 
 Set an option value
 
+**Parameters**
+
+-   `name`  
+-   `value`  
+
 ## this.sqz.cli.params.get
 
 Return CLI params
@@ -126,7 +165,69 @@ Returns **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 
 Return CLI params
 
+**Parameters**
+
+-   `args`  
+
 Returns **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
+
+## this.sqz.cloud.storage.uploadFile
+
+Uploads a file to the Cloud's storage
+
+**Parameters**
+
+-   `localPath` **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** local file path "/tmp/file.zip"
+-   `remotePath` **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** remote file path "upload/path/file.zip"
+-   `params` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
+
+**Examples**
+
+```javascript
+this.sqz.cloud.storage.uploadFile('/tmp/file.zip', 'upload/path/file.zip', {
+    public : true // uploads the file as a public access URL
+}).then(() => {
+    // file successfully uploaded
+});
+```
+
+Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
+
+## this.sqz.cloud.storage.removeFile
+
+Removes a file from to the Cloud's storage
+
+**Parameters**
+
+-   `remotePath` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** remote path "upload/path"
+
+**Examples**
+
+```javascript
+this.sqz.cloud.storage.removeFile(remotePath).then(() => {
+    // file successfully removed
+});
+```
+
+Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
+
+## this.sqz.cloud.storage.getPublicUrl
+
+Retrieve Cloud storage public URL
+
+**Examples**
+
+```javascript
+this.sqz.cloud.storage.getPublicUrl().then((res) => {
+    console.log(res.publicUrl);
+});
+```
+
+Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
+
+## Cloud
+
+Class that manages Cloud operations
 
 ## this.sqz.cloud.storage.uploadDir
 
@@ -151,80 +252,30 @@ this.sqz.cloud.storage.uploadDir('/tmp/source_dir', 'upload/path', {
 
 Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
 
-## this.sqz.cloud.storage.getPublicUrl
-
-Retrieve Cloud storage public URL
-
-**Examples**
-
-```javascript
-this.sqz.cloud.storage.getPublicUrl().then((res) => {
-    console.log(res.publicUrl);
-});
-```
-
-Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
-
-## this.sqz.cloud.storage.removeFile
-
-Removes a file from to the Cloud's storage
-
-**Parameters**
-
--   `remotePath` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** remote path "upload/path"
-
-**Examples**
-
-```javascript
-this.sqz.cloud.storage.removeFile(remotePath).then(() => {
-    // file successfully removed
-});
-```
-
-Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
-
-## Cloud
-
-Class that manages Cloud operations
-
-## this.sqz.cloud.storage.uploadFile
-
-Uploads a file to the Cloud's storage
-
-**Parameters**
-
--   `localPath` **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** local file path "/tmp/file.zip"
--   `remotePath` **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** remote file path "upload/path/file.zip"
--   `params` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
-
-**Examples**
-
-```javascript
-this.sqz.cloud.storage.uploadFile('/tmp/file.zip', 'upload/path/file.zip', {
-    public : true // uploads the file as a public access URL
-}).then(() => {
-    // file successfully uploaded
-});
-```
-
-Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
-
 ## Command
 
 Class for running spawning commands
+
+**Parameters**
+
+-   `sqz`  
 
 ### run
 
 **Parameters**
 
+-   `description`  
 -   `bin`  
 -   `args`  
--   `description`  
 -   `noExit`  
 
 ## Config
 
 Class that manages project's configuration
+
+**Parameters**
+
+-   `sqz`  
 
 ## this.sqz.config.set
 
@@ -232,8 +283,8 @@ Configure a setting
 
 **Parameters**
 
--   `setting` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** setting name
 -   `setting` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** setting value
+-   `value`  
 
 ## this.sqz.config.get
 
@@ -249,6 +300,10 @@ Returns **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 
 Class that manages CLI's lifecycle
 
+**Parameters**
+
+-   `sqz`  
+
 ### run
 
 Run each event from the lifecycle
@@ -257,56 +312,13 @@ Run each event from the lifecycle
 
 -   `lifecycle` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** lifecycle array
 
-## Express
-
-Class that serves a Squeezer project
-
-### run
-
-Start the Node Express server
-
-**Parameters**
-
--   `callback`  
-
-### find
-
-Find a function's HTTP event that matches to the current requested URL
-
-**Parameters**
-
--   `url`  http request url
--   `method`  http method
-
-## loadMicroservices
-
-Loads available microservices from the current project
-
-## Livereload
-
-Class that serves a Squeezer project
-
-## Watcher
-
-Class that serves a Squeezer project
-
-### init
-
-initialize the file watcher
-
-### getFileDeps
-
-Get deep file inclusions for a specific file
-
-**Parameters**
-
--   `file`  
-
-Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** 
-
 ## Utilities
 
 Class that manages some Squeezer utilities
+
+**Parameters**
+
+-   `sqz`  
 
 ## this.sqz.utils.bluebird
 
@@ -328,6 +340,10 @@ Returns lodash instance <https://lodash.com/>
 
 Class that compiles some reuirements needed for deployment
 
+**Parameters**
+
+-   `sqz`  
+
 ### stage
 
 Validate stages
@@ -345,6 +361,10 @@ Check if Node defined project's platform it's compatible with the current runtim
 ## Variables
 
 Class that manages global CLI variables
+
+**Parameters**
+
+-   `sqz`  
 
 ## this.sqz.variables.get
 
@@ -378,6 +398,10 @@ Returns deployed app base url
 
 Class which builds an Object for returning local version information  .
 
+**Parameters**
+
+-   `sqz`  
+
 ## this.sqz.version.get
 
 Returns framework version information
@@ -390,6 +414,15 @@ Returns framework  markdown version information
 
 Class that manages YAML parsing
 
+**Parameters**
+
+-   `sqz`  
+
 ## this.sqz.yaml.parse
 
 Parse an YAML file
+
+**Parameters**
+
+-   `file`  
+-   `input`  

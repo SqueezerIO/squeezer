@@ -19,7 +19,7 @@ const commands     = CLI.get();
 let cliTree     = '';
 const addedCmds = [];
 const data      = {};
-const summary   = fs.readFileSync('../docs/SUMMARY.md', 'utf8');
+const summary   = fs.readFileSync(`${__dirname}/../docs/SUMMARY.md`, 'utf8');
 
 _.forEach(commands, (mainVal, cmd) => {
   const cmdNames    = cmd.split(':');
@@ -63,11 +63,11 @@ _.forEach(commands, (mainVal, cmd) => {
 });
 
 _.forEach(data, (value, key) => {
-  fs.writeFileSync(`../docs/cli/${key}.md`, stripColorCodes(value));
+  fs.writeFileSync(`${__dirname}/../docs/cli/${key}.md`, stripColorCodes(value));
 });
 
 const startChars = '### Command Line Interface';
 const endChars   = '--';
 const re         = new RegExp(`${startChars}[\\s\\S]*?${endChars}`);
 
-fs.writeFileSync('../docs/SUMMARY.md', summary.replace(re, `${startChars}\n\n${cliTree}\n\n${endChars}`));
+fs.writeFileSync(`${__dirname}/../docs/SUMMARY.md`, summary.replace(re, `${startChars}\n\n${cliTree}\n\n${endChars}`));
