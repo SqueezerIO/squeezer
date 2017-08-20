@@ -6,7 +6,7 @@
 ### Docs : [docs.squeezer.io](https://docs.squeezer.io)
 ### Chat : [chat.squeezer.io](http://chat.squeezer.io)
 
-[![Squeezer.IO](docs/gitbook/images/badge.svg)](https://Squeezer.IO)
+[![Squeezer.IO](https://cdn.rawgit.com/SqueezerIO/squeezer/9a010c35/docs/gitbook/images/badge.svg)](https://Squeezer.IO)
 [![Build Status](https://travis-ci.org/SqueezerIO/squeezer.svg?branch=master)](https://travis-ci.org/SqueezerIO/squeezer)
 [![npm version](https://badge.fury.io/js/squeezer-cli.svg)](https://badge.fury.io/js/squeezer-cli)
 [![Join the chat at https://gitter.im/SqueezerIO/squeezer](https://badges.gitter.im/SqueezerIO/squeezer.svg)](https://gitter.im/SqueezerIO/squeezer?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
