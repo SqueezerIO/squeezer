@@ -5,7 +5,7 @@ plugins:
   - test
   - deploy
 #  - invoke
-#  - run
+  - run
 #  - logs
   - help
   - list

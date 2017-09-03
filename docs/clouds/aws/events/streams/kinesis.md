@@ -42,10 +42,10 @@ functions:
   testFunction:
     handler: "test"
     events:
-      - stream:
-          sourceArn: KinesisStack.Outputs.myKinesisStreamArn
-          batchSize: 100
-          startPosition: LATEST
+      - stream: true
+        sourceArn: KinesisStack.Outputs.myKinesisStreamArn
+        batchSize: 100
+        startPosition: LATEST
 ```
 
 `handler.js` :

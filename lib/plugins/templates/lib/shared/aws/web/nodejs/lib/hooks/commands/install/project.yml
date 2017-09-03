@@ -1,6 +1,2 @@
 - description: Installing project's npm packages
   bin: cd ${project.path} && npm install --silent
-- description: Installing required tools
-  bin: npm install webpack node-sass phantomjs-prebuilt selenium-standalone webdriverio wdio-mocha-framework wdio-spec-reporter  -g --silent
-- description: Installing Selenium webdriver
-  bin: selenium-standalone install

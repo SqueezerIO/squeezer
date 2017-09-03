@@ -7,20 +7,11 @@
 
 --
 
-### Projects
-
-* [API](projects/api/api.md)
-  * [Swagger Integration](projects/api/swagger.md)
-* [Web](projects/web/web.md)
-  
---
-
 ### Development
 
 * [Inclusions](development/inclusions.md)
 * [Packaging](development/packaging.md)
 * [Command Hooks](development/command_hooks.md)
-* [Testing](development/testing.md)
 * [CORS](development/cors.md)
   
 --
@@ -32,7 +23,7 @@
   * [Setting up credentials](clouds/aws/credentials.md)
   * [CloudFormation](clouds/aws/cloudformation.md)
   * [Events](clouds/aws/events/introduction.md)
-    * [API Gateway](clouds/aws/events/api_gateway.md)
+    * [HTTP](clouds/aws/events/http.md)
     * [Schedule](clouds/aws/events/schedule.md)
     * [S3](clouds/aws/events/s3.md)
     * [Streams](clouds/aws/events/streams/streams.md)
@@ -45,6 +36,14 @@
   * [Installation](clouds/azure/installation.md)
   * [Setting up credentials](clouds/azure/credentials.md)
   * [ARM templates](clouds/azure/arm_templates.md)
+  * [Events](clouds/azure/events/introduction.md)
+    * [HTTP](clouds/azure/events/http.md)  
+    * [Timer](clouds/azure/events/timer.md)  
+    * [Blob Storage](clouds/azure/events/blob_storage.md)  
+    * [DocumentDB](clouds/azure/events/documentDB.md)  
+    * [Event Hubs](clouds/azure/events/event_hubs.md)  
+    * [Queue Storage](clouds/azure/events/queue_storage.md)  
+    * [Service Bus](clouds/azure/events/service_bus.md)  
 
       
 --
@@ -82,7 +81,6 @@
 * [Install](cli/install.md)
 * [List](cli/list.md)
 * [Templates](cli/templates.md)
-* [Test](cli/test.md)
 * [Update](cli/update.md)
 * [Version](cli/version.md)
 

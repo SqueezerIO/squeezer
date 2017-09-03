@@ -2,12 +2,16 @@
   "author": "Nick Chisiu",
   "gitbook": "3.x.x",
   "plugins": [
-    "edit-link"
+    "edit-link",
+    "expandable-chapters"
   ],
   "pluginsConfig": {
     "edit-link": {
       "base": "https://github.com/SqueezerIO/squeezer/edit/master/docs",
       "label": "Edit On GitHub"
+    },
+    "pluginsConfig": {
+      "expandable-chapters":{}
     }
   },
   "title": "Squuezer.IO Framework Documentation"

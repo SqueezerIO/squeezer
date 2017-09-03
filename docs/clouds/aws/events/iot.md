@@ -9,8 +9,8 @@ functions:
   testFunction:
     handler: "test"
     events:
-      - iot:
-          sql: "SELECT * FROM 'some_topic'"
+      - iot: true
+        sql: "SELECT * FROM 'some_topic'"
 ```
 
 `handler.js` :

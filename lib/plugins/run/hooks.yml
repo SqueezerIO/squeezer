@@ -1,0 +1,6 @@
+- identifier : 'function:run'
+  path : 'lib'
+  function : 'run'
+- identifier : 'load:env'
+  path : 'lib/common'
+  function : 'loadEnvVars'

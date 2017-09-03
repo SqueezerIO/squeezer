@@ -9,8 +9,7 @@ functions:
   testFunction:
     handler: "test"
     events:
-      - alexaSkills:
-          enabled: true
+      - alexaSkills: true
 ```
 
 `handler.js` :

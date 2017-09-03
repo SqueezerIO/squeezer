@@ -1,4 +1,0 @@
-- description: Executing test "${source}"
-  bin: wdio --spec
-  args:
-    - '${source}'

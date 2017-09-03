@@ -1,4 +1,4 @@
-### API Gateway Event
+### HTTP Event
 
 You can invoke a Lambda function over HTTPS. You can do this by defining a custom REST API and 
 endpoint using Amazon API Gateway. You map individual API operations, such as GET and PUT, to 
@@ -15,9 +15,9 @@ functions:
     memory: "128MB"
     timeout: 6
     events:
-      - http:
-          path: "/rest/v1/hello"
-          method: "get"
+      - http: true
+        path: "/rest/v1/hello"
+        method: "get"
 ```
 
 `handler.js`

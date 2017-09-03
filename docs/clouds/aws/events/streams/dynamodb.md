@@ -56,10 +56,10 @@ functions:
   testFunction:
     handler: "test"
     events:
-      - stream:
-          sourceArn: DynamoStack.Outputs.ProductsDynamoTableStreamArn
-          batchSize: 100
-          startPosition: LATEST
+      - stream: true
+        sourceArn: DynamoStack.Outputs.ProductsDynamoTableStreamArn
+        batchSize: 100
+        startPosition: LATEST
 ```
 
 `handler.js` :

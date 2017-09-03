@@ -21,6 +21,19 @@ PROJECT_DIR
             └── index.js
 ```
 
+##### Activate a Plugin
+
+`PROJECT_DIR/squeezer.yml` :
+
+```yaml
+  - name: squeezer-plugin-1
+    path: node_modules
+  - name: squeezer-plugin-2
+    path: plugins
+    options:
+      var1: hello 
+```
+
 ##### Common
 
 You can use many of the Squeezer framework features in the [Common](common.md) section .

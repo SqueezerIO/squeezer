@@ -5,18 +5,11 @@
     "jsinspect": "jsinspect -t 30 -i ./lib/ ./microservices/"
   },
   "dependencies": {
-    "squeezer-serve" : "^0.0.1",
-    "squeezer-aws": "^0.0.1",
-    "squeezer-swagger": "^0.0.1"
+    "squeezer-serve" : "~0.0.1",
+    "squeezer-aws": "~0.0.5",
+    "squeezer-swagger": "~0.0.2"
   },
   "devDependencies": {
-    "babel-core": "^6.24.1",
-    "babel-loader": "^6.4.1",
-    "babel-preset-es2015": "^6.22.0",
-    "babel-preset-react": "^6.23.0",
-    "babel-register": "^6.22.0",
-    "chai": "^3.5.0",
-    "chai-http": "^3.0.0",
     "eslint": "^3.14.0",
     "eslint-config-airbnb": "^14.0.0",
     "eslint-config-airbnb-base": "^11.0.1",

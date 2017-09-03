@@ -24,29 +24,32 @@ module.exports = (() => {
 
     load() {
       const frameworkCmdsPaths = walkSync(`${__dirname}/../`, { globs : ['lib/plugins/*/index.js'] })
-        .map(val => (`../${val}`));
+        .map(val => ({ path : `../${val}`, options : {} }));
 
-      let pluginsCmdsPaths = [];
+      const pluginsCmdsPaths = [];
 
       if (sqz.vars.project.isValid && sqz.vars.project.plugins
         && sqz.vars.project.plugins.length > 0) {
         _.forEach(sqz.vars.project.plugins, (val) => {
           const pluginPath = `${sqz.vars.project.path}/${val.path}/${val.name}/index.js`;
           if (fs.existsSync(pluginPath)) {
-            pluginsCmdsPaths.push(pluginPath);
+            pluginsCmdsPaths.push({
+              path    : pluginPath,
+              options : val.options || {}
+            });
           }
         });
       }
 
       const paths = _.concat(frameworkCmdsPaths, pluginsCmdsPaths);
 
-      _.forEach(paths, (path) => {
-        this.add(require(path), path); // eslint-disable-line global-require
+      _.forEach(paths, (val) => {
+        this.add(require(val.path), val.path, val.options); // eslint-disable-line global-require
       });
     }
 
-    add(CommandConstructor, path) {
-      const command = new CommandConstructor(sqz);
+    add(CommandConstructor, path, options) {
+      const command = new CommandConstructor(sqz, options);
 
       if (!_.has(command, 'commands')) {
         sqz.cli.log.error(`No available command constructor found in ${colors.blue.bold(path)}`);

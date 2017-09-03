@@ -78,5 +78,4 @@ $ sqz config --setting azure_username --value <USERNAME or CLIENT_ID>
 $ sqz config --setting azure_password --value <PASSWORD OR SECRET> 
 $ sqz config --setting azure_tenant --value <a guid OR your domain(contosocorp.com)>
 $ sqz config --setting azure_location --value <azure region (eastus)>
-$ sqz config --setting azure_subscription_id --value <azure subscription id (azure account list)">
 ```

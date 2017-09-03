@@ -58,19 +58,4 @@ Outputs:
       Ref: "ProductsDynamo"
 ```
 
-This CloudFormation template will create a new DynamoDB table resource , but in order to access this table later you need to grab the
-generated table name which will be a Logical ID , therefore you have the ability to include 
-the output as a shell permanent `ENV` variable in your microservice's `sqz.config.yml` or `PROJECT_DIR/squeezer.yml` files : 
-
-```yaml
-env:
-  PRODUCTS_TABLE: "DynamoStack.Outputs.ProductsDynamoTable"
-```
-
-Squeezer will handle all CloudFormation required dependencies, more specifically
- it will add a `DependOn : ['DynamoStack']` to the main stack, required by your microservice stack
-  in order to use the new DynamoDB table resource.
-
-Use the new variable in the Node.JS code base :
-
-`process.env.PRODUCTS_TABLE`
+All `Outputs` values are accessible as environment variables `process.env.ProductsDynamoTable` 

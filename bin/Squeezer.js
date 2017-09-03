@@ -1,8 +1,8 @@
 'use strict';
 
-const _       = require('lodash');
-const colors  = require('colors');
-const fs      = require('fs');
+const _      = require('lodash');
+const colors = require('colors');
+const fs     = require('fs');
 
 const CommonArchiver  = require('../lib/common/archiver');
 const CommonYaml      = require('../lib/common/yaml');
@@ -46,6 +46,7 @@ class Squeezer {
     this.vars = {
       project       : {},
       microservices : {},
+      functions     : {},
       hooks         : [],
       apiBaseUrl    : 'https://api.squeezer.io',
       stage         : 'dev',

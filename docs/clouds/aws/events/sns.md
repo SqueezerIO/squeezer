@@ -42,8 +42,8 @@ functions:
   testFunction:
     handler: "test"
     events:
-      - sns:
-          topic: snsStack.mySNSTopic
+      - sns: true
+        topic: snsStack.mySNSTopic
 ```
 
 `handler.js` :

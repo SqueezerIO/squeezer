@@ -171,21 +171,36 @@ Return CLI params
 
 Returns **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
 
-## this.sqz.cloud.storage.uploadFile
+## this.sqz.cloud.storage.getPublicUrl
 
-Uploads a file to the Cloud's storage
+Retrieve Cloud storage public URL
+
+**Examples**
+
+```javascript
+this.sqz.cloud.storage.getPublicUrl().then((res) => {
+    console.log(res.publicUrl);
+});
+```
+
+Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
+
+## this.sqz.cloud.storage.uploadDir
+
+Uploads a directory to the Cloud's storage
 
 **Parameters**
 
--   `localPath` **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** local file path "/tmp/file.zip"
--   `remotePath` **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** remote file path "upload/path/file.zip"
+-   `localPath` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** local path "/tmp/source_dir"
+-   `remotePath` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** remote path "upload/path"
 -   `params` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
 
 **Examples**
 
 ```javascript
-this.sqz.cloud.storage.uploadFile('/tmp/file.zip', 'upload/path/file.zip', {
-    public : true // uploads the file as a public access URL
+this.sqz.cloud.storage.uploadDir('/tmp/source_dir', 'upload/path', {
+    public : true, // uploads the file as a public access URL
+    sync   : true  // synchronize directory
 }).then(() => {
     // file successfully uploaded
 });
@@ -211,40 +226,25 @@ this.sqz.cloud.storage.removeFile(remotePath).then(() => {
 
 Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
 
-## this.sqz.cloud.storage.getPublicUrl
-
-Retrieve Cloud storage public URL
-
-**Examples**
-
-```javascript
-this.sqz.cloud.storage.getPublicUrl().then((res) => {
-    console.log(res.publicUrl);
-});
-```
-
-Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
-
 ## Cloud
 
 Class that manages Cloud operations
 
-## this.sqz.cloud.storage.uploadDir
+## this.sqz.cloud.storage.uploadFile
 
-Uploads a directory to the Cloud's storage
+Uploads a file to the Cloud's storage
 
 **Parameters**
 
--   `localPath` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** local path "/tmp/source_dir"
--   `remotePath` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** remote path "upload/path"
+-   `localPath` **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** local file path "/tmp/file.zip"
+-   `remotePath` **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** remote file path "upload/path/file.zip"
 -   `params` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
 
 **Examples**
 
 ```javascript
-this.sqz.cloud.storage.uploadDir('/tmp/source_dir', 'upload/path', {
-    public : true, // uploads the file as a public access URL
-    sync   : true  // synchronize directory
+this.sqz.cloud.storage.uploadFile('/tmp/file.zip', 'upload/path/file.zip', {
+    public : true // uploads the file as a public access URL
 }).then(() => {
     // file successfully uploaded
 });
@@ -320,21 +320,15 @@ Class that manages some Squeezer utilities
 
 -   `sqz`  
 
-## this.sqz.utils.bluebird
+### getIdentifier
 
-Returns Bluebird A+ class promises instance <http://bluebirdjs.com/docs/getting-started.html>
+Get an identifier for a specific value
 
-## this.sqz.utils.walkSync
+**Parameters**
 
-Returns walk-sync instance <https://www.npmjs.com/package/walk-sync>
+-   `value`  
 
-## this.sqz.utils.colors
-
-Returns terminal colors instance <https://www.npmjs.com/package/colors>
-
-## this.sqz.utils.lodash
-
-Returns lodash instance <https://lodash.com/>
+Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
 ## Validate
 
@@ -385,6 +379,18 @@ Returns project config variables
 ## this.sqz.variables.getMicroservices
 
 Returns all available microservices in the current project
+
+**Parameters**
+
+-   `options`  
+
+## this.sqz.variables.getMicroservices
+
+Returns all available functions
+
+**Parameters**
+
+-   `options`  
 
 ## this.sqz.variables.getHooks
 

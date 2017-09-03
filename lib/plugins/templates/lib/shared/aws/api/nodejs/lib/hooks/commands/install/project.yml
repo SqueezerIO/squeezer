@@ -1,4 +1,4 @@
 - description: Installing project's npm packages
   bin: cd ${project.path} && npm install --silent
 - description: Installing required tools
-  bin: npm install mocha -g --silent
+  bin: ${sudo} npm install mocha -g --silent

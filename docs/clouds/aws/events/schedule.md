@@ -33,11 +33,11 @@ functions:
     description: "Schedule Event"
     handler: "scheduleTask"
     events:
-      - schedule: 
-          value: rate(1 minute)
+      - schedule: true
+        value: rate(1 minute)
       # OR
       - schedule: 
-          value: cron(0 10 * * * *)
+        value: cron(0 10 * * * *)
 ```
 
 `handler.js`

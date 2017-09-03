@@ -43,7 +43,7 @@ Run tests on deployed database tables , API endpoints , Web apps,  etc.
 **NOTE**: Don't forget to deploy the resources before running the tests
 
 ```bash
-$ sqz compile --production
+$ sqz compile --cloud
 $ sqz deploy
 $ sqz test
 ```
