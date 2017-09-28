@@ -1,2 +1,0 @@
-- description: Updating npm packages for microservice "${microservice.name}"
-  bin: cd ${microservice.path}/src && npm update --silent

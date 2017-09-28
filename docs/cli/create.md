@@ -1,6 +1,6 @@
-
-## Create 
-
+---
+title: CLI - create
+---
  
  Usage: 
 
@@ -12,13 +12,14 @@
 
  Options:
 
-    --project / -p      Project's name (required)
+    --project / -p      Project's name (optional) "my-first-project"
+
  
-    --email / -e        Project's owner email address (required)
+    --template / -t     Project's template , get available templates : "sqz templates" (required)
+
  
-    --template / -t     Project's template , get available templates : sqz templates (required)
- 
-    --noChecksums / -n  Disable microservices checksum, this will make the deployment sequence considerably slower (optional)
+    --noChecksums / -n  Disable functions checksum, this will make the deployment sequence considerably slower (optional)
+
  
 
  Examples:

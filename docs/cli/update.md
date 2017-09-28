@@ -1,6 +1,6 @@
-
-## Update 
-
+---
+title: CLI - update
+---
  
  Usage: 
 
@@ -8,11 +8,11 @@
 
  Description:
 
-    Update project's & microservices packages
+    Update project's packages
 
  Options:
 
 
  Examples:
 
-    $ sqz update --name my-first-project --template aws-generic
+    $ sqz update 

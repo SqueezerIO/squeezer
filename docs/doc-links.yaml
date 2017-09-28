@@ -1,0 +1,48 @@
+- title: Introduction
+  links:
+    "Getting started": /docs/getting-started
+
+- title: Development
+  links:
+    "Packaging": /docs/development/packaging
+    "Command Hooks": /docs/development/command-hooks
+    "Classes": /docs/common
+    "CORS": /docs/development/cors
+
+- title: Amazon Web Services
+  links:
+    "Introduction": /docs/cloud/aws/introduction
+    "Installation": /docs/cloud/aws/installation
+    "Setting up credentials": /docs/cloud/aws/credentials
+    "CloudFormation" : /docs/cloud/aws/cloudformation
+    "Events" : /docs/cloud/aws/events/introduction
+    "->HTTP" : /docs/cloud/aws/events/http
+    "->Schedule" : /docs/cloud/aws/events/schedule
+    "->Streams" : /docs/cloud/aws/events/streams/streams
+    "->->DynamoDB" : /docs/cloud/aws/events/streams/dynamodb
+    "->->Kinesis" : /docs/cloud/aws/events/streams/kinesis
+    "->SNS" : /docs/cloud/aws/events/sns
+    "->IoT" : /docs/cloud/aws/events/iot
+    "->Alexa Skills" : /docs/cloud/aws/events/alexa
+
+- title: Microsoft Azure
+  links:   
+    "Introduction" : /docs/cloud/azure/introduction
+    "Installation" : /docs/cloud/azure/installation
+    "Setting up credentials" : /docs/azure/credentials
+    "ARM templates" : /docs/cloud/azure/arm-templates
+    "Events" : /docs/cloud/azure/events/introduction
+    "->HTTP" : /docs/cloud/azure/events/http
+    "->Timer" : /docs/cloud/azure/events/timer
+    "->Blob Storage" : /docs/cloud/azure/events/blob-storage
+    "->DocumentDB" : /docs/cloud/azure/events/documentDB
+    "->Event Hubs" : /docs/cloud/azure/events/event-hubs
+    "->Queue Storage" : /docs/cloud/azure/events/queue-storage
+    "->Service Bus" : /docs/cloud/azure/events/service-bus
+
+- title: Plugin
+  links:
+    "Introduction" : /docs/plugin/introduction
+    "Lifecycle" : /docs/plugin/lifecycle
+    "Example" : /docs/plugin/example
+    "Debugging" : /docs/plugin/debugging

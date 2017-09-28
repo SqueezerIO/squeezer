@@ -23,8 +23,8 @@ event.input.json
 **/dist/*
 !**/dist/.gitkeep
 
-# microservices inclusions
-microservices/*/src/inclusions
+# functions inclusions
+functions/*/src/inclusions
 
 # screenshots webdriverio
 errorShots

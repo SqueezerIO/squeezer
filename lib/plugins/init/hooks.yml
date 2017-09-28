@@ -1,0 +1,3 @@
+- identifier : 'project:init'
+  path : 'lib/index.js'
+  function : 'run'

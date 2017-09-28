@@ -171,15 +171,27 @@ Return CLI params
 
 Returns **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
 
-## this.sqz.cloud.storage.getPublicUrl
+## Cloud
 
-Retrieve Cloud storage public URL
+Class that manages Cloud operations
+
+## this.sqz.cloud.storage.uploadFile
+
+Uploads a file to the Cloud's storage
+
+**Parameters**
+
+-   `localPath` **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** local file path "/tmp/file.zip"
+-   `remotePath` **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** remote file path "upload/path/file.zip"
+-   `params` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
 
 **Examples**
 
 ```javascript
-this.sqz.cloud.storage.getPublicUrl().then((res) => {
-    console.log(res.publicUrl);
+this.sqz.cloud.storage.uploadFile('/tmp/file.zip', 'upload/path/file.zip', {
+    public : true // uploads the file as a public access URL
+}).then(() => {
+    // file successfully uploaded
 });
 ```
 
@@ -208,6 +220,20 @@ this.sqz.cloud.storage.uploadDir('/tmp/source_dir', 'upload/path', {
 
 Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
 
+## this.sqz.cloud.storage.getPublicUrl
+
+Retrieve Cloud storage public URL
+
+**Examples**
+
+```javascript
+this.sqz.cloud.storage.getPublicUrl().then((res) => {
+    console.log(res.publicUrl);
+});
+```
+
+Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
+
 ## this.sqz.cloud.storage.removeFile
 
 Removes a file from to the Cloud's storage
@@ -221,32 +247,6 @@ Removes a file from to the Cloud's storage
 ```javascript
 this.sqz.cloud.storage.removeFile(remotePath).then(() => {
     // file successfully removed
-});
-```
-
-Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
-
-## Cloud
-
-Class that manages Cloud operations
-
-## this.sqz.cloud.storage.uploadFile
-
-Uploads a file to the Cloud's storage
-
-**Parameters**
-
--   `localPath` **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** local file path "/tmp/file.zip"
--   `remotePath` **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** remote file path "upload/path/file.zip"
--   `params` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
-
-**Examples**
-
-```javascript
-this.sqz.cloud.storage.uploadFile('/tmp/file.zip', 'upload/path/file.zip', {
-    public : true // uploads the file as a public access URL
-}).then(() => {
-    // file successfully uploaded
 });
 ```
 
@@ -376,15 +376,7 @@ Returns current selected region
 
 Returns project config variables
 
-## this.sqz.variables.getMicroservices
-
-Returns all available microservices in the current project
-
-**Parameters**
-
--   `options`  
-
-## this.sqz.variables.getMicroservices
+## this.sqz.variables.getFunctions
 
 Returns all available functions
 
@@ -399,6 +391,10 @@ Returns project's hooks
 ## this.sqz.variables.getAppBaseUrl
 
 Returns deployed app base url
+
+## this.sqz.variables.getCloud
+
+Returns in use cloud name
 
 ## Version
 

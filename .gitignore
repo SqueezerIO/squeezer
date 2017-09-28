@@ -5,6 +5,7 @@ dist/*
 !dist/.gitkeep
 *.log
 .idea
+.history
 
 # eslint cache
 .eslintcache
@@ -15,7 +16,6 @@ test.js
 # docs
 !docs
 docs/_book
-docs/README.md
 docs/docs
 
 # coverage

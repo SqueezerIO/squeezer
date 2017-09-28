@@ -3,6 +3,6 @@
 
 globs:
   include:
-    - '${projectPath}/microservices/**'
+    - '${projectPath}/functions/**'
   ignore:
     - '**/node_modules/**'

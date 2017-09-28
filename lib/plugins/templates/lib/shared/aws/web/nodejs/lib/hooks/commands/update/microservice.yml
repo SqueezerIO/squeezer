@@ -1,2 +1,2 @@
-- description: Updating npm packages for microservice "${microservice.name}"
-  bin: cd ${microservice.path}/src && npm update --silent
+- description: Updating npm packages for function "${function.name}"
+  bin: cd ${function.path}/src && npm update --silent

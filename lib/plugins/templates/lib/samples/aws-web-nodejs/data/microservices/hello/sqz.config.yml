@@ -1,5 +1,3 @@
-# SQUEEZER MICROSERVICE
-
 name: hello
 description: Hello !!!!!
 
@@ -28,7 +26,7 @@ functions:
         path: /
         method: get
 
-# INCLUDES FILES OR DIRECTORIES FROM PROJECT ( should appear on "src/inclusions/DEST" microservice's path )
+# INCLUDES FILES OR DIRECTORIES FROM PROJECT ( should appear on "src/inclusions/DEST" function's path )
 inclusions:
   - src: lib/http
     dest: http

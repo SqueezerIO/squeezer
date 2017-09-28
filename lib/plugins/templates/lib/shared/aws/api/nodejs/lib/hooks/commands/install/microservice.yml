@@ -1,2 +1,0 @@
-- description: Installing npm packages for microservice "${microservice.name}"
-  bin: cd ${microservice.path}/src && npm install --silent

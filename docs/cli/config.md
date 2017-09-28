@@ -1,6 +1,6 @@
-
-## Config 
-
+---
+title: CLI - config
+---
  
  Usage: 
 
@@ -13,8 +13,10 @@
  Options:
 
     --setting / -s  setting name (required)
+
  
     --value / -v    setting value (required)
+
  
 
  Examples:

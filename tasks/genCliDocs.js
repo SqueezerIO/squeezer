@@ -13,8 +13,7 @@ const CLI = require('../bin/cli');
 
 const help = new Help();
 
-const spacing      = '    ';
-const startHeading = '##';
+const spacing      = '  ';
 const commands     = CLI.get();
 let cliTree     = '';
 const addedCmds = [];
@@ -26,21 +25,18 @@ _.forEach(commands, (mainVal, cmd) => {
   const cmdNamesLen = cmdNames.length;
 
   _.forEach(cmdNames, (val, index) => {
-    const filename     = `cli/${cmdNames[0]}.md`;
-    const alphaVal     = _.capitalize(val.replace(/[^a-z0-9]+/gi, ' '));
+    const formatBaseName = cmdNames.join('-');
+    const filename     = `/docs/cli/${formatBaseName}/`;
+    const alphaVal     = val.replace(/[^a-z0-9]+/gi, ' ');
     let command        = '';
     let output         = null;
-    let hashIdentifier = null;
-
 
     const init = () => {
       if (index === 0) {
         command = cmdNames[0];
       } else if (index === cmdNamesLen - 1) {
-        hashIdentifier = cmdNames.join('_');
         command        = cmdNames.join(':');
       } else {
-        hashIdentifier = cmdNames.slice(0, index + 1).join('_');
         command        = cmdNames.slice(0, index + 1).join(':');
       }
     };
@@ -48,15 +44,15 @@ _.forEach(commands, (mainVal, cmd) => {
     init();
 
     if (addedCmds.indexOf(command) < 0) {
-      output = `${startHeading}${'#'.repeat(index)}` +
-        ` ${alphaVal} ${hashIdentifier ? `{#${hashIdentifier}}` : ''}\n\n`;
+      output = `---\ntitle: CLI - ${cmdNames.join(' - ')}\n---\n`;
+        // ` ${alphaVal} ${hashIdentifier ? `{#${hashIdentifier}}` : ''}\n\n`;
       if (index === cmdNamesLen - 1) {
         output = `${output}${help.get(commands, cmdNames.join(':'))}`;
       }
 
-      cliTree = `${cliTree}${spacing.repeat(index)}* [${alphaVal}](${filename}${hashIdentifier ? `#${hashIdentifier}` : ''})\n`;
+      cliTree = `${cliTree}${spacing.repeat(index)}* [${alphaVal}](${filename})\n`;
 
-      data[cmdNames[0]] = `${data[cmdNames[0]] || ''}\n${output}`;
+      data[formatBaseName] = `${data[cmdNames[0]] || ''}${output}`;
       addedCmds.push(command);
     }
   });
@@ -66,8 +62,8 @@ _.forEach(data, (value, key) => {
   fs.writeFileSync(`${__dirname}/../docs/cli/${key}.md`, stripColorCodes(value));
 });
 
-const startChars = '### Command Line Interface';
-const endChars   = '--';
+const startChars = 'CLI';
+const endChars   = '<!--END-->';
 const re         = new RegExp(`${startChars}[\\s\\S]*?${endChars}`);
 
-fs.writeFileSync(`${__dirname}/../docs/SUMMARY.md`, summary.replace(re, `${startChars}\n\n${cliTree}\n\n${endChars}`));
+fs.writeFileSync(`${__dirname}/../docs/SUMMARY.md`, summary.replace(re, `${startChars}\n<!--this section is generated-->\n${cliTree}${endChars}`));

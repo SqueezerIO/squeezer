@@ -1,5 +1,5 @@
 - description: Webpacking JS assets
-  bin: webpack
+  bin: ${projectPath}/node_modules/.bin/webpack
   args:
     - '-p'
     - '--config'

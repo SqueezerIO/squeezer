@@ -19,7 +19,7 @@ Please note we have a code of conduct, please follow it in all your interactions
 ### Integration
 
 - Please make sure that you have [Docker](https://docs.docker.com/engine/installation/) installed
-- [Configure an AWS profile](https://docs.squeezer.io/clouds/aws/aws_profile.html) named `squeezer-test` 
+- [Configure an AWS profile](https://squeezer.io/docs/clouds/aws/aws_profile.html) named `squeezer-test` 
 - `npm run test-integration`
 
 ## Code of Conduct

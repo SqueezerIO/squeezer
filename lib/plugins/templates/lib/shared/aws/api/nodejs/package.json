@@ -2,7 +2,7 @@
   "scripts": {
     "test": "mocha ./test/runner.js",
     "eslint": "eslint .",
-    "jsinspect": "jsinspect -t 30 -i ./lib/ ./microservices/"
+    "jsinspect": "jsinspect -t 30 -i ./lib/ ./services/"
   },
   "dependencies": {
     "squeezer-serve" : "~0.0.1",
