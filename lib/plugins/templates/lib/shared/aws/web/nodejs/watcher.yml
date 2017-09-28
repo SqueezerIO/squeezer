@@ -4,6 +4,6 @@
 globs:
   include:
     - '${projectPath}/web'
-    - '${projectPath}/microservices/**'
+    - '${projectPath}/functions/**'
   ignore:
     - '**/node_modules/**'

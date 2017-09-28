@@ -1,6 +1,6 @@
-
-## Deploy 
-
+---
+title: CLI - deploy
+---
  
  Usage: 
 
@@ -8,25 +8,25 @@
 
  Description:
 
-    If no options are specified all your available microservices where code changed from the last deployment will be deployed.
+    Deploys the current project into the cloud.
 
  Options:
 
-    --microservice / -m  microservice name (optional)
-    value
-                       Deploys only a specific microservice
+    --function / -f  function name (optional)
+      value
+                     Deploys only a specific function
  
-    --force / -f         force deployement (optional)
+    --stage          environment stage (optional) "dev"
+      value
+ 
+    --force          force to deploy (optional)
 
-                       Force deployment for all the current microservices 
-                       NOTE : Will deploy all microservices , even the ones with no code changes from the last deployment.
+                     Force a deployment even if there is no any code changes
  
-    --stage              environment stage (optional) "dev"
-    value 
 
  Examples:
 
     $ sqz deploy 
-    $ sqz deploy --stage dev --region us-east-1
+    $ sqz deploy --stage dev
     $ sqz deploy --force
-    $ sqz deploy --microservice my-first-microservice
+    $ sqz deploy --function my-function

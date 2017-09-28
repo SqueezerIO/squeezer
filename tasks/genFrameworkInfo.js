@@ -12,4 +12,4 @@ window.frameworkVersion = '${settings.version}';
 window.frameworkVersionReleaseDate = '${versionReleaseDate}';
 `;
 
-fs.writeFileSync('../docs/gitbook/js/framework.js', info);
+fs.writeFileSync(`${__dirname}/../docs/gitbook/js/framework.js`, info);

@@ -2,11 +2,11 @@
   "scripts": {
     "test": "mocha ./test/runner.js",
     "eslint": "eslint .",
-    "jsinspect": "jsinspect -t 30 -i ./lib/ ./microservices/"
+    "jsinspect": "jsinspect -t 30 -i ./lib/ ./services/"
   },
   "dependencies": {
-    "squeezer-serve" : "^0.0.1",
-    "squeezer-aws": "^0.0.1",
+    "squeezer-serve": "~0.0.1",
+    "squeezer-aws": "~0.0.5",
     "bootstrap-sass": "^3.3.7",
     "material-ui": "^0.17.1",
     "react": "^15.5.0",
@@ -14,12 +14,6 @@
     "react-tap-event-plugin": "^2.0.1"
   },
   "devDependencies": {
-    "babel-core": "^6.24.1",
-    "babel-loader": "^6.4.1",
-    "babel-preset-es2015": "^6.22.0",
-    "babel-preset-react": "^6.23.0",
-    "babel-register": "^6.22.0",
-    "chai": "^3.5.0",
     "eslint": "^3.14.0",
     "eslint-config-airbnb": "^14.0.0",
     "eslint-config-airbnb-base": "^11.0.1",
@@ -27,6 +21,7 @@
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.9.0",
     "jsinspect": "^0.12.4",
-    "json-loader": "^0.5.4"
+    "json-loader": "^0.5.4",
+    "webpack": "^3.5.5"
   }
 }

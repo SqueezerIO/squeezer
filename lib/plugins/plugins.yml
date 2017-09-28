@@ -1,16 +1,15 @@
 plugins:
-#  - aws
-#  - azure
   - config
   - test
   - deploy
-#  - invoke
-#  - run
-#  - logs
+  - invoke
+  - run
+  - logs
   - help
   - list
+  - init
   - project
-  - microservices
+  - functions
   - create
   - serve
   - version

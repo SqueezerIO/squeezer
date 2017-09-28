@@ -1,15 +1,5 @@
-# SQUEEZER MICROSERVICE
-
 name: hello
 description: Hello !!!!!
-
-# ENVIRONMENT VARIABLES ( accessible via "process.env" in NodeJS )
-env:
-#  MSG: hello
-  dev:
-#    MSG: hello dev
-  prod:
-#    MSG: hello prod
 
 functions:
   hello:
@@ -32,11 +22,11 @@ functions:
 #     invoke current lambda function when some of the next events is triggered
 #     http://docs.aws.amazon.com/lambda/latest/dg/invoking-lambda-function.html
     events:
-      - http:
-          path: /
-          method: get
+      - http: true
+        path: /
+        method: get
 
-# INCLUDES FILES OR DIRECTORIES FROM PROJECT ( should appear on "src/inclusions/DEST" microservice's path )
+# INCLUDES FILES OR DIRECTORIES FROM PROJECT ( should appear on "src/inclusions/DEST" function's path )
 inclusions:
   - src: lib/http
     dest: http

@@ -1,6 +1,6 @@
-
-## Templates 
-
+---
+title: CLI - templates
+---
  
  Usage: 
 

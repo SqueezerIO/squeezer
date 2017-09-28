@@ -1,6 +1,6 @@
-
-## Compile 
-
+---
+title: CLI - compile
+---
  
  Usage: 
 
@@ -8,15 +8,16 @@
 
  Description:
 
-    Compile all the microservices available , this is required before running functions locally or making cloud deployments 
+    Compile all the available functions ( pre-requirement for both development & deployments )
 
  Options:
 
-    --microservice / -m  microservice name (optional)
-    value
-                       Compiles only a specific microservice
+    --function / -f  function name (optional)
+      value
+                     Compiles only a specific function
  
-    --cloud / -p         enable cloud compiling, default is development (optional)
+    --cloud / -c     enable cloud compiling, default is "development" (optional)
+
  
 
  Examples:

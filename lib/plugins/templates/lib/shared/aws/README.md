@@ -1,5 +1,5 @@
-## Framework : [squeezer.io](http://squeezer.io)
-## Documentation : [docs.squeezer.io](http://docs.squeezer.io)
+## Framework : [squeezer.io](https://squeezer.io)
+## Documentation : [squeezer.io/docs](https://squeezer.io/docs)
 
 ### Project Structure
 
@@ -7,9 +7,9 @@
 .
 ├── cloudformation      CloudFormation nested custom YAML templates
 ├── lib                 Project's Library
-├── microservices       Microservices Directory
-│   └── microservice1
-│   └── microservice2
+├── functions       Functions Directory
+│   └── function1
+│   └── function2
 ├── node_modules        Node NPM packages
 └── plugins             Squeezer plugins
 ```
@@ -36,8 +36,8 @@ NOTE: **Windows** users should [enable symlinks](http://answers.perforce.com/art
 | 3. | **sqz create --name my-first-project --template aws-api-rest-nodejs**  |  Create a project |
 | 4. | **cd my-first-project**  |  Switch to the project's directory |
 | 5. | **sqz install**  |  Install all requirements |
-| 5. | **sqz compile**  |  Compile microservices |
-| 7. | **sqz serve**  |  Simulates project on your local microservices platform<br>*NOTE* : Live reload enabled by default |
+| 5. | **sqz compile**  |  Compile functions |
+| 7. | **sqz serve**  |  Simulates project on your local functions platform<br>*NOTE* : Live reload enabled by default |
 
 
 `WebApp` : [http://localhost:4001/](http://localhost:4001/)
@@ -49,5 +49,5 @@ NOTE: **Windows** users should [enable symlinks](http://answers.perforce.com/art
 
 |    | cmd | description  |
 |----|-----|--------------|
-| 1. | **sqz compile --production**  |  Compile microservices |
+| 1. | **sqz compile --production**  |  Compile functions |
 | 2. | **sqz deploy**  | Deploy your app into the cloud provider<br>*Note*: initial deployments can take longer <= **40 mins** |

@@ -1,6 +1,6 @@
-
-## Install 
-
+---
+title: CLI - install
+---
  
  Usage: 
 
@@ -8,14 +8,10 @@
 
  Description:
 
-    Install project's & microservices packages
+    Install project's packages
 
  Options:
 
-    --microservice / -m  microservice name (optional)
-    value
-                       install packages only for a specific microservice
- 
 
  Examples:
 

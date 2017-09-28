@@ -1,6 +1,6 @@
-
-## Version 
-
+---
+title: CLI - version
+---
  
  Usage: 
 

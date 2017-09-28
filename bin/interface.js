@@ -24,32 +24,35 @@ module.exports = (() => {
 
     load() {
       const frameworkCmdsPaths = walkSync(`${__dirname}/../`, { globs : ['lib/plugins/*/index.js'] })
-        .map(val => (`../${val}`));
+        .map(val => ({ path : `../${val}`, options : {} }));
 
-      let pluginsCmdsPaths = [];
+      const pluginsCmdsPaths = [];
 
       if (sqz.vars.project.isValid && sqz.vars.project.plugins
         && sqz.vars.project.plugins.length > 0) {
         _.forEach(sqz.vars.project.plugins, (val) => {
           const pluginPath = `${sqz.vars.project.path}/${val.path}/${val.name}/index.js`;
           if (fs.existsSync(pluginPath)) {
-            pluginsCmdsPaths.push(pluginPath);
+            pluginsCmdsPaths.push({
+              path    : pluginPath,
+              options : val.options || {}
+            });
           }
         });
       }
 
       const paths = _.concat(frameworkCmdsPaths, pluginsCmdsPaths);
 
-      _.forEach(paths, (path) => {
-        this.add(require(path), path); // eslint-disable-line global-require
+      _.forEach(paths, (val) => {
+        this.add(require(val.path), val.path, val.options); // eslint-disable-line global-require
       });
     }
 
-    add(CommandConstructor, path) {
-      const command = new CommandConstructor(sqz);
+    add(CommandConstructor, path, options) {
+      const command = new CommandConstructor(sqz, options);
 
       if (!_.has(command, 'commands')) {
-        sqz.cli.log.error(`No available command constructor found in ${colors.blue.bold(path)}`);
+        sqz.cli.log.error(`No available command constructor found in "${path}"`);
       }
 
       command.commands.forEach((cmdObj) => {
@@ -115,11 +118,13 @@ module.exports = (() => {
     index(args, logo) {
       if (args.names.length === 0) {
         const msg =
-                `${logo}\n` +
-                `* Lists all commands ${colors.green('`sqz list`')}.\n` +
-                `* Get help for a command ${colors.green('`sqz help [command]`')}.\n` +
-                `* Add ${colors.green('--debug')} to any command for debugging\n` +
-                `* Squeezer framework documentation: ${colors.cyan('docs.squeezer.io')}\n`;
+                `${colors.blue.bold(logo)}\n` +
+                `* List commands: ${colors.blue.bold('sqz list')}\n` +
+                `* Help: ${colors.blue.bold('sqz help [command]')}\n` +
+                '* Docs: squeezer.io/docs\n' +
+                '* Chat: chat.squeezer.io\n' +
+                '* Bugs: github.com/SqueezerIO/squeezer/issues\n\n' +
+                `* For debugging add ${colors.blue.bold('--debug')} flag\n`;
 
         sqz.cli.log.console(msg.replace(/^/gm, ' '.repeat(1)));
 
@@ -131,18 +136,19 @@ module.exports = (() => {
       const args       = this.args;
       const command    = this.commands[args.names.join(':')];
       const hintCmd    = args.names[0] === 'help' ? args.args[0] : args.names.join(':');
-      const cliVersion = `${colors.yellow(`CLI v${settings.version}`)}`;
+      const cliVersion = `Framework Version ${colors.blue.bold(`${settings.version}`)}`;
 
       /**
        * ascii art generated with the help of :
        * http://patorjk.com/software/taag/#p=display&f=Rectangles&t=Type%20Something%20
        */
       let logo = '';
-      logo     = `${logo}                                         _\n`;
-      logo     = `${logo} ___ ___ _ _ ___ ___ ___ ___ ___        |_|___\n`;
-      logo     = `${logo}|_ -| . | | | -_| -_|- _| -_|  _|   _   | | . |\n`;
-      logo     = `${logo}|___|_  |___|___|___|___|___|_|    |_|  |_|___|\n`;
-      logo     = `${logo}      |_|                             ${cliVersion}\n`;
+      logo     = `${logo}                                 \n`;
+      logo     = `${logo} _______                                                \n`;
+      logo     = `${logo}|     __|.-----..--.--..-----..-----..-----..-----..----.\n`;
+      logo     = `${logo}|__     ||  _  ||  |  ||  -__||  -__||-- __||  -__||   _|\n`;
+      logo     = `${logo}|_______||__   ||_____||_____||_____||_____||_____||__|  \n`;
+      logo     = `${logo}            |__|                  ${cliVersion}\n`;
 
       let errorMsg            = `Command "${colors.green(hintCmd)}" not found  ... \n`;
       const availableHelpCmds = [];

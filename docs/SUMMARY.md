@@ -1,91 +1,82 @@
-# Summary
-
-### Getting Started
-
-* [Introduction & Quick Setup](README.md)
-* [Terminology](terminology.md)
-
---
-
-### Projects
-
-* [API](projects/api/api.md)
-  * [Swagger Integration](projects/api/swagger.md)
-* [Web](projects/web/web.md)
-  
---
-
+<!--BEGIN-->
 ### Development
+* [Packaging](/docs/development/packaging/)
+* [Command Hooks](/docs/development/command-hooks/)
+* [CORS](/docs/development/cors/)
+<!--END-->
 
-* [Inclusions](development/inclusions.md)
-* [Packaging](development/packaging.md)
-* [Command Hooks](development/command_hooks.md)
-* [Testing](development/testing.md)
-* [CORS](development/cors.md)
-  
---
+<!--BEGIN-->
+### Cloud Providers
+* Amazon Web Services
+  * [Introduction](/docs/cloud/aws/introduction/)
+  * [Installation](/docs/cloud/aws/installation/)
+  * [Setting up credentials](/docs/cloud/aws/credentials/)
+  * [CloudFormation](/docs/cloud/aws/cloudformation/)
+  * Events
+    * [Introduction](/docs/cloud/aws/events/introduction/)
+    * [HTTP](/docs/cloud/aws/events/http/)
+    * [Schedule](/docs/cloud/aws/events/schedule/)
+    * [S3](/docs/cloud/aws/events/s3/)
+    * Streams
+      * [DynamoDB](/docs/cloud/aws/events/streams/dynamodb/)
+      * [Kinesis](/docs/cloud/aws/events/streams/kinesis/) 
+    * [SNS](/docs/cloud/aws/events/sns/)
+    * [IoT](/docs/cloud/aws/events/iot/)
+    * [Alexa Skills](/docs/cloud/aws/events/alexa/)
+* Microsoft Azure
+  * [Introduction](/docs/cloud/azure/introduction/)
+  * [Installation](/docs/cloud/azure/installation/)
+  * [Setting up credentials](/docs/cloud/azure/credentials/)
+  * [ARM templates](/docs/cloud/azure/arm-templates/)
+  * Events
+    * [Introduction](/docs/cloud/azure/events/introduction/)
+    * [HTTP](/docs/cloud/azure/events/http/)  
+    * [Timer](/docs/cloud/azure/events/timer/)  
+    * [Blob Storage](/docs/cloud/azure/events/blob-storage/)  
+    * [DocumentDB](/docs/cloud/azure/events/documentDB/)  
+    * [Event Hubs](/docs/cloud/azure/events/event-hubs/)  
+    * [Queue Storage](/docs/cloud/azure/events/queue-storage/)  
+    * [Service Bus](/docs/cloud/azure/events/service-bus/)     
+<!--END-->
 
-### Clouds
+<!--BEGIN-->
+### Plugin
+* [Introduction](/docs/plugin/introduction/)
+* [Lifecycle](/docs/plugin/lifecycle/)
+* [Example](/docs/plugin/example/)
+* [Debugging](/docs/plugin/debugging/)
+<!--BEGIN-->
 
-* [AWS](clouds/aws/aws.md)
-  * [Installation](clouds/aws/installation.md)
-  * [Setting up credentials](clouds/aws/credentials.md)
-  * [CloudFormation](clouds/aws/cloudformation.md)
-  * [Events](clouds/aws/events/introduction.md)
-    * [API Gateway](clouds/aws/events/api_gateway.md)
-    * [Schedule](clouds/aws/events/schedule.md)
-    * [S3](clouds/aws/events/s3.md)
-    * [Streams](clouds/aws/events/streams/streams.md)
-      * [DynamoDB](clouds/aws/events/streams/dynamodb.md)
-      * [Kinesis](clouds/aws/events/streams/kinesis.md) 
-    * [SNS](clouds/aws/events/sns.md)
-    * [IoT](clouds/aws/events/iot.md)
-    * [Alexa Skills](clouds/aws/events/alexa.md)
-* [Azure](clouds/azure/azure.md)
-  * [Installation](clouds/azure/installation.md)
-  * [Setting up credentials](clouds/azure/credentials.md)
-  * [ARM templates](clouds/azure/arm_templates.md)
-
-      
---
-
-
-### Plugins
-
-* [Introduction](plugins/introduction.md)
-* [Lifecycle](plugins/lifecycle.md)
-* [Example](plugins/example.md)
-* [Debugging](plugins/debugging.md)
-
---
-
+<!--BEGIN-->
 ### Common
+* [Classes](common/)
+<!--END-->
 
-* [Classes](common.md)
-
---
-
-### Command Line Interface
-
-* [Compile](cli/compile.md)
-* [Config](cli/config.md)
-* [Create](cli/create.md)
-* [Fileutils](cli/fileutils.md)
-    * [Copy](cli/fileutils.md#fileutils_copy)
-    * [Empty](cli/fileutils.md#fileutils_empty)
-    * [Mkdir](cli/fileutils.md#fileutils_mkdir)
-    * [Link](cli/fileutils.md#fileutils_link)
-    * [Move](cli/fileutils.md#fileutils_move)
-    * [Remove](cli/fileutils.md#fileutils_remove)
-    * [Sync](cli/fileutils.md#fileutils_sync)
-* [Help](cli/help.md)
-* [Install](cli/install.md)
-* [List](cli/list.md)
-* [Templates](cli/templates.md)
-* [Test](cli/test.md)
-* [Update](cli/update.md)
-* [Version](cli/version.md)
-
-
---
+<!--BEGIN-->
+### CLI
+<!--this section is generated-->
+* [compile](/docs/cli/compile/)
+* [config](/docs/cli/config/)
+* [create](/docs/cli/create/)
+* [deploy](/docs/cli/deploy/)
+* [fileutils](/docs/cli/fileutils-copy/)
+  * [copy](/docs/cli/fileutils-copy/)
+  * [empty](/docs/cli/fileutils-empty/)
+  * [mkdir](/docs/cli/fileutils-mkdir/)
+  * [link](/docs/cli/fileutils-link/)
+  * [move](/docs/cli/fileutils-move/)
+  * [remove](/docs/cli/fileutils-remove/)
+  * [sync](/docs/cli/fileutils-sync/)
+* [help](/docs/cli/help/)
+* [init](/docs/cli/init/)
+* [install](/docs/cli/install/)
+* [invoke](/docs/cli/invoke/)
+* [list](/docs/cli/list/)
+* [logs](/docs/cli/logs/)
+* [remove](/docs/cli/remove/)
+* [run](/docs/cli/run/)
+* [templates](/docs/cli/templates/)
+* [update](/docs/cli/update/)
+* [version](/docs/cli/version/)
+<!--END-->
 

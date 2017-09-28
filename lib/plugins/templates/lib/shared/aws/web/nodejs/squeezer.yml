@@ -31,6 +31,8 @@ env:
 
 # PLUGINS
 plugins:
+  - name: squeezer-aws
+    path: node_modules
   - name: squeezer-serve
     path: node_modules
 
