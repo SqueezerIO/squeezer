@@ -1,9 +1,7 @@
 ![Squeezer Intro](docs/gitbook/images/introduction.png)
 
-### [Watch video](https://www.youtube.com/watch?v=DfRnJOZvtJg&t=3s)
-
 #### Framework : [squeezer.io](https://squeezer.io)
-#### Docs : [squeezer.io/docs](https://squeezer.io/docs)
+#### Docs : [squeezer.io/docs](https://squeezer.io/docs/)
 #### Chat : [chat.squeezer.io](http://chat.squeezer.io)
 
 [![Squeezer.IO](https://cdn.rawgit.com/SqueezerIO/squeezer/9a010c35/docs/gitbook/images/badge.svg)](https://Squeezer.IO)
@@ -11,8 +9,6 @@
 [![npm version](https://badge.fury.io/js/squeezer-cli.svg)](https://badge.fury.io/js/squeezer-cli)
 [![Join the chat at https://gitter.im/SqueezerIO/squeezer](https://badges.gitter.im/SqueezerIO/squeezer.svg)](https://gitter.im/SqueezerIO/squeezer?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![DUB](https://img.shields.io/dub/l/vibe-d.svg)]()
-
-![Quick Getting Started](docs/gitbook/images/getting-started-tutorial-quick.gif)
 
 ### Contents
 
@@ -35,7 +31,7 @@ zero-administration compute platforms where code runs on the top of
 ### <a name="features"></a>Features in short
 
 - [Swagger UI](http://swagger.io/) API REST  documentation support
-- **SEO-friendly** web apps with the [PUG](https://pugjs.org/) support ( formerly known as **JADE** ) + your favorite JS framework + CDN integrated support for project's assets (js, images, css, ...)
+- **SEO-friendly** web apps
 - share components between functions
 - auto-deployable, auto-scalable , no DevOps requirements
 - silent deployments ,no interruption for the current functionality ( really useful on production )
@@ -53,7 +49,7 @@ where code changed from the last deployment
 - competitive pricing (  >= 2$ / 1 million HTTP requests )
 - smart external dependencies inclusion into the compiled function ( **node_modules** and other project files ) ... just
 like on any other trivial NodeJS project
-- Babel ES6/ES7 + Webpack 2 integration
+- Webpack integration
 
 #### Requirements
 
@@ -90,10 +86,10 @@ Extend or merge the Squeezer framework functionality with plugins
 | Project Name | Author | Demo |
 |-------------|------|---------|
 | **[AWS Generic API Project](https://github.com/SqueezerIO/example-projects/aws-api-nodejs)** <br/> AWS generic API Hello World projects using Swagger API Docs | [Nick Chisiu](https://github.com/nickchisiu) | [demo](https://s3.amazonaws.com/awsapinodejs-dev-squeezerdeploymentbucket-249nnrc1a8l7/swagger-ui/index.html) |
-| **[AWS Generic WEB Project](https://github.com/SqueezerIO/example-projects/aws-web-nodejs)** <br/> AWS NodeJS WebApp template + Pug ( ex-Jade ) + ReactJS support + Material UI + Bootstrap 3 styling | [Nick Chisiu](https://github.com/nickchisiu) | [demo](https://s5j7ln2u4l.execute-api.us-east-1.amazonaws.com/dev) |
+| **[AWS Generic WEB Project](https://github.com/SqueezerIO/example-projects/aws-web-nodejs)** <br/> AWS NodeJS WebApp template + ReactJS | [Nick Chisiu](https://github.com/nickchisiu) | [demo](https://s5j7ln2u4l.execute-api.us-east-1.amazonaws.com/dev) |
 | **[AWS REST API Project](https://github.com/SqueezerIO/example-projects/aws-api-nodejs-rest)** <br/> AWS NodeJS REST API template + DynamoDB + Swagger support | [Nick Chisiu](https://github.com/nickchisiu) | [demo](https://s3.amazonaws.com/awsapinodejsrest-dev-squeezerdeploymentbucket-fnurwkb8urep/swagger-ui/index.html) |
 | **[Azure Generic API Project](https://github.com/SqueezerIO/example-projects/azure-api-nodejs)** <br/> Azure generic API Hello World projects using Swagger API Docs | [Nick Chisiu](https://github.com/nickchisiu) | demo |
-| **[Azure Generic WEB Project](https://github.com/SqueezerIO/example-projects/azure-web-nodejs)** <br/> Azure NodeJS WebApp template + Pug ( ex-Jade ) + ReactJS support + Material UI + Bootstrap 3 styling | [Nick Chisiu](https://github.com/nickchisiu) | demo |
+| **[Azure Generic WEB Project](https://github.com/SqueezerIO/example-projects/azure-web-nodejs)** <br/> Azure NodeJS WebApp template + ReactJS | [Nick Chisiu](https://github.com/nickchisiu) | demo |
 | **[Azure REST API Project](https://github.com/SqueezerIO/example-projects/azure-api-nodejs-rest)** <br/> Azure NodeJS REST API template + Azure SQL + Swagger support | [Nick Chisiu](https://github.com/nickchisiu) | demo |
 
 

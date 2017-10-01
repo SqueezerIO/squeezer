@@ -121,7 +121,7 @@ module.exports = (() => {
                 `${colors.blue.bold(logo)}\n` +
                 `* List commands: ${colors.blue.bold('sqz list')}\n` +
                 `* Help: ${colors.blue.bold('sqz help [command]')}\n` +
-                '* Docs: squeezer.io/docs\n' +
+                '* Docs: squeezer.io/docs/\n' +
                 '* Chat: chat.squeezer.io\n' +
                 '* Bugs: github.com/SqueezerIO/squeezer/issues\n\n' +
                 `* For debugging add ${colors.blue.bold('--debug')} flag\n`;

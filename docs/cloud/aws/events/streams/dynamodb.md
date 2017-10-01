@@ -51,23 +51,20 @@ Resources:
 
 ## Hook a Lambda function to the stream event
 
-`sqz.config.yml` :
+`squeezer.yml` :
 
 ```yaml
-functions:
-  testFunction:
-    handler: "test"
-    events:
-      - type: stream
-        sourceArn: DynamoStack.Outputs.ProductsDynamoTableStreamArn
-        batchSize: 100
-        startPosition: LATEST
+events:
+  - type: stream
+    sourceArn: DynamoStack.Outputs.ProductsDynamoTableStreamArn
+    batchSize: 100
+    startPosition: LATEST
 ```
 
 `handler.js` :
 
 ```js
-exports.test = (event, context) => {
+exports.handler = (event, context) => {
   console.log(JSON.stringify(event, null, 2))
   context.succeed(event);
 };

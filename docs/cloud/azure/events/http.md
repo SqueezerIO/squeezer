@@ -25,7 +25,7 @@ events:
 ```javascript
 'use strict';
 
-exports.hello = (context, req) => {
+exports.handler = (context, req) => {
   const query   = req.query;    // query strings
   const body    = req.body;     // parsed content-type body
   const method  = req.method;   // HTTP Method

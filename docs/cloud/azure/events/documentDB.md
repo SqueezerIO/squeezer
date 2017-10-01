@@ -6,25 +6,24 @@ The DocumentDB API input binding retrieves a Cosmos DB document and passes it to
 
 https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-documentdb
 
+`squeezer.yml`
+
 ```yaml
-functions:
-  example:
-    handler: hello
-    events:
-      - type: documentDB
-        x-azure-settings:
-          name: record # Name of input parameter in function signature>
-          databaseName: myDocs # Name of the DocumentDB database
-          collectionName: todo # Name of the DocumentDB collection
-          createIfNotExists: true
-          connection: docDBAppSetting # Name of app setting with connection string
-          direction: out
+events:
+  - type: documentDB
+    x-azure-settings:
+      name: record # Name of input parameter in function signature>
+      databaseName: myDocs # Name of the DocumentDB database
+      collectionName: todo # Name of the DocumentDB collection
+      createIfNotExists: true
+      connection: docDBAppSetting # Name of app setting with connection string
+      direction: out
 ```
 
 ```javascript
 'use strict';
 
-exports.hello = (context, event) => {
+exports.handler = (context, event) => {
   context.log(`Got event: ${event}`);
   context.done();
 };

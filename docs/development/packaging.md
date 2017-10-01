@@ -4,7 +4,7 @@ title: Development - Packaging
 
 ## How to use the `packaging` feature  ?
 
-`sqz.config.yml` 
+`squeezer.yml` 
 
 ```yaml
 packaging:

@@ -4,20 +4,17 @@ title: AWS - Events - Alexa Skills
 
 ## Hook a Lambda function for the Alexa Skills events
 
-`sqz.config.yml` :
+`sqzueezer.yml` :
 
 ```yaml
-functions:
-  testFunction:
-    handler: "test"
-    events:
-      - type: alexaSkills
+events:
+  - type: alexaSkills
 ```
 
 `handler.js` :
 
 ```js
-exports.test = (event, context) => {
+exports.handler = (event, context) => {
   console.log(JSON.stringify(event, null, 2))
   context.succeed(event);
 };

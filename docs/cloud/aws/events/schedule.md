@@ -27,25 +27,21 @@ rate(value unit)
 
 Valid values: **minute** | **minutes** | **hour** | **hours** | **day** | **days**
 
-`sqz.config.yml` :
+`squeezer.yml` :
 
 ```yaml
-functions:
-  scheduleFunc:
-    description: "Schedule Event"
-    handler: "scheduleTask"
-    events:
-      - type: schedule
-        value: rate(1 minute)
-      # OR
-      - type: schedule
-        value: cron(0 10 * * * *)
+events:
+  - type: schedule
+    value: rate(1 minute)
+  # OR
+  - type: schedule
+    value: cron(0 10 * * * *)
 ```
 
 `handler.js`
 
 ```javascript
-exports.scheduleTask = (event, context) => { 
+exports.handler = (event, context) => { 
   context.succeed(event);
 };
 ```

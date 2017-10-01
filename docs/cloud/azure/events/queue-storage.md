@@ -6,15 +6,14 @@ The Azure Queue storage trigger enables you to monitor a queue storage for new m
 
 Find more details on https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-storage-queue
 
+`squeezer.yml`
+
 ```yaml
-functions:
-  example:
-    handler: hello
-    events:
-      - type: queue
-        x-azure-settings:
-          name: item # The name used to identify the trigger data in your code
-          connection: AzureWebJobsStorage # connection property must contain the name of an app setting that contains a storage connection string. 
+events:
+  - type: queue
+    x-azure-settings:
+      name: item # The name used to identify the trigger data in your code
+      connection: AzureWebJobsStorage # connection property must contain the name of an app setting that contains a storage connection string. 
 ```
 
 ```javascript
