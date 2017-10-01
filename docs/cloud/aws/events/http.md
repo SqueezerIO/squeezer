@@ -10,8 +10,6 @@ Gateway service invokes the corresponding Lambda function.
 `squeezer.yml` :
 
 ```yaml
-description: "Hello World"
-handler: "hello"
 events:
   - type: http
     path: "/rest/v1/hello"
@@ -21,7 +19,7 @@ events:
 `handler.js`
 
 ```js
-exports.hello = (event, context) => {
+exports.handler = (event, context) => {
   const response = {
     statusCode : 200,
     headers : {

@@ -1,6 +1,6 @@
 {
   "name": "squeezer-cli",
-  "version": "1.1.14",
+  "version": "1.1.15",
   "preferGlobal": true,
   "description": "Event-driven APIs & Web apps on functions, serverless ! Squeezer is a framework designed to help developers to get a better architecture on serverless zero-administration compute platforms with code that runs into cloud functions like [AWS Lambda](https://aws.amazon.com/documentation/lambda/) , [Azure Functions](https://azure.microsoft.com/en-us/services/functions/) , [Google Cloud Functions](https://cloud.google.com/functions/docs/) and [IBM OpenWhisk](https://developer.ibm.com/openwhisk/) .",
   "homepage": "https://squeezer.io/",
@@ -51,8 +51,7 @@
     "eslint": "eslint . --cache",
     "jsinspect": "jsinspect -t 30 -i ./bin/ ./lib/ ./test/ --ignore './lib/plugins/serve/public'",
     "serve": "cd docs && gitbook serve",
-    "gendocs": "gulp gen-classes-docs && node tasks/genCliDocs",
-    "publishdocs": "aws s3 sync docs/_book s3://docs.squeezer.io/ --profile squeezer && aws configure set preview.cloudfront true && aws cloudfront create-invalidation --profile squeezer --distribution-id E3DPKIWN8MDSTI --paths '/*'"
+    "gendocs": "gulp gen-classes-docs && node tasks/genCliDocs"
   },
   "contributors": [
     {
@@ -65,13 +64,10 @@
   "dependencies": {
     "archiver": "^1.1.0",
     "bluebird": "^3.4.6",
-    "body-parser": "^1.15.2",
     "colors": "^1.1.2",
     "fs-extra": "^2.0.0",
     "home-config": "^0.1.0",
-    "js-yaml": "^3.6.1",
     "lodash": "^4.15.0",
-    "moment": "^2.17.1",
     "precinct": "^3.8.0",
     "request": "^2.81.0",
     "sync-exec": "^0.6.2",
@@ -81,6 +77,7 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
+    "js-yaml": "^3.6.1",
     "concurrently": "^3.1.0",
     "coveralls": "^2.13.1",
     "documentation": "^5.2.1",

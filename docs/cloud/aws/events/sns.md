@@ -37,21 +37,18 @@ Include the `sns-template.yml` file in the main stack.
 
 ## Hook a Lambda function to the sns event
 
-`sqz.config.yml` :
+`squeezer.yml` :
 
 ```yaml
-functions:
-  testFunction:
-    handler: "test"
-    events:
-      - type: sns
-        topic: snsStack.mySNSTopic
+events:
+  - type: sns
+    topic: snsStack.mySNSTopic
 ```
 
 `handler.js` :
 
 ```js
-exports.test = (event, context) => {
+exports.handler = (event, context) => {
   console.log(JSON.stringify(event, null, 2))
   context.succeed(event);
 };

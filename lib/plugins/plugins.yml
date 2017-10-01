@@ -16,6 +16,6 @@ plugins:
   - templates
   - install
   - compile
-  - update
+# - update
   - fileutils
 #  - docker

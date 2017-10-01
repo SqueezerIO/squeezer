@@ -1,5 +1,5 @@
 ## Framework : [squeezer.io](https://squeezer.io)
-## Documentation : [squeezer.io/docs](https://squeezer.io/docs)
+## Documentation : [squeezer.io/docs](https://squeezer.io/docs/)
 
 ### Project Structure
 

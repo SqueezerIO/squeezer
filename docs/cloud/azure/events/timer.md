@@ -9,15 +9,11 @@ Find more details on https://docs.microsoft.com/en-us/azure/azure-functions/func
 `squeezer.yml`
 
 ```yaml
-functions:
-  hello:
-    description: Says hello
-    handler: hello
-    events:
-      - type: timer
-        x-azure-settings:
-          name: item # Name of trigger parameter in function signature
-          schedule: 0 */5 * * * * # cron expression
+events:
+  - type: timer
+    x-azure-settings:
+      name: item # Name of trigger parameter in function signature
+      schedule: 0 */5 * * * * # cron expression
 ```
 
 `handler.js`
@@ -25,7 +21,7 @@ functions:
 ```javascript
 'use strict';
 
-exports.hello = (context, timerObject) => {
+exports.handler = (context, timerObject) => {
   context.log('Timer triggered');
   context.done();
 };
