@@ -1,5 +1,6 @@
-# Introduction - Get started
-
+---
+title: Introduction - Get started
+---
 ## Install Squeezer's command line tool
 
 `npm install squeezer-cli -g`
