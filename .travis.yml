@@ -1,13 +1,9 @@
 language: node_js
 
 node_js:
-  - "6"
-
-services:
-  - docker
+  - "8"
 
 before_install:
-  - pip install --user awscli
   - export PATH=$PATH:$HOME/.local/bin
 
 install:

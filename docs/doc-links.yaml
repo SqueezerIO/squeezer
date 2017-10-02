@@ -5,7 +5,7 @@
   links:
     Packaging: /docs/development/packaging/
     Command Hooks: /docs/development/command-hooks/
-    CORS: /docs/development/cors/
+    Cors: /docs/development/cors/
 - title: Clouds
   links:
     Amazon Web Services:
