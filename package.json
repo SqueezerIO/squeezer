@@ -51,7 +51,7 @@
     "eslint": "eslint . --cache",
     "jsinspect": "jsinspect -t 30 -i ./bin/ ./lib/ ./test/ --ignore './lib/plugins/serve/public'",
     "serve": "cd docs && gitbook serve",
-    "gendocs": "gulp gen-classes-docs && node tasks/genCliDocs"
+    "gendocs": "node tasks/genCliDocs"
   },
   "contributors": [
     {
@@ -87,8 +87,6 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.10.0",
-    "gulp": "^3.9.1",
-    "gulp-documentation": "^3.2.0",
     "istanbul": "^0.4.5",
     "jest": "^21.1.0",
     "jsinspect": "^0.12.7",

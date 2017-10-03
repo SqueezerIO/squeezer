@@ -6,7 +6,7 @@
     Packaging: /docs/development/packaging/
     Command Hooks: /docs/development/command-hooks/
     Cors: /docs/development/cors/
-- title: Clouds
+- title: Cloud Providers
   links:
     Amazon Web Services:
       Introduction: /docs/cloud/aws/introduction/
@@ -42,7 +42,6 @@
     Lifecycle: /docs/plugin/lifecycle/
     Example: /docs/plugin/example/
     Debugging: /docs/plugin/debugging/
-    Classes: /docs/plugin/common/
 - title: CLI
   links:
     compile: /docs/cli/compile/

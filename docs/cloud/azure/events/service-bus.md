@@ -1,5 +1,5 @@
 ---
-title: Microsoft Azure - Events - Service Bus Trigger
+title: Microsoft Azure - Events - Service Bus
 ---
     
 Use the Service Bus trigger to respond to messages from a Service Bus queue or topic.

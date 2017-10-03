@@ -1,5 +1,5 @@
 ---
-title: AWS - Events - HTTP Event
+title: AWS - Events - HTTP
 ---
 
 You can invoke a Lambda function over HTTPS. You can do this by defining a custom REST API and 

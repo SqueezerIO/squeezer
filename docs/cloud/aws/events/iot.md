@@ -1,5 +1,5 @@
 ---
-title: AWS - Events - IoT events
+title: AWS - Events - IoT
 ---
 
 #### Hook a Lambda function for the IoT events

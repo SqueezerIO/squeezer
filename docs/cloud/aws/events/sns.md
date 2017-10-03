@@ -1,5 +1,5 @@
 ---
-title: AWS - Events - SNS events
+title: AWS - Events - SNS
 ---
 
 ## Add a new SNS topic resource
