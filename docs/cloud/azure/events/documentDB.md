@@ -1,5 +1,5 @@
 ---
-title: Microsoft Azure - Events - DocumentDB Trigger
+title: Microsoft Azure - Events - DocumentDB
 ---
        
 The DocumentDB API input binding retrieves a Cosmos DB document and passes it to the named input parameter of the function. The document ID can be determined based on the trigger that invokes the function.

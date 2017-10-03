@@ -1,5 +1,5 @@
 ---
-title: Microsoft Azure - Events - Timer trigger
+title: Microsoft Azure - Events - Timer
 ---
 
 The timer trigger supports multi-instance scale-out. A single instance of a particular timer function is run across all instances.

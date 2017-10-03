@@ -14,13 +14,15 @@ Please note we have a code of conduct, please follow it in all your interactions
 
 ### Units
 
-- `npm run test`
+- `npm test`
 
-### Integration
+### Linter
 
-- Please make sure that you have [Docker](https://docs.docker.com/engine/installation/) installed
-- [Configure an AWS profile](https://squeezer.io/docs/clouds/aws/aws_profile.html) named `squeezer-test` 
-- `npm run test-integration`
+- `npm run eslint`
+
+### Duplicate Code
+
+- `nom run jsinspect`
 
 ## Code of Conduct
 

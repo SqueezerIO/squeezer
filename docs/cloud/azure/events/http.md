@@ -1,5 +1,5 @@
 ---
-title: Microsoft Azure - Events - HTTP trigger
+title: Microsoft Azure - Events - HTTP
 ---
 
 The HTTP trigger will execute your function in response to an HTTP request. 

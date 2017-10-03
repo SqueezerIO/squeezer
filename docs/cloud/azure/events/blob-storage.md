@@ -1,5 +1,5 @@
 ---
-title: Microsoft Azure - Events - Blob Storage Trigger
+title: Microsoft Azure - Events - Blob Storage
 ---
        
 Using the Azure Blob storage trigger, your function code is called when a new or updated blob is detected. The blob contents are provided as input to the function.

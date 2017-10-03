@@ -1,5 +1,5 @@
 ---
-title: Microsoft Azure - Events - Event Hubs Trigger
+title: Microsoft Azure - Events - Event Hubs
 ---
     
 Use the Event Hubs trigger to respond to an event sent to an event hub event stream. You must have read access to the event hub to set up the trigger.

@@ -1,5 +1,5 @@
 ---
-title: Microsoft Azure - Events - Queue Storage Trigger
+title: Microsoft Azure - Events - Queue Storage
 ---
     
 The Azure Queue storage trigger enables you to monitor a queue storage for new messages and react to them.

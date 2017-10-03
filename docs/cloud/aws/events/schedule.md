@@ -1,5 +1,5 @@
 ---
-title: AWS - Events - Schedule Events ( Cron )
+title: AWS - Events - Schedule ( Cron )
 ---
 
 ## Cron Expressions
