@@ -1,5 +1,4 @@
-[![Squeezer Framework](readme-introduction.gif)](https://squeezer.io){:height="auto" width="700px"}
-
+<a href="https://squeezer.io" target="_blank"><img width="700" height="auto" src="./readme-introduction.gif"></a>
 
 #### Framework : [squeezer.io](https://squeezer.io)
 #### Docs : [squeezer.io/docs](https://squeezer.io/docs/)
