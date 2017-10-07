@@ -1,4 +1,4 @@
-![Squeezer Intro](docs/gitbook/images/introduction.png)
+![Squeezer Intro](readme-introduction.gif)
 
 #### Framework : [squeezer.io](https://squeezer.io)
 #### Docs : [squeezer.io/docs](https://squeezer.io/docs/)
