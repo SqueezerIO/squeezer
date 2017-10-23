@@ -1,5 +1,5 @@
-- identifier : 'deploy:compile'
-  path : 'lib/compile'
+- identifier : 'deploy:run'
+  path : 'lib'
   function : 'run'
 - identifier : 'deploy:checksums:get'
   path : 'lib/checksums'

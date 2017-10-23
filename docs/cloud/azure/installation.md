@@ -6,7 +6,7 @@ title: Microsoft Azure - Install plugin
 
 `npm i squeezer-azure --save`
 
-## Activate the plugin
+### Activate the plugin
 
 *PROJECT_DIR/squeezer.yml*
 

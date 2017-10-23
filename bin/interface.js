@@ -2,14 +2,15 @@
  * CLI manager
  */
 
-const sqz      = require('./Squeezer');
-const fs       = require('fs');
-const colors   = require('colors/safe');
-const _        = require('lodash');
+const sqz = require('./Squeezer');
+const path = require('path');
+const colors = require('colors/safe');
+const _ = require('lodash');
 const walkSync = require('walk-sync');
 
 const settings = require('../package.json');
-const bin      = Object.keys(settings.bin)[0];
+
+const bin = Object.keys(settings.bin)[0];
 
 /* eslint no-param-reassign: 0, no-shadow: 0, prefer-template : 0 */
 
@@ -18,33 +19,25 @@ module.exports = (() => {
 
   class CommandLineInterface {
     constructor() {
-      this.args     = sqz.cli.params.get();
+      this.args = sqz.cli.params.get();
       this.commands = {};
     }
 
     load() {
-      const frameworkCmdsPaths = walkSync(`${__dirname}/../`, { globs : ['lib/plugins/*/index.js'] })
-        .map(val => ({ path : `../${val}`, options : {} }));
+      const frameworkPath = path.resolve(`${__dirname}/../lib`);
+      const frameworkCmdsPaths = walkSync(path.resolve(`${__dirname}/../lib`), { globs: ['plugins/*/index.js'] })
+        .map(val => ({ path: path.join(frameworkPath, val) }));
 
-      const pluginsCmdsPaths = [];
+      let pluginsCmdsPaths = [];
 
-      if (sqz.vars.project.isValid && sqz.vars.project.plugins
-        && sqz.vars.project.plugins.length > 0) {
-        _.forEach(sqz.vars.project.plugins, (val) => {
-          const pluginPath = `${sqz.vars.project.path}/${val.path}/${val.name}/index.js`;
-          if (fs.existsSync(pluginPath)) {
-            pluginsCmdsPaths.push({
-              path    : pluginPath,
-              options : val.options || {}
-            });
-          }
-        });
+      if (sqz.vars.project.isValid && sqz.vars.customPluginPaths.length > 0) {
+        pluginsCmdsPaths = _.concat(pluginsCmdsPaths, sqz.vars.customPluginPaths);
       }
 
       const paths = _.concat(frameworkCmdsPaths, pluginsCmdsPaths);
 
       _.forEach(paths, (val) => {
-        this.add(require(val.path), val.path, val.options); // eslint-disable-line global-require
+        this.add(require(val.path), val.path); // eslint-disable-line global-require
       });
     }
 
@@ -118,13 +111,13 @@ module.exports = (() => {
     index(args, logo) {
       if (args.names.length === 0) {
         const msg =
-                `${colors.blue.bold(logo)}\n` +
-                `* List commands: ${colors.blue.bold('sqz list')}\n` +
-                `* Help: ${colors.blue.bold('sqz help [command]')}\n` +
-                '* Docs: squeezer.io/docs/\n' +
-                '* Chat: chat.squeezer.io\n' +
-                '* Bugs: github.com/SqueezerIO/squeezer/issues\n\n' +
-                `* For debugging add ${colors.blue.bold('--debug')} flag\n`;
+          `${colors.blue.bold(logo)}\n` +
+          `* List commands: ${colors.blue.bold('sqz list')}\n` +
+          `* Help: ${colors.blue.bold('sqz help [command]')}\n` +
+          '* Docs: squeezer.io/docs/\n' +
+          '* Chat: chat.squeezer.io\n' +
+          '* Bugs: github.com/SqueezerIO/squeezer/issues\n\n' +
+          `* For debugging add ${colors.blue.bold('--debug')} flag\n`;
 
         sqz.cli.log.console(msg.replace(/^/gm, ' '.repeat(1)));
 
@@ -133,9 +126,9 @@ module.exports = (() => {
     }
 
     run() {
-      const args       = this.args;
-      const command    = this.commands[args.names.join(':')];
-      const hintCmd    = args.names[0] === 'help' ? args.args[0] : args.names.join(':');
+      const args = this.args;
+      const command = this.commands[args.names.join(':')];
+      const hintCmd = args.names[0] === 'help' ? args.args[0] : args.names.join(':');
       const cliVersion = `Framework Version ${colors.blue.bold(`${settings.version}`)}`;
 
       /**
@@ -143,14 +136,14 @@ module.exports = (() => {
        * http://patorjk.com/software/taag/#p=display&f=Rectangles&t=Type%20Something%20
        */
       let logo = '';
-      logo     = `${logo}                                 \n`;
-      logo     = `${logo} _______                                                \n`;
-      logo     = `${logo}|     __|.-----..--.--..-----..-----..-----..-----..----.\n`;
-      logo     = `${logo}|__     ||  _  ||  |  ||  -__||  -__||-- __||  -__||   _|\n`;
-      logo     = `${logo}|_______||__   ||_____||_____||_____||_____||_____||__|  \n`;
-      logo     = `${logo}            |__|                  ${cliVersion}\n`;
+      logo = `${logo}                                 \n`;
+      logo = `${logo} _______                                                \n`;
+      logo = `${logo}|     __|.-----..--.--..-----..-----..-----..-----..----.\n`;
+      logo = `${logo}|__     ||  _  ||  |  ||  -__||  -__||-- __||  -__||   _|\n`;
+      logo = `${logo}|_______||__   ||_____||_____||_____||_____||_____||__|  \n`;
+      logo = `${logo}            |__|                  ${cliVersion}\n`;
 
-      let errorMsg            = `Command "${colors.green(hintCmd)}" not found  ... \n`;
+      let errorMsg = `Command "${colors.green(hintCmd)}" not found  ... \n`;
       const availableHelpCmds = [];
 
       this.index(args, logo);

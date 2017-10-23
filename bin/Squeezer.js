@@ -2,6 +2,7 @@
 
 const _ = require('lodash');
 const fs = require('fs');
+const path = require('path');
 
 const CommonArchiver = require('../lib/common/archiver');
 const CommonYaml = require('../lib/common/yaml');
@@ -18,6 +19,8 @@ const CommonVersion = require('../lib/common/version');
 const CommonConfig = require('../lib/common/config');
 const CommonValidate = require('../lib/common/validate');
 const CommonChecksums = require('../lib/common/checksums');
+const CommonProvider = require('../lib/common/provider');
+const CommonFunctions = require('../lib/common/functions');
 
 class Squeezer {
   init() {
@@ -38,22 +41,26 @@ class Squeezer {
     this.config = new CommonConfig(this);
     this.validate = new CommonValidate(this);
     this.checksums = new CommonChecksums(this);
+    this.provider = new CommonProvider(this);
+    this.functions = new CommonFunctions(this);
 
     this.deploy = {};
     this.cloud = {};
 
     this.vars = {
       project: {},
+      customPluginPaths: [],
+      previousChecksums: {
+        functions : {}
+      },
+      currentChecksums: {
+        functions : {}
+      },
       functions: {},
       hooks: [],
       apiBaseUrl: 'https://api.squeezer.io',
-      stage: 'dev',
       outputs: {},
       assets: {
-        main: {
-          previousChecksum: null,
-          currentChecksum: null
-        },
         functions: [],
         uploadPaths: []
       }
@@ -121,6 +128,7 @@ class Squeezer {
   loadHooks() {
     /* load frameworks hooks */
     const frameworkPlugins = this.yaml.parse(`${__dirname}/../lib/plugins/plugins.yml`);
+    const projectPath = this.vars.project.path;
 
     _.forOwn(frameworkPlugins.plugins, (plugin) => {
       const hookFile = `${__dirname}/../lib/plugins/${plugin}/hooks.yml`;
@@ -135,16 +143,36 @@ class Squeezer {
     });
 
     /* load plugins hooks */
+    const findPluginPath = (plugin) => {
+      const paths = ['plugins', 'node_modules'];
+      let pluginPath = null;
+
+      _.forEach(paths, (val) => {
+        const pluginBasePath = path.join(projectPath, val, plugin);
+        const hookPath = path.join(pluginBasePath, 'hooks.yml');
+        if (fs.existsSync(hookPath)) {
+          pluginPath = pluginBasePath;
+        }
+      });
+
+      return pluginPath;
+    };
+
     if (this.vars.project.isValid === true) {
       _.forEach(this.vars.project.plugins, (plugin) => {
-        const hookFile = `${this.vars.project.path}/${plugin.path}/${plugin.name}/hooks.yml`;
-        if (fs.existsSync(hookFile)) {
+        const pluginPath = findPluginPath(plugin);
+
+        if (pluginPath) {
           const data = this
-            .yaml.parse(hookFile)
+            .yaml.parse(path.join(pluginPath, 'hooks.yml'))
             .map((val) => {
-              val.path = `${this.vars.project.path}/${plugin.path}/${plugin.name}/${val.path}`;
+              val.path = path.join(pluginPath, val.path);
               return val;
             });
+
+          this.vars.customPluginPaths.push({
+            path: path.join(pluginPath, 'index.js')
+          });
 
           this.vars.hooks = this.vars.hooks.concat(data);
         }

@@ -4,7 +4,7 @@ title: Plugin - Example
 
 https://github.com/SqueezerIO/my-first-plugin
 
-All plugins are atumatically loaded from your project root directory `PROJECT_DIR/plugins/`
+All plugins are automatically loaded from your project root directory `PROJECT_DIR/plugins/`
 
 *Plugin file structure*
 
@@ -23,24 +23,20 @@ PROJECT_DIR
             └── index.js
 ```
 
-##### Activate a Plugin
+### Activate a Plugin
 
 `PROJECT_DIR/squeezer.yml` :
 
 ```yaml
-  - name: squeezer-plugin-1
-    path: node_modules
-  - name: squeezer-plugin-2
-    path: plugins
-    options:
-      var1: hello 
+  plugins:
+    - squeezer-plugin
 ```
 
-##### Common
+### Common
 
 You can use many of the Squeezer framework features in the [Common](common.md) section .
 
-##### Extends a current framework command ( *it will add `--msg` option for current `deploy` command* )
+### Extends a current framework command ( *it will add `--msg` option for current `deploy` command* )
 
  
 `index.js` :
@@ -83,7 +79,7 @@ class MyFirstPlugin {
 module.exports = MyFirstPlugin;
 ``` 
 
-##### Or add a fresh new command to the CLI ...
+### Or add a fresh new command to the CLI ...
 
 ```javascript
 'use strict';
@@ -107,7 +103,7 @@ class MyFirstPlugin {
 $ sqz command:subcommand --debug
 ```
 
-##### Configure hooks
+### Configure hooks
 
 `hooks.yml` :
 
@@ -170,7 +166,7 @@ class MyFirstPluginHooks {
 module.exports = MyFirstPluginHooks;
 ```
 
-#### Execute
+### Execute
 
 ```
 $ sqz deploy --msg "hello" --debug

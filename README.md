@@ -1,4 +1,4 @@
-![Squeezer Intro](docs/gitbook/images/introduction.png)
+<a href="https://squeezer.io" target="_blank"><img width="700" height="auto" src="./readme-introduction.gif"></a>
 
 #### Framework : [squeezer.io](https://squeezer.io)
 #### Docs : [squeezer.io/docs](https://squeezer.io/docs/)
@@ -20,6 +20,7 @@
 * [Example Projects](#example-projects)
 * [Contributing](#contributing)
 * [Community](#community)
+* [Meetups](#meetups)
 
 ### What is Squeezer ?
 
@@ -102,9 +103,10 @@ NOTE: **Windows** users should [enable symlinks](http://answers.perforce.com/art
 |    | cmd | description  |
 |----|-----|--------------|
 | 1. | **npm install -g squeezer-cli**  |  Install Squeezer CLI |
-| 2. | **sqz create --project my-first-project --template aws-api-nodejs**  |  Create a project |
+| 2. | **sqz create --project my-first-project --template api-nodejs**  |  Create a project |
 | 3. | **cd my-first-project**  |  Switch to the project's directory |
-| 4. | **sqz compile**  |  Install packages & compile functions |
+| 4. | **sqz install**  |  Install dependencies |
+| 4. | **sqz compile**  |  Compile functions |
 | 5. | **sqz serve**  |  Development mode<br>**Live reload** enabled by default |
 
 ##### Deploy
@@ -112,8 +114,8 @@ NOTE: **Windows** users should [enable symlinks](http://answers.perforce.com/art
 |    | cmd | description  |
 |----|-----|--------------|
 | 1. | [Configure credentials](https://docs.squeezer.io/clouds/aws/credentials.html)  |  Cloud credentials |
-| 2. | **sqz compile --cloud**  |  Compile functions for cloud deployments |
-| 3. | **sqz deploy --stage dev**  | Deploy your app into the cloud provider<br>*Note*: initial deployments can take longer <= **40 mins** |
+| 2. | **sqz compile --cloud --stage dev**  |  Compile functions for cloud deployments |
+| 3. | **sqz deploy**  | Deploy your app into the cloud provider<br>*Note*: initial deployments can take longer <= **40 mins** |
 
 
 #### <a name="contributing"></a>Contributing
@@ -127,3 +129,7 @@ See [contributing.md](CONTRIBUTING.md) for contribution guidelines
 * [Facebook](https://www.facebook.com/Squeezer.IO/)
 * [Twitter](https://twitter.com/SqueezerIO)
 * [Contact Us](mailto:nick@squeezer.io)
+
+### <a name="meetups"></a>Meetups
+
+* [Workshop: Serverless javascript with Squeezer](https://www.meetup.com/Cluj-Javascripters/events/243915438/?)

@@ -2,13 +2,17 @@
 title: Microsoft Azure - Configure Credentials
 ---
 
-## Step 1 - Installing Azure Command Line interface
+```
+$ sqz config --setting provider --value azure
+```
+
+### Step 1 - Installing Azure Command Line interface
 
 ```
 $ npm install -g azure-cli
 ```
 
-## Step 2 - Creating a Service Principal
+### Step 2 - Creating a Service Principal
 
 ```shell
 $ azure login # or $ azure login -u user@domain.tld
@@ -75,7 +79,7 @@ info:    login command OK
 ```
 
 
-## Step 3 - Adding credentials to the Squeezer project
+### Step 3 - Adding credentials to the Squeezer project
 
 ```
 $ sqz config --setting azure_username --value <USERNAME or CLIENT_ID> 
