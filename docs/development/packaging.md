@@ -2,7 +2,7 @@
 title: Development - Packaging
 ---
 
-## How to use the `packaging` feature  ?
+### How to use the `packaging` feature  ?
 
 `squeezer.yml` 
 

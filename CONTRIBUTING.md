@@ -8,7 +8,7 @@ Please note we have a code of conduct, please follow it in all your interactions
 ## Pull Request Process
 
 1. Lock down dependency versions `npm shrinkwrap`
-2. TravisCI will trigger linter check, js duplicate code scan and integration tests
+2. TravisCI will trigger linter check, js duplicate code scan and tests
 
 ## Tests
 
@@ -22,7 +22,13 @@ Please note we have a code of conduct, please follow it in all your interactions
 
 ### Duplicate Code
 
-- `nom run jsinspect`
+- `npm run jsinspect`
+
+### Add a new cloud provider
+
+- [events integration](https://github.com/SqueezerIO/squeezer-adapter-node)
+- [provider integration](https://github.com/SqueezerIO/squeezer-api-node)
+- add [documentation](https://github.com/SqueezerIO/squeezer/tree/master/docs/cloud)
 
 ## Code of Conduct
 

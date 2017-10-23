@@ -23,3 +23,5 @@ docs/docs
 coverage/
 lib-cov/
 coverage.json
+
+.history

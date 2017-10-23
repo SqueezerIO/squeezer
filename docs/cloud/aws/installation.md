@@ -6,7 +6,7 @@ title: AWS - Install Plugin
 
 `npm i squeezer-aws --save`
 
-## Activate the plugin
+### Activate the plugin
 
 *PROJECT_DIR/squeezer.yml*
 

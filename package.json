@@ -73,7 +73,8 @@
     "sync-exec": "^0.6.2",
     "templatestring": "^5.0.1",
     "update-notifier": "^1.0.2",
-    "walk-sync": "^0.3.1"
+    "walk-sync": "^0.3.1",
+    "yaml-include": "^1.2.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",

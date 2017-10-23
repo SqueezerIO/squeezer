@@ -2,6 +2,10 @@
 title: AWS - Configure Credentials
 ---
 
+```
+$ sqz config --setting provider --value aws
+```
+
 ## Step 1 - Installing AWS Command Line interface
 
 There are a number of different ways to install the AWS CLI on your machine, depending on what operating system and environment you are using:
@@ -13,7 +17,7 @@ There are a number of different ways to install the AWS CLI on your machine, dep
  On OS X, if you see an error regarding the version of six that came with distutils in El Capitan, use the *--ignore-installed* option:<br><br>
 `$ sudo pip install awscli --ignore-installed six`
 
-## Step 2 - Adding a new AWS credentials profile
+### Step 2 - Adding a new AWS credentials profile
 
 NOTE : please make sure that your AWS user is `IAM` **admin** privileged .
 
@@ -26,7 +30,7 @@ Default region name [None]: us-east-1
 Default output format [None]: json
 ```
 
-## Step 3 - Adding the AWS profile to the Squeezer project
+### Step 3 - Adding the AWS profile to the Squeezer project
 
 ```
 $ sqz config --setting aws_profile --value my-first-project
