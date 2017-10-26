@@ -1,2 +1,0 @@
-- description: Updating npm packages for function "${function.name}"
-  bin: cd ${function.path}/src && npm update --silent

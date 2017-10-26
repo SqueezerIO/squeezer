@@ -1,8 +1,0 @@
-{
-  "dependencies": {
-    "source-map-support": "0.4.11",
-    "aws-sdk": "2.7.27",
-    "bluebird": "3.4.7",
-    "uuid": "3.0.1"
-  }
-}

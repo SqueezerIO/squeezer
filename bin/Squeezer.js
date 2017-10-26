@@ -19,31 +19,10 @@ const CommonVersion = require('../lib/common/version');
 const CommonConfig = require('../lib/common/config');
 const CommonValidate = require('../lib/common/validate');
 const CommonChecksums = require('../lib/common/checksums');
-const CommonProvider = require('../lib/common/provider');
 const CommonFunctions = require('../lib/common/functions');
 
 class Squeezer {
   init() {
-    this.cli = {
-      params: new CommonCliParams(this),
-      error: new CommonCliError(this),
-      loader: new CommonCliLoader(this),
-      log: new CommonCliLog(this),
-      help: new CommonCliHelp(this)
-    };
-    this.utils = new CommonUtils(this);
-    this.yaml = new CommonYaml(this);
-    this.lifecycle = new CommonLifecycle(this);
-    this.command = new CommonCommand(this);
-    this.variables = new CommonVariables(this);
-    this.archive = new CommonArchiver(this);
-    this.version = new CommonVersion(this);
-    this.config = new CommonConfig(this);
-    this.validate = new CommonValidate(this);
-    this.checksums = new CommonChecksums(this);
-    this.provider = new CommonProvider(this);
-    this.functions = new CommonFunctions(this);
-
     this.deploy = {};
     this.cloud = {};
 
@@ -70,8 +49,29 @@ class Squeezer {
       this.vars.deploy = true;
     }
 
-    this.validateVersion();
+    this.yaml = new CommonYaml(this);
+
     this.loadProject();
+
+    this.cli = {
+      params: new CommonCliParams(this),
+      error: new CommonCliError(this),
+      loader: new CommonCliLoader(this),
+      log: new CommonCliLog(this),
+      help: new CommonCliHelp(this)
+    };
+    this.utils = new CommonUtils(this);
+    this.lifecycle = new CommonLifecycle(this);
+    this.command = new CommonCommand(this);
+    this.variables = new CommonVariables(this);
+    this.archive = new CommonArchiver(this);
+    this.version = new CommonVersion(this);
+    this.validate = new CommonValidate(this);
+    this.checksums = new CommonChecksums(this);
+    this.functions = new CommonFunctions(this);
+    this.config = new CommonConfig(this);
+
+    this.validateVersion();
     this.loadHooks();
   }
 

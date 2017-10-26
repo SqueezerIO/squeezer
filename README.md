@@ -66,10 +66,7 @@ Create a quick project stub by using templates :
 
 | template | description |
 |-----|--------------|
-|aws-api-nodejs | AWS generic API app template. |
-|aws-web-nodejs | AWS generic WEB app template. |
-|azure-api-nodejs | Azure generic API app template. |
-|azure-web-nodejs | Azure generic WEB app template. |
+|api-nodejs | AWS generic API app template. |
 
 #### <a name="plugins"></a>Plugins
 
@@ -77,8 +74,6 @@ Extend or merge the Squeezer framework functionality with plugins
 
 | Plugin | Author |
 |-----|--------------|
-|**[AWS Plugin](https://github.com/SqueezerIO/squeezer-aws)** <br/> This plugin enables AWS Lambda support within the Squeezer Framework. | [Nick Chisiu](https://github.com/nickchisiu) |
-|**[Azure Plugin](https://github.com/SqueezerIO/squeezer-azure)** <br/> This plugin enables Azure Functions support within the Squeezer Framework. | [Nick Chisiu](https://github.com/nickchisiu) |
 |**[Serve Plugin](https://github.com/SqueezerIO/squeezer-serve)** <br/> This plugin enables serving support for local development within the Squeezer Framework. | [Nick Chisiu](https://github.com/nickchisiu) |
 |**[Swagger Plugin](https://github.com/SqueezerIO/squeezer-swagger)** <br/> This plugin enables Swagger API Documentation support within the Squeezer Framework. | [Nick Chisiu](https://github.com/nickchisiu) |
 
@@ -86,12 +81,8 @@ Extend or merge the Squeezer framework functionality with plugins
 
 | Project Name | Author | Demo |
 |-------------|------|---------|
-| **[AWS Generic API Project](https://github.com/SqueezerIO/example-projects/aws-api-nodejs)** <br/> AWS generic API Hello World projects using Swagger API Docs | [Nick Chisiu](https://github.com/nickchisiu) | [demo](https://s3.amazonaws.com/awsapinodejs-dev-squeezerdeploymentbucket-249nnrc1a8l7/swagger-ui/index.html) |
-| **[AWS Generic WEB Project](https://github.com/SqueezerIO/example-projects/aws-web-nodejs)** <br/> AWS NodeJS WebApp template + ReactJS | [Nick Chisiu](https://github.com/nickchisiu) | [demo](https://s5j7ln2u4l.execute-api.us-east-1.amazonaws.com/dev) |
-| **[AWS REST API Project](https://github.com/SqueezerIO/example-projects/aws-api-nodejs-rest)** <br/> AWS NodeJS REST API template + DynamoDB + Swagger support | [Nick Chisiu](https://github.com/nickchisiu) | [demo](https://s3.amazonaws.com/awsapinodejsrest-dev-squeezerdeploymentbucket-fnurwkb8urep/swagger-ui/index.html) |
-| **[Azure Generic API Project](https://github.com/SqueezerIO/example-projects/azure-api-nodejs)** <br/> Azure generic API Hello World projects using Swagger API Docs | [Nick Chisiu](https://github.com/nickchisiu) | demo |
-| **[Azure Generic WEB Project](https://github.com/SqueezerIO/example-projects/azure-web-nodejs)** <br/> Azure NodeJS WebApp template + ReactJS | [Nick Chisiu](https://github.com/nickchisiu) | demo |
-| **[Azure REST API Project](https://github.com/SqueezerIO/example-projects/azure-api-nodejs-rest)** <br/> Azure NodeJS REST API template + Azure SQL + Swagger support | [Nick Chisiu](https://github.com/nickchisiu) | demo |
+| **[Generic API](https://github.com/SqueezerIO/example-projects/tree/master/api-nodejs)** <br/>  Generic API Hello World + Swagger API Docs | [Nick Chisiu](https://github.com/nickchisiu) | [demo]() |
+| **[REST API](https://github.com/SqueezerIO/example-projects/tree/master/api-rest-nodejs)** <br/>  REST API using MongoDB + Swagger API Docs | [Nick Chisiu](https://github.com/nickchisiu) | [demo]() |
 
 
 #### <a name="getting-started"></a>Getting started
@@ -115,7 +106,7 @@ NOTE: **Windows** users should [enable symlinks](http://answers.perforce.com/art
 |----|-----|--------------|
 | 1. | [Configure credentials](https://docs.squeezer.io/clouds/aws/credentials.html)  |  Cloud credentials |
 | 2. | **sqz compile --cloud --stage dev**  |  Compile functions for cloud deployments |
-| 3. | **sqz deploy**  | Deploy your app into the cloud provider<br>*Note*: initial deployments can take longer <= **40 mins** |
+| 3. | **sqz deploy**  | Deploy your app into the cloud provider |
 
 
 #### <a name="contributing"></a>Contributing

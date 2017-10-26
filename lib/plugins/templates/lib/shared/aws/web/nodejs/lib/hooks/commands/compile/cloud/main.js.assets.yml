@@ -1,8 +1,0 @@
-- description: Webpacking JS assets
-  bin: ${projectPath}/node_modules/.bin/webpack
-  args:
-    - '-p'
-    - '--config'
-    - '${projectPath}/lib/webpack/config.web.main.prod.js'
-    - '${source}/js/main.js'
-    - '${target}/js/main.js'

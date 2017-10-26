@@ -1,0 +1,25 @@
+info:
+  title: API Documentation
+  description: Detailed documentation for available API endpoints
+definitions:
+  GetResponse:
+    type: object
+    properties:
+      message:
+        type: string
+        default: success
+      statusCode:
+        type: integer
+        default: 200
+  ErrorResponse:
+    type: object
+    properties:
+      message:
+        type: string
+        default: error message
+      code:
+        type: string
+        default: error code
+      statusCode:
+        type: integer
+        default: 400

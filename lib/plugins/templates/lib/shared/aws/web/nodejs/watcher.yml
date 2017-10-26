@@ -1,9 +1,0 @@
-# Watcher configuration
-# https://www.npmjs.com/package/chokidar
-
-globs:
-  include:
-    - '${projectPath}/web'
-    - '${projectPath}/functions/**'
-  ignore:
-    - '**/node_modules/**'

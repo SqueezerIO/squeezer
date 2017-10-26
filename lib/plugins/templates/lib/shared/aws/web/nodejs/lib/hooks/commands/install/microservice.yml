@@ -1,2 +1,0 @@
-- description: Installing npm packages for function "${function.name}"
-  bin: cd ${function.path}/src && npm install --silent
