@@ -1,0 +1,32 @@
+# IntelliJ idea
+.idea
+
+# OSX
+.DS_Store
+
+# cache
+.cache
+
+# deployment BUILD directory
+.build
+
+# events samples
+event.input.json
+
+# Logs
+*.log
+
+# NODE modules
+**/node_modules
+
+# compiled node packages
+**/dist/*
+!**/dist/.gitkeep
+
+# microservices inclusions
+services/*/src/inclusions
+
+# screenshots webdriverio
+errorShots
+
+vars.json

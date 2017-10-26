@@ -1,0 +1,5 @@
+- description: Executing handler
+  bin: cd ${target} && node ${projectPath}/lib/bin/run.js
+  args:
+    - '${target}/handler.js'
+    - '${eventInputFile}'

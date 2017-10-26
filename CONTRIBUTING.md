@@ -30,6 +30,9 @@ Please note we have a code of conduct, please follow it in all your interactions
 - [provider integration](https://github.com/SqueezerIO/squeezer-api-node)
 - add [documentation](https://github.com/SqueezerIO/squeezer/tree/master/docs/cloud)
 
+NOTE : Please don't forget that Squeezer is cloud agnostic and your changes should not affect 
+the workflow of the other providers .
+
 ## Code of Conduct
 
 ### Our Pledge

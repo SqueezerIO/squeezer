@@ -4,7 +4,7 @@ title: Development - Variables
 
 Squeezer supports both global variables and stage variables.
 
-After compiling a project variables can be accessed from `FUNCTION/src/vars.json`
+After compiling the project variables can be accessed from `FUNCTION/src/vars.json`
 
 ### Global variables
 
@@ -42,4 +42,28 @@ You can access terminal variables inside your template , eg:
 
 ```yaml
   var1: ${env.var1}
+```
+
+**RESULT**
+
+```yaml
+  var1: test
+```
+
+### Self variables
+
+You can re-use variable from the current template
+
+```yaml
+a: 1
+```
+
+```yaml
+b: ${this.a}
+```
+
+**RESULT**
+
+```yaml
+b: 1
 ```

@@ -1,2 +1,0 @@
-- description: Copying the function source directory to the target dir
-  bin: sqz fileutils:copy --src ${source} --dest ${output} --ignore 'web/assets'

@@ -1,0 +1,95 @@
+event:
+  type: http
+  path: /rest/v1/hello/{name}*
+  methods:
+    - GET
+    - POST
+ 
+packaging:
+  - vars.json
+
+swagger:
+  paths:
+    /rest/v1/hello/{name}:
+      get:
+        summary: Says hello
+        description: Says hello
+        parameters:
+          - name: name
+            in: path
+            description: your name
+            required: true
+            type: string        
+          - name: number
+            in: query
+            description: favorite number
+            required: true
+            type: number     
+        tags:
+          - Hello
+        produces:
+          - application/json
+        responses:
+          200:
+            description: successful operation
+            schema:
+              $ref: '#/definitions/RestV1HelloNameResponse'
+          400:
+            description: bad request
+            schema:
+              $ref: '#/definitions/ErrorResponse'
+          500:
+            description: internal error
+    /rest/v1/hello/{name}/anything/you/need/:
+      post:
+        summary: Says hello
+        description: Says hello
+        parameters:
+          - name: name
+            in: path
+            description: your name
+            required: true
+            type: string        
+          - name: number
+            in: query
+            description: favorite number
+            required: true
+            type: number  
+          - in: body
+            name: body
+            description: message body
+            required: true
+            schema:
+              $ref: '#/definitions/HelloMessage'               
+        tags:
+          - Hello
+        produces:
+          - application/json
+        responses:
+          200:
+            description: successful operation
+            schema:
+              $ref: '#/definitions/RestV1HelloNameResponse'
+          400:
+            description: bad request
+            schema:
+              $ref: '#/definitions/ErrorResponse'
+          500:
+            description: internal error            
+  definitions:
+    RestV1HelloNameResponse:
+      type: object
+      properties:
+        name:
+          type: string
+        number:
+          type: string
+        message:
+          type: string
+    HelloMessage:
+      type: object
+      required:
+        - message
+      properties:
+        message:
+          type: string

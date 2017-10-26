@@ -1,0 +1,8 @@
+- description: Webpacking handler source
+  bin: ${project.path}/node_modules/.bin/webpack
+  args:
+    - '-p'
+    - '--config'
+    - '${project.path}/webpack.config.js'
+    - '${source}/handler.js'
+    - '${output}/handler.js'    
