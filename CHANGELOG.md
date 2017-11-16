@@ -1,3 +1,7 @@
+## v1.1.18 - 2017-11-16
+- major release
+- fixed deployment process
+
 ## v1.1.14 - 2017-07-06
 - fixed CORS issues
 - added "Edit On Github" docs support
@@ -26,7 +30,7 @@
 - updated README header picture
 
 ## v1.1.6 - 2017-05-02
-- mising project type property on project's creation
+- missing project type property on project's creation
 
 ## v1.1.5 - 2017-05-02
 - fixed .gitignore renaming on npm publish
