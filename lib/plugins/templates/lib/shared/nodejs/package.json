@@ -5,9 +5,9 @@
     "jsinspect": "jsinspect -t 30 -i ./lib/ ./services/"
   },
   "dependencies": {
-    "squeezer-event-node" : "~0.0.3",    
-    "squeezer-serve" : "~0.0.4",
-    "squeezer-swagger": "~0.0.6"
+    "squeezer-event-node" : "~0.0.4",    
+    "squeezer-serve" : "~0.0.5",
+    "squeezer-swagger": "~0.0.7"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
