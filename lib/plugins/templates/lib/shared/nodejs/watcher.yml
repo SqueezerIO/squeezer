@@ -8,5 +8,5 @@ globs:
     - '${projectPath}/**/*.yml'
   ignore:
     - '**/node_modules/**'
-    - '**/vars.json'
+    - '**/.vars.json'
     - '**/event.input.json'

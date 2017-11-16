@@ -19,7 +19,7 @@ event:
 
 `/url/path/{id}`
 
-On this case the *{id}* param can be accessed later on your handler as *req.id*
+On this case the *{id}* param can be accessed later on your handler as **req.id**
 
 #### Wildcard
 
@@ -36,6 +36,6 @@ Enable a header trough all available functions .
 ```yaml
 vars:
   response-http-headers:
-    - Access-Control-Allow-Origin: "*"
-    - custom-header-1: "foo bar"
+    Access-Control-Allow-Origin: "*"
+    custom-header-1: "foo bar"
 ```

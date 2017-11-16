@@ -6,11 +6,13 @@ title: Events - Http - Nodejs
 
 `npm i squeezer-event-node --save`
 
+`src/handler.js`
+
 ```javascript
 'use strict';
 
 import event from 'squeezer-event-node';
-import vars from './vars';
+import vars from './.vars';
 
 exports.handler = (...args) => event(vars, (req, res) => {
   res.send(200, 'hello!');
@@ -49,7 +51,7 @@ api consumer (Api Gateway, Google Endpoint).
 | Param | Type | Description |
 | --- | --- | --- |
 | statusCode | <code>number</code> | [Http Response code]( https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) |
-| body | <code>string</code> &#124; <code>Object</code> &#124; <code>Array</code> | Response body
+| body | <code>string</code> &#124; <code>Object</code> &#124; <code>Array</code> | Response body |
 
 **Kind**: public function
 **Returns**: <code>Object</code> - response HTTP response object formatted for Api Gateway.

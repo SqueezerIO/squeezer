@@ -18,4 +18,5 @@ plugins:
   - compile
 # - update
   - fileutils
+  - key
 #  - docker

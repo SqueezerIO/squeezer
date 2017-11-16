@@ -5,15 +5,14 @@
     "jsinspect": "jsinspect -t 30 -i ./lib/ ./services/"
   },
   "dependencies": {
-    "squeezer-event-node" : "~0.0.2",    
-    "squeezer-serve" : "~0.0.3",
-    "squeezer-swagger": "~0.0.4"
+    "squeezer-event-node" : "~0.0.3",    
+    "squeezer-serve" : "~0.0.4",
+    "squeezer-swagger": "~0.0.6"
   },
   "devDependencies": {
-    "babel-preset-env": "^1.6.1",    
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
-    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
     "babel-register": "^6.26.0",
     "eslint": "^3.14.0",
     "eslint-config-airbnb": "^14.0.0",
@@ -23,7 +22,8 @@
     "eslint-plugin-react": "^6.9.0",
     "jsinspect": "^0.12.7",
     "json-loader": "^0.5.4",
+    "jest": "^21.2.1",    
     "webpack": "^3.6.0",
-    "webpack-node-externals": "^1.6.0"
+    "webpack-node-externals": "^1.6.0"    
   }
 }

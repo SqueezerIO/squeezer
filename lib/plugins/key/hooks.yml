@@ -1,0 +1,3 @@
+- identifier : 'key:get'
+  path : 'lib'
+  function : 'get'
