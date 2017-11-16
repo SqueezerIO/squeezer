@@ -1,4 +1,7 @@
 ## v1.1.18 - 2017-11-16
+- fixed packaging staff
+
+## v1.1.18 - 2017-11-16
 - major release
 - fixed deployment process
 
