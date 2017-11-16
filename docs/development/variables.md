@@ -4,7 +4,7 @@ title: Development - Variables
 
 Squeezer supports both global variables and stage variables.
 
-After compiling the project variables can be accessed from `FUNCTION/src/vars.json`
+After compiling the project variables can be accessed from `FUNCTION/src/.vars.json`
 
 ### Global variables
 

@@ -1,30 +1,25 @@
 event:
   type: http
-  path: /rest/v1/hello/{name}*
+  path: /rest/v1/hello/*
   methods:
     - GET
     - POST
  
 packaging:
-  - vars.json
+  - .vars.json
 
 swagger:
   paths:
-    /rest/v1/hello/{name}:
+    /rest/v1/hello/anything/you/want/:
       get:
         summary: Says hello
         description: Says hello
         parameters:
           - name: name
-            in: path
+            in: query
             description: your name
             required: true
-            type: string        
-          - name: number
-            in: query
-            description: favorite number
-            required: true
-            type: number     
+            type: string 
         tags:
           - Hello
         produces:
@@ -40,21 +35,15 @@ swagger:
               $ref: '#/definitions/ErrorResponse'
           500:
             description: internal error
-    /rest/v1/hello/{name}/anything/you/need/:
       post:
         summary: Says hello
         description: Says hello
-        parameters:
+        parameters:    
           - name: name
-            in: path
+            in: query
             description: your name
             required: true
-            type: string        
-          - name: number
-            in: query
-            description: favorite number
-            required: true
-            type: number  
+            type: string 
           - in: body
             name: body
             description: message body
@@ -75,7 +64,7 @@ swagger:
             schema:
               $ref: '#/definitions/ErrorResponse'
           500:
-            description: internal error            
+            description: internal error                
   definitions:
     RestV1HelloNameResponse:
       type: object

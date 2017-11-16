@@ -1,0 +1,4 @@
+- description: running test ${testFile}
+  bin: ${project.path}/node_modules/.bin/jest
+  args:
+    - '${testFile}'

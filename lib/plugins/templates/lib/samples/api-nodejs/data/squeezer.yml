@@ -6,15 +6,15 @@ vars:
   stages:
     local:
       response-http-headers:
-        - Access-Control-Allow-Origin: "*"
-        - Access-Control-Allow-Headers: "Authorization, Content-Type"
+        Access-Control-Allow-Origin: "*"
+        Access-Control-Allow-Headers: "Authorization,Content-Type"
     dev:
       response-http-headers:
-        - Access-Control-Allow-Origin: "*"
-        - Access-Control-Allow-Headers: "Authorization, Content-Type"
+        Access-Control-Allow-Origin: "*"
+        Access-Control-Allow-Headers: "Authorization,Content-Type"
     prod:
       response-http-headers:
-        - Access-Control-Allow-Origin: "http://example.org"
+        Access-Control-Allow-Origin: "http://example.org"
 
 plugins:
   - squeezer-serve

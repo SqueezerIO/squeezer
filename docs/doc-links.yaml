@@ -12,19 +12,20 @@
     Packaging: /docs/development/packaging/
     Command Hooks: /docs/development/command-hooks/
 - title: Events
-  links:
+  links:  
     Http:
       Configure: /docs/events/http/configure/
       NodeJS: /docs/events/http/nodejs/
+    Schedule:
+      Configure: /docs/events/schedule/configure/
+      NodeJS: /docs/events/schedule/nodejs/      
 - title: Cloud Providers
   links:
     Amazon Web Services:
       Introduction: /docs/cloud/aws/introduction/
-      Installation: /docs/cloud/aws/installation/
       Setting up credentials: /docs/cloud/aws/credentials/
     Microsoft Azure:
       Introduction: /docs/cloud/azure/introduction/
-      Installation: /docs/cloud/azure/installation/
       Setting up credentials: /docs/cloud/azure/credentials/
 - title: Plugin
   links:

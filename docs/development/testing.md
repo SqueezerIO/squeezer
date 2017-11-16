@@ -8,9 +8,9 @@ title: Development - Testing
 
 ```yaml
 tests:
-  - db.js
-  - web.js
-  - api.js
+  - src/db.test.js
+  - src/api.test.js
+  - src/web.test.js
 ```
 
 ## Run tests
@@ -20,7 +20,7 @@ tests:
 
 It will run tests against new or changed functions only .
 
-**NOTE: This feature requires a deployment key
+**NOTE**: This feature requires a deployment key
 
 `$ sqz test --smart` 
 

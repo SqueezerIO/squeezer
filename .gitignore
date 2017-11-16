@@ -25,3 +25,6 @@ lib-cov/
 coverage.json
 
 .history
+
+**/src/.vars.json
+**/src/vars.json

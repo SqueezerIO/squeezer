@@ -93,18 +93,18 @@ NOTE: **Windows** users should [enable symlinks](http://answers.perforce.com/art
 
 |    | cmd | description  |
 |----|-----|--------------|
-| 1. | **npm install -g squeezer-cli**  |  Install Squeezer CLI |
+| 1. | **npm i squeezer-cli -g**  |  Install Squeezer CLI |
 | 2. | **sqz create --project my-first-project --template api-nodejs**  |  Create a project |
 | 3. | **cd my-first-project**  |  Switch to the project's directory |
 | 4. | **sqz install**  |  Install dependencies |
 | 4. | **sqz compile**  |  Compile functions |
-| 5. | **sqz serve**  |  Development mode<br>**Live reload** enabled by default |
+| 5. | **sqz serve**  |  Development mode<br>**Live compiling** |
 
 ##### Deploy
 
 |    | cmd | description  |
 |----|-----|--------------|
-| 1. | [Configure credentials](https://docs.squeezer.io/clouds/aws/credentials.html)  |  Cloud credentials |
+| 1. | Configure provider & setup credentials  |   |
 | 2. | **sqz compile --cloud --stage dev**  |  Compile functions for cloud deployments |
 | 3. | **sqz deploy**  | Deploy your app into the cloud provider |
 

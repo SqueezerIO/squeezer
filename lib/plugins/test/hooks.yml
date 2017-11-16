@@ -1,0 +1,3 @@
+- identifier : 'test:run'
+  path : 'lib'
+  function : 'run'
