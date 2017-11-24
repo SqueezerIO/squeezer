@@ -1,5 +1,8 @@
+## v1.1.20 - 2017-11-24
+- fixed functions checksum file deps
+
 ## v1.1.18 - 2017-11-16
-- fixed packaging staff
+- fixed packages on templates
 
 ## v1.1.18 - 2017-11-16
 - major release
