@@ -1,3 +1,8 @@
+## v1.1.22 - 2017-12-16
+- fixed major dependencies parsing bugs
+## v1.1.21 - 2017-12-02
+- fixed packages issues
+
 ## v1.1.20 - 2017-11-24
 - fixed functions checksum file deps
 
