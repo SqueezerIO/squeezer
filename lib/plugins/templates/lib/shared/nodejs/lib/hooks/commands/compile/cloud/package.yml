@@ -1,0 +1,8 @@
+- description: Installing package ${pkg}
+  bin: npm
+  args:
+    - 'install'
+    - '--silent'
+    - '--prefix'
+    - '${output}'
+    - '${pkg}@${version}'
