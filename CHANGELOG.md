@@ -1,3 +1,10 @@
+## v1.1.24 - 2018-01-25
+- disabled functions compiling when changing "squeezer.yml" vars on local development
+- added yarn to install the functions packages
+
+## v1.1.22 - 2017-12-18
+- fixed packages parsing issue
+
 ## v1.1.22 - 2017-12-16
 - fixed major dependencies parsing bugs
 ## v1.1.21 - 2017-12-02

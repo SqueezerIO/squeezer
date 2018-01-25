@@ -9,6 +9,8 @@ Any function can be trigger by a specific event .
 `FUNCTION/squeezer.yml`
 
 ```yaml
+name: hello
+
 event:
   type: http
   path: /rest/v1/hello
