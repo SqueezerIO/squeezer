@@ -1,3 +1,5 @@
+name: hello
+
 event:
   type: http
   path: /rest/v1/hello/*

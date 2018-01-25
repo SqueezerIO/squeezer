@@ -1,8 +1,8 @@
-- description: Installing package ${pkg}
-  bin: npm
+- description: Installing packages for function ${func.name}
+  bin: cd ${output} && ${project.path}/node_modules/.bin/yarn
   args:
     - 'install'
     - '--silent'
-    - '--prefix'
-    - '${output}'
-    - '${pkg}@${version}'
+    - '--no-progress'
+    - '--non-interactive'
+    - '--prefer-offline' 

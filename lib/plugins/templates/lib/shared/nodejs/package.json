@@ -6,7 +6,7 @@
   },
   "dependencies": {
     "squeezer-event-node" : "~0.0.4",    
-    "squeezer-serve" : "~0.0.5",
+    "squeezer-serve" : "~0.0.6",
     "squeezer-swagger": "~0.0.7"
   },
   "devDependencies": {

@@ -1,2 +1,14 @@
+- description: Installing yarn
+  bin: npm
+  args:
+    - 'install'
+    - '--silent'
+    - 'yarn'
 - description: Installing project's packages
-  bin: cd ${project.path} && npm install --silent
+  bin: ${project.path}/node_modules/.bin/yarn
+  args:
+    - 'install'
+    - '--silent'
+    - '--no-progress'
+    - '--non-interactive'
+    - '--prefer-offline'

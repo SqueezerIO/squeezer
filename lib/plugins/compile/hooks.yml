@@ -1,3 +1,6 @@
 - identifier : 'compile:run'
   path : 'lib/compile'
   function : 'run'
+- identifier : 'compile:vars'
+  path : 'lib/compile'
+  function : 'vars'
