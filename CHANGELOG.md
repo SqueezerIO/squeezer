@@ -1,3 +1,6 @@
+## v1.1.27 - 2018-02-22
+- fixed vars cloud compiling
+
 ## v1.1.24 - 2018-01-25
 - disabled functions compiling when changing "squeezer.yml" vars on local development
 - added yarn to install the functions packages
