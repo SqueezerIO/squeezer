@@ -37,7 +37,7 @@ class Squeezer {
       },
       functions: {},
       hooks: [],
-      apiBaseUrl: 'https://api.squeezer.io',
+      apiBaseUrl: 'https://api.squeezer.io/prod',
       outputs: {},
       assets: {
         functions: [],
