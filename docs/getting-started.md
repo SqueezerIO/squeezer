@@ -48,12 +48,18 @@ Configure provider & setup credentials
 2. `sqz compile --cloud --stage dev` - Compile functions , sources , ... ( cloud ready )
 3. `sqz deploy` - Deploys project into the cloud
 
-
+<br/>
+<br/>
 
 ## Blockchain Connector
 
+
+<img src="https://squeezer.io/connector-diagram.png" />
+
 **https://github.com/SqueezerIO/squeezer-blockchain-connector**
 
+<br/>
+<br/>
 
 ### Initialize
 
