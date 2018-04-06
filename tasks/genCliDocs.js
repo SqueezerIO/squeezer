@@ -95,5 +95,5 @@ fs.writeFileSync(docsYaml, yaml.dump(doc));
 // const endChars   = '<!--END-->';
 // const re         = new RegExp(`${startChars}[\\s\\S]*?${endChars}`);
 
-// fs.writeFileSync(`${__dirname}/../docs/SUMMARY.md`, 
+// fs.writeFileSync(`${__dirname}/../docs/SUMMARY.md`,
 //   summary.replace(re, `${startChars}<!--this section is generated-->\n${cliTree}${endChars}`));
