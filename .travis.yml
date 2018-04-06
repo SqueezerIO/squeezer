@@ -15,8 +15,6 @@ script:
   - npm run jsinspect
   - npm test
 
-cyclomatic_complexity: 15
-
 notifications:
   webhooks:
     urls:
