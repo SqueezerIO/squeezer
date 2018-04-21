@@ -11,7 +11,8 @@
 .build
 
 # events samples
-event.input.json
+.event.input.json
+.event.output.json
 
 # Logs
 *.log
