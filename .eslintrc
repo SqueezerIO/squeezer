@@ -54,6 +54,7 @@
     "strict": 0,
     "import/no-extraneous-dependencies": "off",
     "import/no-dynamic-require": "off",
+    "import/prefer-default-export" : "off",
     "react/require-extension": "off",
     "import/no-unresolved" : "off"
   },

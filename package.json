@@ -49,7 +49,7 @@
   "scripts": {
     "test": "jest",
     "eslint": "eslint . --cache",
-    "jsinspect": "jsinspect -t 30 -i ./bin/ ./lib/ ./test/ --ignore './lib/plugins/serve/public'",
+    "jsinspect": "jsinspect -t 30 -i ./bin/ ./lib/ --ignore './lib/plugins/serve/public'",
     "serve": "cd docs && gitbook serve",
     "gendocs": "node tasks/genCliDocs"
   },
