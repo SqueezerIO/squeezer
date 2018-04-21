@@ -1,3 +1,6 @@
+## v1.2.1 - 2018-04-21
+- add source map support
+
 ## v1.1.27 - 2018-02-22
 - fixed vars cloud compiling
 
