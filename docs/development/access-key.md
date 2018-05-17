@@ -1,11 +1,11 @@
 ---
-title: Development - Deployment key
+title: Development - Access key
 ---
 
-Each time when a new project is created the framework will assign a **deployment key** ,
+Each time when a new project is created the framework will assign a **access key** ,
 which will be used later to compile, test & deploy only functions where code changed from the previous
 deployment , making blazing fast cloud deployments .
 
-**Generate a Squeezer deployment key**
+**Generate a Squeezer access key**
 
 `sqz genkey`
