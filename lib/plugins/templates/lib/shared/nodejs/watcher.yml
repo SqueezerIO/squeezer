@@ -3,10 +3,12 @@
 
 globs:
   include:
-    - '${projectPath}/services/**'
-    - '${projectPath}/lib/**'
     - '${projectPath}/**/*.yml'
+    - '${projectPath}/**/*.js'
+    - '${projectPath}/**/*.json'
   ignore:
     - '**/node_modules/**'
+    - '**/.build/**'
     - '**/.vars.json'
-    - '**/event.input.json'
+    - '**/.event.input.json'
+    - '**/.event.output.json'

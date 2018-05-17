@@ -14,9 +14,11 @@ title: Events - Http - Nodejs
 import event from 'squeezer-event-node';
 import vars from './.vars';
 
-exports.handler = (...args) => event(vars, (req, res) => {
-  res.send(200, 'hello!');
-}, ...args);
+export function handler(...args) {
+  event(vars, (req, res) => {
+    res.send(200, 'hello!');
+  }, ...args);
+}
 ```
 
 #### req : <code>Object</code>
