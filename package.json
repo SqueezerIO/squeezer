@@ -1,8 +1,8 @@
 {
   "name": "squeezer-cli",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "preferGlobal": true,
-  "description": "Event-driven APIs & Web apps on functions, serverless ! Squeezer is a framework designed to help developers to get a better architecture on serverless zero-administration compute platforms with code that runs into cloud functions like [AWS Lambda](https://aws.amazon.com/documentation/lambda/) , [Azure Functions](https://azure.microsoft.com/en-us/services/functions/) , [Google Cloud Functions](https://cloud.google.com/functions/docs/) and [IBM OpenWhisk](https://developer.ibm.com/openwhisk/) .",
+  "description": "Build event-driven DApps and APis on microservices using AWS Lambda, Azure Functions, Google Functions & more . Serverless ",
   "homepage": "https://squeezer.io/",
   "bin": {
     "sqz": "bin/bin.js",
@@ -40,7 +40,13 @@
     "google cloud functions",
     "ibm openwhisk",
     "iot",
-    "internet of things"
+    "internet of things",
+    "blockchain",
+    "blockchain apps",
+    "blockchain app",
+    "dapps",
+    "dapp",
+    "apps"
   ],
   "repository": {
     "type": "git",
