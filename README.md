@@ -29,6 +29,14 @@ zero-administration compute platforms where code runs on the top of
 `functions` clouds like
 [AWS Lambda](https://aws.amazon.com/documentation/lambda/) , [Azure Functions](https://azure.microsoft.com/en-us/services/functions/) , [IBM OpenWhisk](https://developer.ibm.com/openwhisk/) & [Google Functions](https://cloud.google.com/functions/)
 
+### Blockchain Connector
+
+Agnostic blockchain connector
+
+The main scope of the connector is to unify all the current blockchains data assets into a single normalized API interface , therefore you can build blockchain apps easily without digging into all blockchain infrastructure & genesis. The quickest integration to send or receive blockchain transactions and trigger smart contracts private/public methods.
+
+[How to use](https://github.com/SqueezerIO/squeezer-blockchain-connector) the blockchain connector
+
 ### <a name="features"></a>Features in short
 
 - [Swagger UI](http://swagger.io/) API REST  documentation support
