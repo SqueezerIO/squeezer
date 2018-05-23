@@ -92,7 +92,7 @@ Table of contents
 
 ### Initialize
 
-You will need a Squeezer access key in order to use the blockchain connector. You can get one [here](https://squeezer.io/docs/development/deployment-key/)
+You will need a Squeezer access key in order to use the blockchain connector. You can get one [here](https://squeezer.io/docs/development/access-key/)
 
 ```javascript
 const BlockchainConnector = require('squeezer-blockchain-connector');
