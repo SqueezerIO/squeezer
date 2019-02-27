@@ -1,5 +1,5 @@
 - description: Webpacking handler source
-  bin: ${project.path}/node_modules/.bin/webpack
+  bin: node ${project.path}/node_modules/webpack/bin/webpack.js
   args:
     - '--hide-modules' 
     - '--config'

@@ -30,14 +30,16 @@ class Squeezer {
       project: {},
       customPluginPaths: [],
       previousChecksums: {
-        functions : {}
+        functions: {}
       },
       currentChecksums: {
-        functions : {}
+        functions: {}
       },
       functions: {},
       hooks: [],
       apiBaseUrl: 'https://api.squeezer.io/prod',
+      hostHttpUrl: `http://${process.env.HOST_IP}:${process.env.HOST_HTTP_PORT}`,
+      platform: process.env.PLATFORM,
       outputs: {},
       assets: {
         functions: [],
@@ -94,6 +96,10 @@ class Squeezer {
           },
           this.yaml.parse(`${currPath}/squeezer.yml`)
         );
+
+        if (this.vars.platform) {
+          this.vars.project.identifier = `Sqz${process.env.IDENTIFIER}`;
+        }
 
         this.vars.project.isValid = true;
         this.vars.project.path = currPath;
