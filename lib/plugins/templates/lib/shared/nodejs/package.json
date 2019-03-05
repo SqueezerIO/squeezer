@@ -24,6 +24,7 @@
     "json-loader": "^0.5.4",
     "jest": "^21.2.1",    
     "webpack": "^3.6.0",
+    "yarn": "1.9.4",
     "webpack-node-externals": "^1.6.0",
     "webpack-source-map-support": "^2.0.1"
   }

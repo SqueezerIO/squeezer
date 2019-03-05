@@ -1,5 +1,5 @@
 - description: Installing packages for function ${func.name}
-  bin: cd ${output} && ${project.path}/node_modules/.bin/yarn
+  bin: cd ${output} && ${project.path}/node_modules/yarn/bin/yarn.js
   args:
     - 'install'
     - '--silent'

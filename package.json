@@ -1,6 +1,6 @@
 {
   "name": "squeezer-cli",
-  "version": "1.2.7",
+  "version": "1.2.8",
   "preferGlobal": true,
   "description": "Build event-driven DApps and APis on microservices using AWS Lambda, Azure Functions, Google Functions & more . Serverless ",
   "homepage": "https://squeezer.io/",
