@@ -9,13 +9,11 @@ title: Events - Schedule - Configure
 ```yaml
 event:
   type: schedule
-  rate: 1 minute
+  cron: * * * * * *
 ```
 
-**value**
-An integer.
-
-**unit**
-Time unit.
-
-Time units: `minute | minutes | hour | hours | day | days`
+| Minutes |  Hours |  Day of month | Month | Day of week | Year | Description |
+|---|---|---|---|---|---|---|
+| 0 | 10 | * | * | ? | * | Run at 10:00 am (UTC) every day |
+| 15 | 12 | * | * | ? | * |  Run at 12:15 pm (UTC) every day |
+| 0 | 18 | ? | * | ? | * | Run at 6:00 pm (UTC) every Monday through Friday |
