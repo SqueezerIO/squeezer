@@ -1,0 +1,71 @@
+import React from "react"
+
+let stylesStr
+if (process.env.NODE_ENV === `production`) {
+  try {
+    stylesStr = require(`!raw-loader!../public/styles.css`)
+  } catch (e) {
+    console.log(e)
+  }
+}
+
+export default class HTML extends React.Component {
+  render() {
+    let css
+    if (process.env.NODE_ENV === `production`) {
+      css = (
+        <style
+          id="gatsby-inlined-css"
+          key="gatsby-inlined-css"
+          dangerouslySetInnerHTML={{ __html: stylesStr }}
+        />
+      )
+    }
+
+    return (
+      <html lang="en">
+        <head>
+          <link
+            rel="preload"
+            href="/static/ftn45-webfont.c2439033.woff2"
+            as="font"
+            crossOrigin
+          />
+          <link
+            rel="preload"
+            href="/static/spectral-latin-400.bc2de9de.woff2"
+            as="font"
+            crossOrigin
+          />
+          <link
+            rel="preload"
+            href="/static/ftn65-webfont.0ddc10d2.woff2"
+            as="font"
+            crossOrigin
+          />
+          {this.props.headComponents}
+          <meta charSet="utf-8" />
+          <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
+          <link
+            rel="icon"
+            type="image/x-icon"
+            sizes="48x48"
+            href={`/favicon.ico`}
+          />
+          {css}
+        </head>
+        <body>
+          <div
+            id="___gatsby"
+            dangerouslySetInnerHTML={{ __html: this.props.body }}
+          />
+          {this.props.postBodyComponents}
+        </body>
+      </html>
+    )
+  }
+}

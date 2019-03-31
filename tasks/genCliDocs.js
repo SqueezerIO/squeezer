@@ -23,7 +23,7 @@ const cliTree = {};
 _.forEach(commands, (mainVal, cmd) => {
   const cmdNames = cmd.split(':');
   const formatBaseName = cmdNames.join('-');
-  const filename = `/docs/cli/${formatBaseName}/`;
+  const filename = `/cli/${formatBaseName}/`;
 
   _.updateWith(cliTree, `["${cmdNames.join('"]["')}"]`, _.constant(filename));
 

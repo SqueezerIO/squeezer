@@ -14,7 +14,9 @@ title: CLI - logs
 
     --function / -f  function name (required)
       value
-                     Name stored in the sqz.config.yml file
+ 
+    --stage          environment stage (optional) "dev"
+      value
  
 
  Examples:

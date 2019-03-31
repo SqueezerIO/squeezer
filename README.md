@@ -1,7 +1,7 @@
 <a href="https://squeezer.io" target="_blank"><img width="700" height="auto" src="./readme-introduction.gif"></a>
 
 #### Framework : [squeezer.io](https://squeezer.io)
-#### Docs : [squeezer.io/docs](https://squeezer.io/docs/)
+#### Docs : [docs.squeezer.io](https://docs.squeezer.io/)
 #### Chat : [chat.squeezer.io](http://chat.squeezer.io)
 
 [![Squeezer.IO](https://cdn.rawgit.com/SqueezerIO/squeezer/9a010c35/docs/gitbook/images/badge.svg)](https://Squeezer.IO)

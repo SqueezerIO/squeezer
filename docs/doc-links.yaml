@@ -1,59 +1,61 @@
 - title: Introduction
   links:
-    Getting Started: /docs/getting-started/
+    Getting Started: /getting-started/
 - title: Development
   links:
-    Function: /docs/development/function/  
-    Variables: /docs/development/variables/  
-    Yaml: /docs/development/yaml/      
-    Access key: /docs/development/access-key/  
-    Runtime: /docs/development/runtime/  
-    Testing: /docs/development/testing/
-    Packaging: /docs/development/packaging/
-    Command Hooks: /docs/development/command-hooks/
+    Function: /development/function/
+    Variables: /development/variables/
+    Yaml: /development/yaml/
+    Access key: /development/access-key/
+    Runtime: /development/runtime/
+    Testing: /development/testing/
+    Packaging: /development/packaging/
+    Command Hooks: /development/command-hooks/
 - title: Events
-  links:  
+  links:
     Http:
-      Configure: /docs/events/http/configure/
-      NodeJS: /docs/events/http/nodejs/
+      Configure: /events/http/configure/
+      NodeJS: /events/http/nodejs/
     Schedule:
-      Configure: /docs/events/schedule/configure/
-      NodeJS: /docs/events/schedule/nodejs/      
+      Configure: /events/schedule/configure/
+      NodeJS: /events/schedule/nodejs/
 - title: Cloud Providers
   links:
     Amazon Web Services:
-      Introduction: /docs/cloud/aws/introduction/
-      Setting up credentials: /docs/cloud/aws/credentials/
+      Introduction: /cloud/aws/introduction/
+      Setting up credentials: /cloud/aws/credentials/
     Microsoft Azure:
-      Introduction: /docs/cloud/azure/introduction/
-      Setting up credentials: /docs/cloud/azure/credentials/
+      Introduction: /cloud/azure/introduction/
+      Setting up credentials: /cloud/azure/credentials/
 - title: Plugin
   links:
-    Introduction: /docs/plugin/introduction/
-    Lifecycle: /docs/plugin/lifecycle/
-    Example: /docs/plugin/example/
-    Debugging: /docs/plugin/debugging/
+    Introduction: /plugin/introduction/
+    Lifecycle: /plugin/lifecycle/
+    Example: /plugin/example/
+    Debugging: /plugin/debugging/
 - title: CLI
   links:
-    compile: /docs/cli/compile/
-    config: /docs/cli/config/
-    create: /docs/cli/create/
-    deploy: /docs/cli/deploy/
+    compile: /cli/compile/
+    config: /cli/config/
+    create: /cli/create/
+    deploy: /cli/deploy/
     fileutils:
-      copy: /docs/cli/fileutils-copy/
-      empty: /docs/cli/fileutils-empty/
-      mkdir: /docs/cli/fileutils-mkdir/
-      link: /docs/cli/fileutils-link/
-      move: /docs/cli/fileutils-move/
-      remove: /docs/cli/fileutils-remove/
-      sync: /docs/cli/fileutils-sync/
-    help: /docs/cli/help/
-    init: /docs/cli/init/
-    install: /docs/cli/install/
-    invoke: /docs/cli/invoke/
-    list: /docs/cli/list/
-    logs: /docs/cli/logs/
-    remove: /docs/cli/remove/
-    run: /docs/cli/run/
-    templates: /docs/cli/templates/
-    version: /docs/cli/version/
+      copy: /cli/fileutils-copy/
+      empty: /cli/fileutils-empty/
+      mkdir: /cli/fileutils-mkdir/
+      link: /cli/fileutils-link/
+      move: /cli/fileutils-move/
+      remove: /cli/fileutils-remove/
+      sync: /cli/fileutils-sync/
+    help: /cli/help/
+    init: /cli/init/
+    install: /cli/install/
+    invoke: /cli/invoke/
+    genkey: /cli/genkey/
+    list: /cli/list/
+    logs: /cli/logs/
+    remove: /cli/remove/
+    run: /cli/run/
+    templates: /cli/templates/
+    test: /cli/test/
+    version: /cli/version/

@@ -8,13 +8,12 @@ title: CLI - invoke
 
  Description:
 
-    Invoke a function directly in the Cloud
+    Invoke a function directly in the cloud environment
 
  Options:
 
     --function / -f  function name (required)
       value
-                     Function name stored in the sqz.config.yml file
  
     --path / -p      JSON event input file (optional)
       value
