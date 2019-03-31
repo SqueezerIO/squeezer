@@ -19,8 +19,12 @@ title: CLI - compile
     --cloud / -c     enable cloud compiling, default is "development" (optional)
 
  
+    --stage          environment stage (optional) "local"
+      value
+ 
 
  Examples:
 
     $ sqz compile 
     $ sqz compile --cloud
+    $ sqz compile --cloud --stage dev

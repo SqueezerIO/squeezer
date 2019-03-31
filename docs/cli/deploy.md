@@ -16,9 +16,6 @@ title: CLI - deploy
       value
                      Deploys only a specific function
  
-    --stage          environment stage (optional) "dev"
-      value
- 
     --force          force to deploy (optional)
 
                      Force a deployment even if there is no any code changes
@@ -27,6 +24,5 @@ title: CLI - deploy
  Examples:
 
     $ sqz deploy 
-    $ sqz deploy --stage dev
     $ sqz deploy --force
     $ sqz deploy --function my-function

@@ -14,7 +14,7 @@ title: CLI - run
 
     --function / -f  function name (required)
       value
-                     Function name stored in the sqz.config.yml file
+                     Function name
  
     --path / -p      JSON event input file (optional)
       value

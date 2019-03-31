@@ -1,4 +1,4 @@
 ## Framework : [squeezer.io](https://squeezer.io)
-## Documentation : [squeezer.io/docs](https://squeezer.io/docs)
+## Documentation : [docs.squeezer.io](https://docs.squeezer.io/)
 
-## [Getting started](https://squeezer.io/docs/getting-started/)
+## [Getting started](https://docs.squeezer.io/getting-started/)

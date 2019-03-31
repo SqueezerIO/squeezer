@@ -1,0 +1,21 @@
+.DS_Store
+.env
+node_modules
+dist/*
+!dist/.gitkeep
+*.log
+.idea
+.history
+.squeezer
+
+# eslint cache
+.eslintcache
+
+# just a simple test.js
+test.js
+
+# site gen
+_site
+.cache
+public
+content
