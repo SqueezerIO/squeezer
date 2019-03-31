@@ -36,7 +36,6 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         if (result.errors) {
           reject(result.errors)
         }
-        console.log(result)
 
         // const blogPosts = _.filter(
         //   result.data.allMarkdownRemark.edges,
