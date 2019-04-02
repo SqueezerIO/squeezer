@@ -1,4 +1,4 @@
-<a href="https://squeezer.io" target="_blank"><img width="700" height="auto" src="./readme-introduction.gif"></a>
+<a href="https://squeezer.io" target="_blank"><img width="700" height="auto" src="./readme-intro.gif"></a>
 
 #### Framework : [squeezer.io](https://squeezer.io)
 #### Docs : [docs.squeezer.io](https://docs.squeezer.io/)
@@ -36,7 +36,7 @@ The main usage of the ChainKit is to unify top blockchains interfaces into a sin
 - create blockchain wallets
 - double-encrypt for wallet data
 - user choose how to store wallet token
-- bi-direction blockchain transactions (inbound and outbound)
+- bi-directional blockchain transactions (inbound and outbound)
 - create blockchain payment solution
 - build dApps connecting to smart contracts using chainkit agnostic connector
 - deploy smart contracts
