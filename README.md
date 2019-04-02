@@ -24,29 +24,28 @@
 
 ### What is Squeezer ?
 
-Squeezer is a framework designed to help  developers to get a better architecture on serverless
-zero-administration compute platforms where code runs on the top of
-`functions` clouds like
-[AWS Lambda](https://aws.amazon.com/documentation/lambda/) , [Azure Functions](https://azure.microsoft.com/en-us/services/functions/) , [IBM OpenWhisk](https://developer.ibm.com/openwhisk/) & [Google Functions](https://cloud.google.com/functions/)
+Squeezer is a platform that empowers new-entry blockchain developers to build serverless dApps simply as dead.
 
-### Blockchain Connector
+### ChainKit - Agnostic blockchain integration
 
-Agnostic blockchain connector
+The main usage of the ChainKit is to unify top blockchains interfaces into a single normalized API interface , therefore you can build blockchain dApps easily without digging into blockchain complex infrastructure.
 
-The main scope of the connector is to unify all the current blockchains data assets into a single normalized API interface , therefore you can build blockchain apps easily without digging into all blockchain infrastructure & genesis. The quickest integration to send or receive blockchain transactions and trigger smart contracts private/public methods.
-
-[How to use](https://github.com/SqueezerIO/squeezer-blockchain-connector) the blockchain connector
-
+[How to use the ChainKit](https://github.com/SqueezerIO/squeezer-chainkit)
 ### <a name="features"></a>Features in short
 
-- [Swagger UI](http://swagger.io/) API REST  documentation support
-- **SEO-friendly** web apps
-- share components between functions
+- create blockchain wallets
+- double-encrypt for wallet data
+- user choose how to store wallet token
+- bi-direction blockchain transactions (inbound and outbound)
+- create blockchain payment solution
+- build dApps connecting to smart contracts using chainkit agnostic connector
+- deploy smart contracts
+- quick intuitive code deployments by using a special mechanism which will deploy smart contracts and dApp services where code changed
+- powered by microservices
+- share components between functions, similar to monolytic project
 - auto-deployable, auto-scalable , no DevOps requirements
 - silent deployments ,no interruption for the current functionality ( really useful on production )
-- access deployed resources credentials (DB user, pass ...) directly from `process.env` variables  
 - one single command to simultaneously deploy all available functions on your project
-- quick intuitive code deployments by using a special mechanism which will deploy only assets, functions and file packages
 where code changed from the last deployment
 - automatic rollback to the previous working deployment if something goes wrong
 - sequential deployments, wait for the current deployments in progress to finish
@@ -55,10 +54,7 @@ where code changed from the last deployment
 - separate your environments in multiple stages
 - extend framework functionality with your own "home-made" plugins
 - pay only for the usage ( no monthly subscriptions )
-- competitive pricing (  >= 2$ / 1 million HTTP requests )
-- smart external dependencies inclusion into the compiled function ( **node_modules** and other project files ) ... just
-like on any other trivial NodeJS project
-- Webpack integration
+- [Swagger UI](http://swagger.io/) API documentation support
 
 #### Requirements
 
@@ -74,7 +70,7 @@ Create a quick project stub by using templates :
 
 | template | description |
 |-----|--------------|
-|api-nodejs | AWS generic API app template. |
+|api-nodejs | Generic API app template. |
 
 #### <a name="plugins"></a>Plugins
 
@@ -90,7 +86,6 @@ Extend or merge the Squeezer framework functionality with plugins
 | Project Name | Author | Demo |
 |-------------|------|---------|
 | **[Generic API](https://github.com/SqueezerIO/example-projects/tree/master/api-nodejs)** <br/>  Generic API Hello World + Swagger API Docs | [Nick Chisiu](https://github.com/nickchisiu) | [demo]() |
-| **[REST API](https://github.com/SqueezerIO/example-projects/tree/master/api-rest-nodejs)** <br/>  REST API using MongoDB + Swagger API Docs | [Nick Chisiu](https://github.com/nickchisiu) | [demo]() |
 
 
 #### <a name="getting-started"></a>Getting started
