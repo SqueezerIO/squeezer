@@ -17,7 +17,6 @@
 * [Features](#features)
 * [Templates](#templates)
 * [Plugins](#plugins)
-* [Example Projects](#example-projects)
 * [Contributing](#contributing)
 * [Community](#community)
 * [Meetups](#meetups)
@@ -85,7 +84,7 @@ Extend or merge the Squeezer framework functionality with plugins
 
 | Project Name | Author | Demo |
 |-------------|------|---------|
-| **[Generic API](https://github.com/SqueezerIO/example-projects/tree/master/api-nodejs)** <br/>  Generic API Hello World + Swagger API Docs | [Nick Chisiu](https://github.com/nickchisiu) | [demo]() |
+| **[Generic API](https://github.com/SqueezerIO/squeezer-hello-world)** <br/>  Generic API Hello World + Swagger API Docs | [Nick Chisiu](https://github.com/nickchisiu) | [demo](https://sqz5ca210f6823a384c14708-squeezerdeploymentbucket-1xxqffrhec7qv.s3.amazonaws.com/swagger-ui/index.html) |
 
 
 #### <a name="getting-started"></a>Getting started
