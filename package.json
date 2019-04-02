@@ -1,6 +1,6 @@
 {
   "name": "squeezer-cli",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "preferGlobal": true,
   "description": "Build serverless dApps",
   "homepage": "https://squeezer.io/",
