@@ -2,12 +2,10 @@
 
 #### Framework : [squeezer.io](https://squeezer.io)
 #### Docs : [docs.squeezer.io](https://docs.squeezer.io/)
-#### Chat : [chat.squeezer.io](http://chat.squeezer.io)
 
 [![Squeezer.IO](https://cdn.rawgit.com/SqueezerIO/squeezer/9a010c35/docs/gitbook/images/badge.svg)](https://Squeezer.IO)
 [![Build Status](https://travis-ci.org/SqueezerIO/squeezer.svg?branch=master)](https://travis-ci.org/SqueezerIO/squeezer)
 [![npm version](https://badge.fury.io/js/squeezer-cli.svg)](https://badge.fury.io/js/squeezer-cli)
-[![Join the chat at https://gitter.im/SqueezerIO/squeezer](https://badges.gitter.im/SqueezerIO/squeezer.svg)](https://gitter.im/SqueezerIO/squeezer?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![DUB](https://img.shields.io/dub/l/vibe-d.svg)]()
 
 ### Contents
@@ -118,7 +116,6 @@ See [contributing.md](CONTRIBUTING.md) for contribution guidelines
 ### <a name="community"></a>Community
 
 * [Squeezer issues](https://github.com/SqueezerIO/squeezer/issues)
-* [Gitter Chatroom](http://chat.squeezer.io/)
 * [Facebook](https://www.facebook.com/Squeezer.IO/)
 * [Twitter](https://twitter.com/SqueezerIO)
 * [Contact Us](mailto:nick@squeezer.io)
