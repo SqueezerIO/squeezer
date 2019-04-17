@@ -82,7 +82,7 @@ Extend or merge the Squeezer framework functionality with plugins
 
 | Project Name | Author | Demo |
 |-------------|------|---------|
-| **[Generic API](https://github.com/SqueezerIO/squeezer-hello-world)** <br/>  Generic API Hello World + Swagger API Docs | [Nick Chisiu](https://github.com/nickchisiu) | [demo](https://sqz5ca210f6823a384c14708-squeezerdeploymentbucket-1xxqffrhec7qv.s3.amazonaws.com/swagger-ui/index.html) |
+| **[Generic API](https://github.com/SqueezerIO/squeezer-2way-payment)** <br/>  Squeezer Two Way Blockchain Payment System | [Nick Chisiu](https://github.com/nickchisiu) | [demo](https://sqz5ca210f6823a384c14708-squeezerdeploymentbucket-1xxqffrhec7qv.s3.amazonaws.com/swagger-ui/index.html) |
 
 
 #### <a name="getting-started"></a>Getting started
@@ -94,7 +94,7 @@ NOTE: **Windows** users should [enable symlinks](http://answers.perforce.com/art
 |    | cmd | description  |
 |----|-----|--------------|
 | 1. | **npm i squeezer-cli -g**  |  Install Squeezer CLI |
-| 2. | **sqz create --project my-first-project --template api-nodejs**  |  Create a project |
+| 2. | **sqz create --project my-first-project --template https://github.com/SqueezerIO/squeezer-2way-payment**  |  Create a project |
 | 3. | **cd my-first-project**  |  Switch to the project's directory |
 | 4. | **sqz install**  |  Install dependencies |
 | 4. | **sqz compile**  |  Compile functions |
