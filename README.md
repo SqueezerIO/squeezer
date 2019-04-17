@@ -1,4 +1,4 @@
-<a href="https://squeezer.io" target="_blank"><img width="700" height="auto" src="./readme-intro.gif"></a>
+<a href="https://squeezer.io" target="_blank"><img width="700" height="auto" src="./readme-introduction.gif"></a>
 
 #### Framework : [squeezer.io](https://squeezer.io)
 #### Docs : [docs.squeezer.io](https://docs.squeezer.io/)
@@ -67,7 +67,7 @@ Create a quick project stub by using templates :
 
 | template | description |
 |-----|--------------|
-|api-nodejs | Generic API app template. |
+|Squeezer 2way Payment | https://github.com/SqueezerIO/squeezer-2way-payment |
 
 #### <a name="plugins"></a>Plugins
 
@@ -82,14 +82,13 @@ Extend or merge the Squeezer framework functionality with plugins
 
 | Project Name | Author | Demo |
 |-------------|------|---------|
-| **[Generic API](https://github.com/SqueezerIO/squeezer-2way-payment)** <br/>  Squeezer Two Way Blockchain Payment System | [Nick Chisiu](https://github.com/nickchisiu) | [demo](https://sqz5ca210f6823a384c14708-squeezerdeploymentbucket-1xxqffrhec7qv.s3.amazonaws.com/swagger-ui/index.html) |
+| **[Squeezer 2way Payment](https://github.com/SqueezerIO/squeezer-2way-payment)** <br/>  Squeezer Two Way Blockchain Payment System (inbound + outbound) | [Nick Chisiu](https://github.com/nickchisiu) | [video](https://example.org) |
 
 
 #### <a name="getting-started"></a>Getting started
 
 NOTE: **Windows** users should [enable symlinks](http://answers.perforce.com/articles/KB/3472/?q=enabling&l=en_US&fs=Search&pn=1) in order to avoid unwanted symbolic links errors .
 
-##### Serve
 
 |    | cmd | description  |
 |----|-----|--------------|
@@ -99,14 +98,6 @@ NOTE: **Windows** users should [enable symlinks](http://answers.perforce.com/art
 | 4. | **sqz install**  |  Install dependencies |
 | 4. | **sqz compile**  |  Compile functions |
 | 5. | **sqz serve**  |  Development mode<br>**Live compiling** |
-
-##### Deploy
-
-|    | cmd | description  |
-|----|-----|--------------|
-| 1. | Configure provider & setup credentials  |   |
-| 2. | **sqz compile --cloud --stage dev**  |  Compile functions for cloud deployments |
-| 3. | **sqz deploy**  | Deploy your app into the cloud provider |
 
 
 #### <a name="contributing"></a>Contributing
