@@ -32,6 +32,7 @@ The main usage of the ChainKit is to unify top blockchains interfaces into a sin
 
 - create blockchain wallets
 - double-encrypt for wallet data
+- on-the-fly encryption/decryption
 - user choose how to store wallet token
 - bi-directional blockchain transactions (inbound and outbound)
 - create blockchain payment solution
