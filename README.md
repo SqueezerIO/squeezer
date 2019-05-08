@@ -57,7 +57,7 @@ where code changed from the last deployment
 
 ### <a name="roadmap"></a>Roadmap
 
-- decentralize microservices (currently we are using cloud microservices, AWS Lambda, Azure Functions ... we need to get rid of it and store and access the microservices in a decentralized way, IPFS and )
+- decentralize microservices, currently we are using cloud microservices, AWS Lambda, Azure Functions ... we need to get rid of it and store and access the microservices in a decentralized way, IPFS and Ethereum Swarm could be an option
 - add 2FA and other security options when  using ChainKit `sendTransaction` which is used on withdraws, transfer and other sensitive actions
 - add DEX site example using Squeezer `2way-payment-system`
 
