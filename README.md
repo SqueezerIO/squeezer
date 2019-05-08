@@ -13,6 +13,7 @@
 * [Getting Started](#getting-started)
 * [Example Projects](#example-projects)
 * [Features](#features)
+* [Roadmap](#roadmap)
 * [Templates](#templates)
 * [Plugins](#plugins)
 * [Contributing](#contributing)
@@ -32,8 +33,9 @@ The main usage of the ChainKit is to unify top blockchains interfaces into a sin
 
 - create blockchain wallets
 - double-encrypt for wallet data
+- on-the-fly encryption/decryption
 - user choose how to store wallet token
-- bi-directional blockchain transactions (inbound and outbound)
+- bi-directional onchain transactions (inbound and outbound)
 - create blockchain payment solution
 - build dApps connecting to smart contracts using chainkit agnostic connector
 - deploy smart contracts
@@ -52,6 +54,12 @@ where code changed from the last deployment
 - extend framework functionality with your own "home-made" plugins
 - pay only for the usage ( no monthly subscriptions )
 - [Swagger UI](http://swagger.io/) API documentation support
+
+### <a name="roadmap"></a>Roadmap
+
+- decentralize microservices (currently we are using cloud microservices, AWS Lambda, Azure Functions ... we need to get rid of it and store and access the microservices in a decentralized way, IPFS and )
+- add 2FA and other security options when  using ChainKit `sendTransaction` which is used on withdraws, transfer and other sensitive actions
+- add DEX site example using Squeezer `2way-payment-system`
 
 #### Requirements
 
