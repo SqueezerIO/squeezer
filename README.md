@@ -13,6 +13,7 @@
 * [Getting Started](#getting-started)
 * [Example Projects](#example-projects)
 * [Features](#features)
+* [Roadmap](#roadmap)
 * [Templates](#templates)
 * [Plugins](#plugins)
 * [Contributing](#contributing)
@@ -53,6 +54,12 @@ where code changed from the last deployment
 - extend framework functionality with your own "home-made" plugins
 - pay only for the usage ( no monthly subscriptions )
 - [Swagger UI](http://swagger.io/) API documentation support
+
+### <a name="roadmap"></a>Roadmap
+
+- decentralize microservices (currently we are using cloud microservices, AWS Lambda, Azure Functions ... we need to get rid of it and store and access the microservices in a decentralized way, IPFS and )
+- add 2FA and other security options when  using ChainKit `sendTransaction` which is used on withdraws, transfer and other sensitive actions
+- add DEX site example using Squeezer `2way-payment-system`
 
 #### Requirements
 
