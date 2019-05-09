@@ -35,7 +35,7 @@ The main usage of the ChainKit is to unify top blockchains interfaces into a sin
 - double-encrypt for wallet data
 - on-the-fly encryption/decryption
 - user choose how to store wallet token
-- bi-directional onchain transactions (inbound and outbound)
+- bi-directional instant chain transactions (inbound and outbound)
 - create blockchain payment solution
 - build dApps connecting to smart contracts using chainkit agnostic connector
 - deploy smart contracts
@@ -90,7 +90,7 @@ Extend or merge the Squeezer framework functionality with plugins
 
 | Project Name | Author | Demo |
 |-------------|------|---------|
-| **[Squeezer 2way Payment](https://github.com/SqueezerIO/squeezer-2way-payment)** <br/>  Squeezer Two Way Blockchain Payment System (inbound + outbound) | [Nick Chisiu](https://github.com/nickchisiu) | [video](https://example.org) |
+| **[Squeezer 2way Payment System](https://github.com/SqueezerIO/squeezer-2way-payment)** <br/>  Squeezer Two Way Blockchain Payment System (inbound + outbound) | [Nick Chisiu](https://github.com/nickchisiu) | [video](https://example.org) |
 
 
 #### <a name="getting-started"></a>Getting started
