@@ -1,3 +1,5 @@
+Important: This repository is no longer actively maintained and has been archived.
+
 <a href="https://squeezer.io" target="_blank"><img width="700" height="auto" src="./readme-introduction.gif"></a>
 
 #### Framework : [squeezer.io](https://squeezer.io)
